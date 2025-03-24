@@ -1,9 +1,0 @@
-Tìm hiểu: biết domain admin là jessica
-Trong thư mục của jake có ntds.dit, sam.hive. system.hive sử dụng impacket-secretdump để lấy ntlm hash của jessica 
-Format mật khẩu là wctf{bl00dh0und_is_c00l_cityxxx} xxx là 3 số ngẫu nhiên
-Có thể lấy danh sách các thành phố ở https://github.com/FinNLP/cities-list/blob/master/list.txt
-Sau đó dùng pwFormat.py tạo wordlist custom wctf{bl00dh0und_is_c00l_city
-3 số ngẫu nhiên và "}" sẽ được thêm vào khi sử dụng hashcat
-hashcat -a 6 -m 1000 jessicahash cities_wordlist.txt "?d?d?d}"
-Mật khẩu và cũng chính là flag
-wctf{bl00dh0und_is_c00l_votuporanga985}
