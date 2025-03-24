@@ -1,0 +1,13 @@
+cd C:\Users\emily
+tree /f /a > tree.txt
+type tree.txt
+cd Documents
+dir
+type README
+echo "James asked me to keep his password secret, so I made sure to take extra precautions." >> C:\Users\Public\loot.txt
+echo "Note to self: Password for the zip is same as mine, with 777 at the end" >> C:\Users\Public\loot.txt
+del README
+cp .\important.7z C:\Users\Public
+del C:\Users\Public\loot.txt
+del C:\Users\Public\important.7z
+runas /User:wolvctf\james cmd

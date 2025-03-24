@@ -1,0 +1,6 @@
+[1;36m╔══════════╣ [1;32mLooking for AutoLogon credentials[0m
+[1;31m    Some AutoLogon credentials were found[0m
+    DefaultDomainName             :  WOLVCTF
+    DefaultUserName               :  WOLVCTF\Dan
+    DefaultPassword               :  DansSuperCoolPassw0rd!!
+    AltDefaultUserName            :  loot-in-hex:656e61626c335f347574306c6f67306e5f306b3f3f213f7d
