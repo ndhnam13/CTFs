@@ -1,8 +1,8 @@
 Phần 1 của chuỗi bài active là domain access
-Trong gia đoạn này của cuộc tấn công, hacker sẽ thường truy cập vào hệ thống qua fishing hoặc các lỗ hổng của web như injection,...
+Trong gia đoạn này của cuộc tấn công, hacker sẽ thường truy cập vào hệ thống qua fishing hoặc các lỗ hổng của web như injection,bruteforce,...
 
 
-Trong thư mục user ta thấy có user mssql_service nên khả năng cao là injection
+Trong thư mục user ta thấy có user mssql_service nên khả năng cao hacker đã tận dụng lỗ hổng nào đó để truy cập vào đây
 Kiểm tra Users\mssql_service\MSSQL13.SQLEXPRESS\MSSQL\Log\ERRORLOG có thể thấy hacker đã thử bruteforce tên tài khoản trên SQL server, các tên người dùng cũng có thể ghép lại thành flag1
 Sau đó hacker đã đăng nhập thành công vào mssql với tk:mk sa:Password123
 wctf{d0nt_3n4bl3
