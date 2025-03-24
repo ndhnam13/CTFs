@@ -1,4 +1,4 @@
-Tìm hiểu: biết domain admin là jessica
+Tìm hiểu(chưa tìm hiểu): biết domain admin là jessica
 Trong thư mục của jake có ntds.dit, sam.hive. system.hive sử dụng impacket-secretdump để lấy ntlm hash của jessica 
 Format mật khẩu là wctf{bl00dh0und_is_c00l_cityxxx} xxx là 3 số ngẫu nhiên
 Có thể lấy danh sách các thành phố ở https://github.com/FinNLP/cities-list/blob/master/list.txt
