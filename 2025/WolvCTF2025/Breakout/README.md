@@ -3,7 +3,7 @@
 
 Đây là một file chip8(dùng cho mấy loại game arcade, atari console) tìm chip8 emulator trên mạng rồi phá hết mấy cục gạch sẽ ra flag
 
-Emulator: https://n.ethz.ch/~cehirschi/work/js/chip8/index.html
+Emulator: https://n.ethz.ch/~cehirschi/work/js/chip8/index.html (Bài này có mấy con emulator dùng chỉ hiện một cục gạch, ko biết vì sao?)
 
 ![image](https://github.com/user-attachments/assets/3c5a0da3-2d8e-4c19-a444-727bb663c305)
 
