@@ -54,7 +54,7 @@ Lấy nó ra = `dd if=car.jpeg of=hidden.jpg bs=1 skip=9296`
 `sh0uldv3_3nabl3d_s0m3_k3rb3r0s_pr34uth_4nd_`
 
 # Flag3
-Trước đó emily có nhắc đến việc được james nhắc giữ kín mật khẩu của anh ấy, kiểm tra ConsoleHost_history của James ta được part 3(Đến đoạn này trong log powershell của james hacker đã thay đổi mật khẩu của patrick và emily thành `Password123!`)
+Trước đó emily có nhắc đến việc được james nhắc giữ kín mật khẩu của anh ấy, rất có thể sau khi hacker có được mật khẩu của james đã sử dụng tài khoản đó, kiểm tra ConsoleHost_history của James ta được part 3(Đến đoạn này trong log powershell của james hacker đã thay đổi mật khẩu của patrick và emily thành `Password123!`)
 
 `d0nt_us3_4ll3xtendedr1ghts}`
 
