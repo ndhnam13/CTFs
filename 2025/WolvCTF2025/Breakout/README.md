@@ -1,5 +1,5 @@
 # Bài cho ta file jpg, trích xuất các dữ liệu được ẩn
-`steghide extract -sf breakout.jpg` ra `breakout.ch8` 
+`steghide extract -sf breakout.jpg` để password là blank(ko nhập gì chỉ enter) ra `breakout.ch8` 
 
 Đây là một file chip8(dùng cho mấy loại game arcade, atari console) tìm chip8 emulator trên mạng rồi phá hết mấy cục gạch sẽ ra flag
 
