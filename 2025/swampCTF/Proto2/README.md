@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/28265f4f-c7b6-4e24-a326-941e40e4bdcb)
 
 # Phân tích
 Hiện tại đang tìm hiểu(chờ tác giả post official writeup) có thể tham khảo file pdf của một người khác làm nhưng đây không phải intended solution
