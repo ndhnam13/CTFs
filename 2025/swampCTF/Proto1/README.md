@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/a540e395-cb62-4070-9ae6-3adc387476d2)
 
 # Phân tích
 Bài cho ta một file pcap và ở mô tả có server với port nhưng mà netcat thì lại không vào được
