@@ -1,0 +1,1 @@
+# 2 cái file pdf là wu của 1 người trong discord chưa phải chính thức của tác giả
