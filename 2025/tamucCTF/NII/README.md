@@ -1,6 +1,8 @@
 # Mô tả
 Cant seem to open the file
 
+https://ctfd.tamuctf.com/files/ba211efed4b1d4660a3e911c3208c3e3/nii.tar.gz?token=eyJ1c2VyX2lkIjozNCwidGVhbV9pZCI6MjIsImZpbGVfaWQiOjMxfQ.Z-uk8g.ZdTrjyqkyPwNPGaUuzcDsvxU0uc
+
 # Phân tích 
 Bài cho ta một file `nii` qua tìm hiểu thì đây là viết tắt cho `nifti` dùng trong chụp chiếu não
 
