@@ -11,6 +11,6 @@ Bài cho ta một file `png` khi mở ra thì nhìn thấy rằng khá giống m
 Cuối cùng thử lấy binary data từ ảnh thì thành công khi để các pixel black=0 và white=1 trên https://www.dcode.fr/binary-image
 
 # Flag
-Decode binary là ra flag
+Decode binary ra base64 rồi decode base64 là ra flag
 
 `gigem{b1n4ry_d3c0d1n6_h319y2z8}`
