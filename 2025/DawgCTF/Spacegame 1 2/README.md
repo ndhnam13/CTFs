@@ -14,9 +14,7 @@ name_part: The first up to 17 characters of the name + null terminator. If name 
 Nhìn chung cả 2 part sẽ  chỉ cần đăng nhập thành công, di chuyển đến một vị trí (part1 không cần, part2 là (15,2)) sau đó nhật `PLAYER_LOC` và giải mã ra thôi (Part2 sẽ phải điều chỉnh 1 chút `Hint part2: The documentation lies a little bit. If you are getting weird values, try switching endianess.`, vậy là chỉ cần chỉnh về little edian bởi trong document sử dụng big edian)
 
 # Flag
-Nhờ Claude viết cả 2 cái xdd script (cả 2 script khá lộn xộn, có thể sẽ thay bằng script của tác giả)
-
-## Sẽ tự viết lại script
+Nhờ Claude viết cả 2 cái script xddd, chạy đến vị trí đúng thì sẽ tự động lấy toàn bộ chuỗi byte server gửi xong decode ra flag (Phải tự bỏ phần linh tinh ở giữa đi)
 
 ### Part1
 `DawgCTF{FL4GS_1N_SP4444C3!!!!}`
