@@ -3,7 +3,7 @@ Thằng tạo ra cái này không có tạo client nên mình phải tự code
 
 Qua tìm hiểu document thì ta có thể tự dựng 1 client để kết nối đến server `wss://spacegame.io:443`
 
-Nói chung là khi kết nối thành công đến server sử dụng `SIGN_UP` thì sẽ nhận được `SIGN_UP_RESP` - Nếu đăng nhập thành công không thì sẽ là `Invalid signatre, incomplete player data,...`. Với cả `PLAYER_LOC`, cả 2 sẽ được gửi với rate là `~20 Hz` - Nếu gửi các tín hiệu điều khiển (Cần sử dụng nhiều trong part2 khi điều khiển tàu đến vị trí 15,2)
+Nói chung là khi kết nối thành công đến server sử dụng `SIGN_UP` thì sẽ nhận được `SIGN_UP_RESP` - Nếu đăng nhập không thành công thì sẽ là `Invalid signatre, incomplete player data,...`. Với cả `PLAYER_LOC`, cả 2 sẽ được gửi với rate là `~20 Hz` - Nếu gửi các tín hiệu điều khiển (Cần sử dụng nhiều trong part2 khi điều khiển tàu đến vị trí 15,2)
 
 `PLAYER_LOC` Đây là vị trí của người chơi tại ô đó (Không phải mình) và tên player sẽ là flag luôn (Chỉ là một nửa nhưng có thể tìm thấy toàn bộ nếu lấy toàn bộ byte), phần còn lại nếu xem trong document có đề cập đến
 
