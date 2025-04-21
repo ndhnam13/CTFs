@@ -4,6 +4,8 @@ My Rayhunter has only been in operation for about 3 months, yet it's alerted 4 t
 Flag format: DawgCTF{IMSI_IMEI_zipcode}
 
 # Phân tích
+Bài cho ta một file `.pcapng` mở ra trong wireshark
+
 IMSI ở packet số 28
 
 IMEISV(16 số) ở packet số 36, Đề bài yêu cầu IMEI nên ta sẽ phải tìm IMEI này từ IMEISV, đưa vào web https://www.imei.info/?imei=353977577332846
