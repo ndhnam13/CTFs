@@ -12,6 +12,10 @@ IMEISV(16 số): `3539775773328400` ở packet số 36, Đề bài yêu cầu IM
 
 Biết được đây là IMEI hợp lệ (Đoạn này có kẹt lúc đầu vì tưởng chỉ cần xoá 2 số cuối là ra IMEI nhưng thực ra IMEI có format 15 số tức là phải có thêm 1 số CD(Check digit) vào cuối sau khi đã xoá 2 số cuối từ IMEISV, may là cái web trên đã làm hộ)
 
+```
+The structure of an IMEI number is quite fascinating. It's a 15-digit code, usually represented in this format: AA-BBBBBB-CCCCCC-D
+```
+
 Còn lại muốn tìm ra zipcode thì có thể truy qua các cellID và tracking area code, trong wireshark filter = `gms_a.imeisv` có 4 lần nhả IMEISV, như đã biết trên phần mô tả thì có nói đến việc bị alert 4 lần, quay lại các packet có xuất hiện IMEISV, lướt lên một chút tìm các packet có info `SystemiInfomationBlockType1` rồi sau đó check các mã MCC, MNC, LAC, và CELL ID, phải quy hết về decimal 
 
 Sau đó đưa vào web https://findcellid.com/
