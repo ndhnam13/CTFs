@@ -6,9 +6,9 @@ Flag format: DawgCTF{IMSI_IMEI_zipcode}
 # Phân tích
 Bài cho ta một file `.pcapng` mở ra trong wireshark
 
-IMSI ở packet số 28
+IMSI ở packet số 28 `310240191383963`
 
-IMEISV(16 số) ở packet số 36, Đề bài yêu cầu IMEI nên ta sẽ phải tìm IMEI này từ IMEISV, đưa vào web https://www.imei.info/?imei=353977577332846
+IMEISV(16 số): `3539775773328400` ở packet số 36, Đề bài yêu cầu IMEI nên ta sẽ phải tìm IMEI này từ IMEISV, đưa vào web https://www.imei.info/?imei=353977577332846
 
 Biết được đây là IMEI hợp lệ (Đoạn này có kẹt lúc đầu vì tưởng chỉ cần xoá 2 số cuối là ra IMEI nhưng thực ra IMEI có format 15 số tức là phải có thêm 1 số CD(Check digit) vào cuối sau khi đã xoá 2 số cuối từ IMEISV, may là cái web trên đã làm hộ)
 
