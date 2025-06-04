@@ -12,7 +12,7 @@ Bởi vì mô tả nhắc đến việc nhân viên nhận được một bức 
 
 Tìm một lúc thì thấy trong `tamin\Documents\Outlook` có một file `VCS antivirus.eml`, extract ra xem nó là gì
 
-![image](/pcs/fileeml.PNG)
+![image](./pcs/fileeml.PNG)
 
 Trong file có chứa một file .zip khác, khi lưu về và xuất ra thì ra một file `vcs_antivirus.exe` đưa lên [virustotal](https://www.virustotal.com/gui/file/ea5d1e2d0ddcc874cbfe969d7bf49e58f980bce01501f4e8a53107a0dacff736) thì có rất nhiều red flag 
 
@@ -380,7 +380,7 @@ https://api.telegram.org/bot7457737016:AAEvv7iDxEzpd9bxMmY9BBwZM0rE2e9Yef0/forwa
 {"ok":true,"result":[{"message_id":760}]}
 ```
 
-![image](/pcs/forward.PNG)
+![image](./pcs/forward.PNG)
 
 Ví dụ **copyMessages** (không quan tâm protected hay không)
 
@@ -424,7 +424,7 @@ https://api.telegram.org/bot7457737016:AAEvv7iDxEzpd9bxMmY9BBwZM0rE2e9Yef0/copyM
 }
 ```
 
-![image](/pcs/copy.PNG)
+![image](./pcs/copy.PNG)
 
 # Flag
 
