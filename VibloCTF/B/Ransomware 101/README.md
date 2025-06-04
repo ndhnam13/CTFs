@@ -229,7 +229,7 @@ Trước hết, script tạo AES key với khóa 256-bit và block size 128-bit 
 
 - Thay thế các ký tự đặc biệt không hợp lệ trong tên file bằng `_`
 - Tạo file với tên là: (số thứ tự * 111111) + ký tự đó + `.txt`
--  Ví dụ: nếu ký tự là `a` và `$counter` là 2 → file tên `222222a.txt` 
+-  Ví dụ: nếu ký tự là `a` và `$counter` là 2 => file tên `222222a.txt` 
 - Nội dung mỗi file là chuỗi `'tmq'`
 - Tăng counter lên 1 và tiếp tục cho đến hết file
 
@@ -431,3 +431,16 @@ https://api.telegram.org/bot7457737016:AAEvv7iDxEzpd9bxMmY9BBwZM0rE2e9Yef0/copyM
 Có rất nhiều key và IV được gửi nhưng đoán là cái đầu tiên là key và IV được tạo ra lúc mã hoá `flag.txt` đưa vào [cyberchef](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)AES_Decrypt(%7B'option':'Base64','string':'%2BaiywnFuZEvfh0xZOtC1xR7HsNLFapkvjaDhdp%2BgANE%3D'%7D,%7B'option':'Base64','string':'e3P16mVzbGDaSGsAzCPNJQ%3D%3D'%7D,'CBC','Raw','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)&input=aVVBN05nY0d6dTViaXNBWmlUWUc0Mmw4RWl3c1gxNkRYNHN3NVZMYm9VLzVZMkhPVXZlK2RFSm5jV2cwOGtkSQ&oeol=FF) thì chính xác và ra flag
 
 `flag{rAnS0MWAR3_wiTH_Te1EgRam_is_FUn_r1ghT???}`
+
+# Các kỹ thuật malware đã sử dụng
+T1059.001 – PowerShell
+
+T1218.005 – LOLBin (sdelete)
+
+T1041 – Exfiltration Over C2 Channel (telegram api)
+
+T1486 – Data Encrypted for Impact (flag.txt)
+
+T1070.004 – File Deletion (sdelete)
+
+T1027 – Obfuscated Files (powershell encode b64 + tên biến dài + phân file ký tự)
