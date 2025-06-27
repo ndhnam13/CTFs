@@ -1,0 +1,131 @@
+Received: from 127.0.0.1
+ by atlas-production.v2-mail-prod1-gq1.omega.yahoo.com with HTTP; Tue, 1 Nov 2022 15:26:50 +0000
+Return-Path: <gnolavnaut@gmail.com>
+X-Originating-Ip: [209.85.218.46]
+Received-SPF: pass (domain of gmail.com designates 209.85.218.46 as permitted sender)
+Authentication-Results: atlas-production.v2-mail-prod1-gq1.omega.yahoo.com;
+ dkim=pass header.i=@gmail.com header.s=20210112;
+ spf=pass smtp.mailfrom=gmail.com;
+ dmarc=pass(p=NONE,sp=QUARANTINE) header.from=gmail.com;
+X-Apparently-To: blu3dr490n@yahoo.com; Tue, 1 Nov 2022 15:26:50 +0000
+X-YMailAVSC: e7NICsI3bBv6_5hGooIIQoP3sBnCKWm1.zWNnsF2gFXDZ0g
+ ykvVn9VRG58tNSeJRRiDtu1VGumSUi3BAacwqhhEYDFcbtHTmGaMNiW_JVzP
+ 68wSYlMdE772VmPXvTT4tf1mUqUt4F2LvTCzYlSr1wSANXAYgCv6z8XFG22s
+ QFbsgdOxKAVZQQyz0I.Tipm9IvAKljn16Ai04ON1QxzLwxVw70qYMIiiYmEM
+ uA39.qMYQiLSDhZ9.nA6b6N8ZVWagCiRprjggdqSqGhkch4AfWKPUsUnrph8
+ 1KuKRL0hCFtzmNRGO6w41EtsZ.5aorJc_6cJe.Oeqcv66kiPmKbo8uC_kn3G
+ T6ksJ3opgt5T56WESHoQzRacIajWT3Z.5mzOfMDIxNovUddoMqvLSES9v3qL
+ F3ZdUpbT0.kcfIsWWr5p7AMAWxEsoomOkb.SxENAOp6n7KUSgpAu0aKSst8p
+ VDCvxd69.1taGIY1hQqrAvImpBHc16ra_gsfF5qpNDvUBl0PpmOtNDPNp8e5
+ 9jyZ4JfABa6qecmOxWJsYsy75Xpi63UkBI9YCKvV2A8dnNlypPegU11.foGi
+ HQZuhCvP_Dkwt2.Ns0YWh.Q6ZsjVAspehJZJLcaef0FMM3xtOUm__9YsbOE7
+ _OphAJhS2cestHQieCI0eNg0EY0iOuj6Mz4hSJZXtdpTjID3MVXqHzO8Qvth
+ osczn2hJZFk4rdToMelFjXgfHj_Hru4cTCTOcA8AkTUrF8rI5uJWgKGaGT0a
+ BbmJnTAHeFFgQ0oO6LQXKkb4r8QkryCkraTRwxjgjeqQlYH1imAO.r.7ynFV
+ v6oLm2bmmQ.kRX38QoLXsaX59q204GTjBi9MGySR5Nl7BEeDa2pYh8EhF_Z2
+ 41NYisNSfMFinf647.u6gqHNmk0N2wWwS7UwP.9CfOAOysgVr4lqa7xtc1Da
+ dNCXbuyskb8PE8BhkR9NR32zxcjt_KQ1PoPKNYaOcW5iv6_OpZ0FfE6vrVIH
+ diXtXeQY3EoNF
+X-YMailISG: gSKCI1sWLDt8Ngc22o4CeDwEpPaA6HVDZ5xSe83M767FTIbA
+ T0b9ZR_s1duWNcEdlufiONGwb97_11WttfsGIg_xcTO5eScuwP5TvhfkJb7v
+ 7LPSjGXkPAoVuWk4KOE6t7ELLobMdJuq.fVNl6agy8svv.mJ58p1qT32D_QX
+ 1N5VBhFsFY3ClTv6n70tviNSM1xiBskxd4NgrbYCtdV.J.YURW5Rdr4ZspG7
+ 2YUgOzLzWpBNq7qjRH4R5n32mciZQG2_NohuZzsSiZE8xbjEECCvWGa86rv_
+ .o3ZdO_iDLa8lHzaHYXO4OgDRFC.bFkBEQoFz5EGzVBDDbjD3DUF43sIYJI7
+ iey.dSdViGartReK86HOc9AbNHwqs8FZuq8DuZn.Sv1QeZGqY08gH1y9c3nD
+ 5dHXlYPaPkft8opdFs4cH3XQ7yhDk7Fl7V44hpm4CHsRlkXaPUwaoJDTwWz7
+ FEgZYmycml1FZedFs8zq8i0gS1GczSTtFAKTnARz1cN9OfKv7tt7Yk3NFXHA
+ f8oFk_39fL_tNguD2a5Vy6TdW51ucU3cjc.QuYIcA2a.KoZgTU7QFztpgxop
+ K0GpuWzA7FnZHUq7QFG4V43Qdm7B7ShKfsKpWmzzjylWNg3U6HImAexDXVsg
+ D.96pjGlO_MXqdzzchPBH11lqM2d65cY0XqD6PW80l8sYdd5x2f85_.Q4X.W
+ hpaT3yCWN97sRH2LW2Vor4fxesu2vbSDXUziqZ7Vq9.dHvnGJlYQx2lmlRco
+ BnO8zWqA4znoHHNtZnV7qrGS00P2sf6TePAgX_qTLTLhsklhsE1tOiHMJG8k
+ 5TXCaSgAoLGG029bH7qCQrblLQc7vjqsoHyKBaq8oZh6jEJSLVNYmidHMY_O
+ KCFwxi5JkaFQ3NeQE.aRoImE.Dd5nQ29VHcJkSAZdy48RtiJXQJuX_xyrCb1
+ ssHNhYxMPcnyLvLRUYDbnFke6PyiiXVjY2hfegRr8pZx72oGg9hZzqCWEzD1
+ 7GgKfHyHwhvsnNVqyL67iJzHaxRfBYzHKxJDyipjfgfcmn22VdGuJpv.lm.U
+ vK6RKyEkH6vg2_IMc3L9P1AwEmd2R39FQivbZaJektsudO_A9RStSr38QiKY
+ fcw98L1WWg7giawElzr9hhp.SMsZqorI3FR98XQRzM.EExV3GiBBGxGmRhYF
+ Vp8vtBEVsDZx1dbeBSME9y1bpc2F4vt5uX_gsotp.Cod1bEMH_5c1Mj4qHgz
+ s4OLrBnFiDuJ9xeDrJL16iDVzLwlQeruFHjCSpvZy8bjW_B6NjIN6kN6hW0c
+ wsb3W9GeTyKgpkWM8uWlS7Jw
+Received: from 209.85.218.46 (EHLO mail-ej1-f46.google.com)
+ by 10.253.230.153 with SMTPs
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256);
+ Tue, 01 Nov 2022 15:26:50 +0000
+Received: by mail-ej1-f46.google.com with SMTP id f27so37912531eje.1
+        for <blu3dr490n@yahoo.com>; Tue, 01 Nov 2022 08:26:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=4CE+SoxggqyxdpkNZu7/0PRPaDCSnHaWv4NOQJF4cnQ=;
+        b=kcih18WupjpQ8QKWDSFN9IaUl4k54iS/rXeTjSReytvPq6Ow+Ho8JBJPkyGRaJMewg
+         jil4tGGJYDUvSiN06L/uWFbOWFUTieTPF1JFXApu2ZEQOKEjk3pqUaTtTUtEUiyZIrii
+         ZUZpyPXoh3cze95FhH1kFEcyMBCF4IVjq1rXUUOl6PqisYgxq46qvOwXioYarR/f/l8k
+         WC7Kex5SmhNFV6oDhAqtD2J50vNsI4+pInzgeuNQ3iHQkzxQjIXpNIEkx6FgNN8sKD7W
+         gDjypq4cn+cHgOG4+YqL2Q23fnY5aU36mcY5mr9sWzULmc4G//WZlRYUr79tMlBt6Hu7
+         DhrQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=4CE+SoxggqyxdpkNZu7/0PRPaDCSnHaWv4NOQJF4cnQ=;
+        b=J/kLok4pw3ukjIPEumWFnt5+QXWRi+Ux1mu+KJr1gb/r3z9ArJoy1NyApVmue7rD55
+         XXpde2goymfhuaj9FG3dYObGmLqWfQ1AmaW1o8sPE6CndSkGN02pkkvdzOX2qA0OUfkw
+         SNW6oxPMBMoYOQ9p86g+4tzs4Ngk0LhKSCooVTfAsBB0HfuNUg3MO/IZF/TztX0wAViT
+         vlNbaUrGmfKU/fz0CSexPkVo5oaZMN5J8UYiMIZSlKdUq9hMdoU9Xfh/IpdLLTkcZoeG
+         LyPGxu8/4yfw1oyui/nIxwpvn1aG5MIUF37mb2jmOcndyKztUrTpSKFGgUSxlnrkmVyV
+         /ZLA==
+X-Gm-Message-State: ACrzQf1aZwUS8ScC0A0lOCRtKGxj5gN5WWUM5V7lqM1WhHMF/70Odcju
+        mGBzYF7g4AfTNcyT9i5W3wznRdIGua0AzAModp62emqhNwYRMQ==
+X-Google-Smtp-Source: AMsMyM5j0F+Y9nPCU5sFeuFeAgn5JXsx6pEGuGYvVOJiy4i2YWBBmD3grKeggtBkKM2KZOqY303azucvAxYfl8Dfogw=
+X-Received: by 2002:a17:907:720d:b0:7a9:b7e6:8612 with SMTP id
+ dr13-20020a170907720d00b007a9b7e68612mr18470806ejc.435.1667316409171; Tue, 01
+ Nov 2022 08:26:49 -0700 (PDT)
+MIME-Version: 1.0
+From: Long Thanh Nguyen <gnolavnaut@gmail.com>
+Date: Tue, 1 Nov 2022 22:26:39 +0700
+Message-ID: <CAGSPY_fJRopdhT=miEnUyeZv4-CWQAoqPXLFCwkJxNv1jou22w@mail.gmail.com>
+Subject: Confirmation
+To: blu3dr490n@yahoo.com
+Content-Type: multipart/alternative; boundary="0000000000004c027405ec6a5a98"
+Content-Length: 1214
+
+--0000000000004c027405ec6a5a98
+Content-Type: text/plain; charset="UTF-8"
+
+Dear blu3dr490n,
+
+Your registration as an exhibitor is confirmed !
+
+*REGISTRATION SUMMARY:*
+
+Registration Number: *2299051228*
+
+Name: blu3dr490n
+
+Flag: Flag{38e96c6f6a60736a612d6b7****263f8}
+
+Thank You
+
+Regards,
+
+Anonymous
+
+--0000000000004c027405ec6a5a98
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p>Dear=C2=A0blu3dr490n,</p><p>Your registration as an exh=
+ibitor is confirmed !</p><p><u><strong>REGISTRATION SUMMARY:</strong></u></=
+p><p>Registration Number:=C2=A0<strong>2299051228</strong></p><p>Name: blu3=
+dr490n</p><p>Flag: Flag{38e96c6f6a60736a612d6b7****263f8}<br></p><p>Thank Y=
+ou</p><p class=3D"MsoNormal" style=3D"margin:0in;font-size:11pt;font-family=
+:Calibri,sans-serif"><span style=3D"font-family:Arial,Helvetica,sans-serif;=
+font-size:small">Regards,</span><span style=3D"font-family:Arial,sans-serif=
+;font-size:10.5pt"><br></span></p><p class=3D"MsoNormal" style=3D"margin:0i=
+n;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-family=
+:Arial,Helvetica,sans-serif;font-size:small">Anonymous</span></p></div>
+
+--0000000000004c027405ec6a5a98--
