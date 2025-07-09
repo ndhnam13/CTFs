@@ -1,0 +1,34 @@
+ def ask_questions(self):
+        ok = (
+            self.ask_question(
+                "1",
+                "What is the OS version of the router?  ",
+                "24.10.2",
+            )
+            and self.ask_question(
+                "2",
+                "What is the IP address of the attacker's machine?",
+                "114.51.41.91",
+            )
+            and self.ask_question(
+                "3",
+                "What is the CVE number of the vulnerability exploited by the attacker?",
+                "CVE‑2025‑32463",
+            )
+            and self.ask_question(
+                "4",
+                "What program's configuration was modify by the attacker to do persistence?",
+                "rsyncd",
+            )
+            and self.ask_question(
+                "5",
+                "What is the host hijacked by the attacker?",
+                "dashboard.company.com",
+            )
+            and self.ask_question(
+                "6",
+                "What host did the attacker use to host malicious artifacts? ",
+                "foo-bar-deadbe.varcel.app",
+            )
+        )
+        return ok
