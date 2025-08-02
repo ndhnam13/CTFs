@@ -19,3 +19,6 @@
 
 ## Week 5:
 [(FOR) DFIR 2025 Ⅰ: Lost In Router](https://github.com/ndhnam13/CTFs/tree/main/EAS3%20-%200day%40freddy/R3CTF/dfir2025/P1)
+
+## Week 6:
+[(FOR) Breadcrumbs](https://github.com/ndhnam13/CTFs/tree/main/EAS3%20-%200day%40freddy/L3akCTF/Breadcrumbs)
