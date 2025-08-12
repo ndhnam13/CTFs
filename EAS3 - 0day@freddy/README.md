@@ -22,3 +22,7 @@
 
 ## Week 6:
 [(FOR) Breadcrumbs](https://github.com/ndhnam13/CTFs/tree/main/EAS3%20-%200day%40freddy/L3akCTF/Breadcrumbs)
+
+## Week 7:
+[(FOR)](https://github.com/ndhnam13/CTFs/blob/main/EAS3%20-%200day%40freddy/Week7/FOR.md)
+[(RE)](https://github.com/ndhnam13/CTFs/blob/main/EAS3%20-%200day%40freddy/Week7/RE.md)
