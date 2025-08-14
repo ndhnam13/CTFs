@@ -29,3 +29,5 @@
 [(RE)](https://github.com/ndhnam13/CTFs/blob/main/EAS3%20-%200day%40freddy/Week7/RE.md)
 
 [(WEB)](https://k4ahr.work/writeups/owasp/)
+
+[(CRYTO)](https://thanhs-organization-37.gitbook.io/thanh1v-crryptohack/cryptohack-course3/keyed-permutations)
