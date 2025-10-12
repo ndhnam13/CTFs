@@ -1,0 +1,2733 @@
+Dump of assembler code for function check_flag:
+   0x0000555555555294 <+0>:	push   rbp
+   0x0000555555555295 <+1>:	mov    rbp,rsp
+   0x0000555555555298 <+4>:	push   rbx
+   0x0000555555555299 <+5>:	sub    rsp,0x28
+   0x000055555555529d <+9>:	mov    QWORD PTR [rbp-0x28],rdi
+   0x00005555555552a1 <+13>:	mov    BYTE PTR [rbp-0x11],0x1
+   0x00005555555552a5 <+17>:	movzx  ebx,BYTE PTR [rbp-0x11]
+   0x00005555555552a9 <+21>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555552ad <+25>:	mov    rdi,rax
+   0x00005555555552b0 <+28>:	call   0x555555555050 <strlen@plt>
+   0x00005555555552b5 <+33>:	cmp    rax,0x25
+   0x00005555555552b9 <+37>:	sete   al
+   0x00005555555552bc <+40>:	movzx  eax,al
+   0x00005555555552bf <+43>:	and    eax,ebx
+   0x00005555555552c1 <+45>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555552c4 <+48>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555552c8 <+52>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555552cc <+56>:	je     0x5555555552f6 <check_flag+98>
+   0x00005555555552ce <+58>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555552d2 <+62>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555552d5 <+65>:	movsx  edx,al
+   0x00005555555552d8 <+68>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555552dc <+72>:	add    rax,0x4
+   0x00005555555552e0 <+76>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555552e3 <+79>:	cmp    al,0x3a
+   0x00005555555552e5 <+81>:	sete   al
+   0x00005555555552e8 <+84>:	movzx  eax,al
+   0x00005555555552eb <+87>:	cmp    edx,eax
+   0x00005555555552ed <+89>:	je     0x5555555552f6 <check_flag+98>
+   0x00005555555552ef <+91>:	mov    eax,0x1
+   0x00005555555552f4 <+96>:	jmp    0x5555555552fb <check_flag+103>
+   0x00005555555552f6 <+98>:	mov    eax,0x0
+   0x00005555555552fb <+103>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555552fe <+106>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555302 <+110>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555306 <+114>:	je     0x555555555331 <check_flag+157>
+=> 0x0000555555555308 <+116>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555530c <+120>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555530f <+123>:	movsx  edx,al
+   0x0000555555555312 <+126>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555316 <+130>:	add    rax,0xb
+   0x000055555555531a <+134>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555531d <+137>:	movsx  eax,al
+   0x0000555555555320 <+140>:	imul   eax,edx
+   0x0000555555555323 <+143>:	cmp    eax,0x20a0
+   0x0000555555555328 <+148>:	jne    0x555555555331 <check_flag+157>
+   0x000055555555532a <+150>:	mov    eax,0x1
+   0x000055555555532f <+155>:	jmp    0x555555555336 <check_flag+162>
+   0x0000555555555331 <+157>:	mov    eax,0x0
+   0x0000555555555336 <+162>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555339 <+165>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555533d <+169>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555341 <+173>:	je     0x55555555536b <check_flag+215>
+   0x0000555555555343 <+175>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555347 <+179>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555534a <+182>:	movsx  edx,al
+   0x000055555555534d <+185>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555351 <+189>:	add    rax,0x15
+   0x0000555555555355 <+193>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555358 <+196>:	movsx  eax,al
+   0x000055555555535b <+199>:	add    eax,edx
+   0x000055555555535d <+201>:	cmp    eax,0xba
+   0x0000555555555362 <+206>:	jne    0x55555555536b <check_flag+215>
+   0x0000555555555364 <+208>:	mov    eax,0x1
+   0x0000555555555369 <+213>:	jmp    0x555555555370 <check_flag+220>
+   0x000055555555536b <+215>:	mov    eax,0x0
+   0x0000555555555370 <+220>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555373 <+223>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555377 <+227>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555537b <+231>:	je     0x5555555553a6 <check_flag+274>
+   0x000055555555537d <+233>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555381 <+237>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555384 <+240>:	movsx  edx,al
+   0x0000555555555387 <+243>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555538b <+247>:	add    rax,0xa
+   0x000055555555538f <+251>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555392 <+254>:	movsx  eax,al
+   0x0000555555555395 <+257>:	imul   eax,edx
+   0x0000555555555398 <+260>:	cmp    eax,0x1ab8
+   0x000055555555539d <+265>:	jne    0x5555555553a6 <check_flag+274>
+   0x000055555555539f <+267>:	mov    eax,0x1
+   0x00005555555553a4 <+272>:	jmp    0x5555555553ab <check_flag+279>
+   0x00005555555553a6 <+274>:	mov    eax,0x0
+   0x00005555555553ab <+279>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555553ae <+282>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555553b2 <+286>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555553b6 <+290>:	je     0x5555555553e4 <check_flag+336>
+   0x00005555555553b8 <+292>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555553bc <+296>:	add    rax,0x1
+   0x00005555555553c0 <+300>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555553c3 <+303>:	movsx  edx,al
+   0x00005555555553c6 <+306>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555553ca <+310>:	add    rax,0x11
+   0x00005555555553ce <+314>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555553d1 <+317>:	cmp    al,0x30
+   0x00005555555553d3 <+319>:	sete   al
+   0x00005555555553d6 <+322>:	movzx  eax,al
+   0x00005555555553d9 <+325>:	cmp    edx,eax
+   0x00005555555553db <+327>:	je     0x5555555553e4 <check_flag+336>
+   0x00005555555553dd <+329>:	mov    eax,0x1
+   0x00005555555553e2 <+334>:	jmp    0x5555555553e9 <check_flag+341>
+   0x00005555555553e4 <+336>:	mov    eax,0x0
+   0x00005555555553e9 <+341>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555553ec <+344>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555553f0 <+348>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555553f4 <+352>:	je     0x555555555422 <check_flag+398>
+   0x00005555555553f6 <+354>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555553fa <+358>:	add    rax,0x1
+   0x00005555555553fe <+362>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555401 <+365>:	movsx  edx,al
+   0x0000555555555404 <+368>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555408 <+372>:	add    rax,0x21
+   0x000055555555540c <+376>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555540f <+379>:	movsx  eax,al
+   0x0000555555555412 <+382>:	add    eax,edx
+   0x0000555555555414 <+384>:	cmp    eax,0xc6
+   0x0000555555555419 <+389>:	jne    0x555555555422 <check_flag+398>
+   0x000055555555541b <+391>:	mov    eax,0x1
+   0x0000555555555420 <+396>:	jmp    0x555555555427 <check_flag+403>
+   0x0000555555555422 <+398>:	mov    eax,0x0
+   0x0000555555555427 <+403>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555542a <+406>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555542e <+410>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555432 <+414>:	je     0x555555555461 <check_flag+461>
+   0x0000555555555434 <+416>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555438 <+420>:	add    rax,0x1
+   0x000055555555543c <+424>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555543f <+427>:	movsx  edx,al
+   0x0000555555555442 <+430>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555446 <+434>:	add    rax,0x16
+   0x000055555555544a <+438>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555544d <+441>:	movsx  eax,al
+   0x0000555555555450 <+444>:	imul   eax,edx
+   0x0000555555555453 <+447>:	cmp    eax,0xfc0
+   0x0000555555555458 <+452>:	jne    0x555555555461 <check_flag+461>
+   0x000055555555545a <+454>:	mov    eax,0x1
+   0x000055555555545f <+459>:	jmp    0x555555555466 <check_flag+466>
+   0x0000555555555461 <+461>:	mov    eax,0x0
+   0x0000555555555466 <+466>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555469 <+469>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555546d <+473>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555471 <+477>:	je     0x55555555549f <check_flag+523>
+   0x0000555555555473 <+479>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555477 <+483>:	add    rax,0x1
+   0x000055555555547b <+487>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555547e <+490>:	movsx  edx,al
+   0x0000555555555481 <+493>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555485 <+497>:	add    rax,0xc
+   0x0000555555555489 <+501>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555548c <+504>:	movsx  eax,al
+   0x000055555555548f <+507>:	add    eax,edx
+   0x0000555555555491 <+509>:	cmp    eax,0xbc
+   0x0000555555555496 <+514>:	jne    0x55555555549f <check_flag+523>
+   0x0000555555555498 <+516>:	mov    eax,0x1
+   0x000055555555549d <+521>:	jmp    0x5555555554a4 <check_flag+528>
+   0x000055555555549f <+523>:	mov    eax,0x0
+   0x00005555555554a4 <+528>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555554a7 <+531>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555554ab <+535>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555554af <+539>:	je     0x5555555554dd <check_flag+585>
+   0x00005555555554b1 <+541>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555554b5 <+545>:	add    rax,0x2
+   0x00005555555554b9 <+549>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555554bc <+552>:	movsx  edx,al
+   0x00005555555554bf <+555>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555554c3 <+559>:	add    rax,0x16
+   0x00005555555554c7 <+563>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555554ca <+566>:	cmp    al,0x72
+   0x00005555555554cc <+568>:	sete   al
+   0x00005555555554cf <+571>:	movzx  eax,al
+   0x00005555555554d2 <+574>:	cmp    edx,eax
+   0x00005555555554d4 <+576>:	je     0x5555555554dd <check_flag+585>
+   0x00005555555554d6 <+578>:	mov    eax,0x1
+   0x00005555555554db <+583>:	jmp    0x5555555554e2 <check_flag+590>
+   0x00005555555554dd <+585>:	mov    eax,0x0
+   0x00005555555554e2 <+590>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555554e5 <+593>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555554e9 <+597>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555554ed <+601>:	je     0x55555555551b <check_flag+647>
+   0x00005555555554ef <+603>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555554f3 <+607>:	add    rax,0x2
+   0x00005555555554f7 <+611>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555554fa <+614>:	movsx  edx,al
+   0x00005555555554fd <+617>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555501 <+621>:	add    rax,0x4
+   0x0000555555555505 <+625>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555508 <+628>:	movsx  eax,al
+   0x000055555555550b <+631>:	add    eax,edx
+   0x000055555555550d <+633>:	cmp    eax,0xb4
+   0x0000555555555512 <+638>:	jne    0x55555555551b <check_flag+647>
+   0x0000555555555514 <+640>:	mov    eax,0x1
+   0x0000555555555519 <+645>:	jmp    0x555555555520 <check_flag+652>
+   0x000055555555551b <+647>:	mov    eax,0x0
+   0x0000555555555520 <+652>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555523 <+655>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555527 <+659>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555552b <+663>:	je     0x555555555559 <check_flag+709>
+   0x000055555555552d <+665>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555531 <+669>:	add    rax,0x2
+   0x0000555555555535 <+673>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555538 <+676>:	movsx  edx,al
+   0x000055555555553b <+679>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555553f <+683>:	add    rax,0xc
+   0x0000555555555543 <+687>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555546 <+690>:	cmp    al,0x2a
+   0x0000555555555548 <+692>:	sete   al
+   0x000055555555554b <+695>:	movzx  eax,al
+   0x000055555555554e <+698>:	cmp    edx,eax
+   0x0000555555555550 <+700>:	je     0x555555555559 <check_flag+709>
+   0x0000555555555552 <+702>:	mov    eax,0x1
+   0x0000555555555557 <+707>:	jmp    0x55555555555e <check_flag+714>
+   0x0000555555555559 <+709>:	mov    eax,0x0
+   0x000055555555555e <+714>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555561 <+717>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555565 <+721>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555569 <+725>:	je     0x555555555597 <check_flag+771>
+   0x000055555555556b <+727>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555556f <+731>:	add    rax,0x2
+   0x0000555555555573 <+735>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555576 <+738>:	movsx  edx,al
+   0x0000555555555579 <+741>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555557d <+745>:	add    rax,0x12
+   0x0000555555555581 <+749>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555584 <+752>:	cmp    al,0x71
+   0x0000555555555586 <+754>:	sete   al
+   0x0000555555555589 <+757>:	movzx  eax,al
+   0x000055555555558c <+760>:	cmp    edx,eax
+   0x000055555555558e <+762>:	je     0x555555555597 <check_flag+771>
+   0x0000555555555590 <+764>:	mov    eax,0x1
+   0x0000555555555595 <+769>:	jmp    0x55555555559c <check_flag+776>
+   0x0000555555555597 <+771>:	mov    eax,0x0
+   0x000055555555559c <+776>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555559f <+779>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555555a3 <+783>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555555a7 <+787>:	je     0x5555555555d6 <check_flag+834>
+   0x00005555555555a9 <+789>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555555ad <+793>:	add    rax,0x3
+   0x00005555555555b1 <+797>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555555b4 <+800>:	movsx  edx,al
+   0x00005555555555b7 <+803>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555555bb <+807>:	add    rax,0x16
+   0x00005555555555bf <+811>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555555c2 <+814>:	movsx  eax,al
+   0x00005555555555c5 <+817>:	imul   eax,edx
+   0x00005555555555c8 <+820>:	cmp    eax,0x1710
+   0x00005555555555cd <+825>:	jne    0x5555555555d6 <check_flag+834>
+   0x00005555555555cf <+827>:	mov    eax,0x1
+   0x00005555555555d4 <+832>:	jmp    0x5555555555db <check_flag+839>
+   0x00005555555555d6 <+834>:	mov    eax,0x0
+   0x00005555555555db <+839>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555555de <+842>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555555e2 <+846>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555555e6 <+850>:	je     0x555555555614 <check_flag+896>
+   0x00005555555555e8 <+852>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555555ec <+856>:	add    rax,0x3
+   0x00005555555555f0 <+860>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555555f3 <+863>:	movsx  edx,al
+   0x00005555555555f6 <+866>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555555fa <+870>:	add    rax,0xc
+   0x00005555555555fe <+874>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555601 <+877>:	cmp    al,0x13
+   0x0000555555555603 <+879>:	sete   al
+   0x0000555555555606 <+882>:	movzx  eax,al
+   0x0000555555555609 <+885>:	cmp    edx,eax
+   0x000055555555560b <+887>:	je     0x555555555614 <check_flag+896>
+   0x000055555555560d <+889>:	mov    eax,0x1
+   0x0000555555555612 <+894>:	jmp    0x555555555619 <check_flag+901>
+   0x0000555555555614 <+896>:	mov    eax,0x0
+   0x0000555555555619 <+901>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555561c <+904>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555620 <+908>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555624 <+912>:	je     0x555555555652 <check_flag+958>
+   0x0000555555555626 <+914>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555562a <+918>:	add    rax,0x3
+   0x000055555555562e <+922>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555631 <+925>:	movsx  edx,al
+   0x0000555555555634 <+928>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555638 <+932>:	add    rax,0x18
+   0x000055555555563c <+936>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555563f <+939>:	movsx  eax,al
+   0x0000555555555642 <+942>:	add    eax,edx
+   0x0000555555555644 <+944>:	cmp    eax,0xe9
+   0x0000555555555649 <+949>:	jne    0x555555555652 <check_flag+958>
+   0x000055555555564b <+951>:	mov    eax,0x1
+   0x0000555555555650 <+956>:	jmp    0x555555555657 <check_flag+963>
+   0x0000555555555652 <+958>:	mov    eax,0x0
+   0x0000555555555657 <+963>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555565a <+966>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555565e <+970>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555662 <+974>:	je     0x555555555690 <check_flag+1020>
+   0x0000555555555664 <+976>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555668 <+980>:	add    rax,0x3
+   0x000055555555566c <+984>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555566f <+987>:	movsx  edx,al
+   0x0000555555555672 <+990>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555676 <+994>:	add    rax,0x13
+   0x000055555555567a <+998>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555567d <+1001>:	movsx  eax,al
+   0x0000555555555680 <+1004>:	add    eax,edx
+   0x0000555555555682 <+1006>:	cmp    eax,0xda
+   0x0000555555555687 <+1011>:	jne    0x555555555690 <check_flag+1020>
+   0x0000555555555689 <+1013>:	mov    eax,0x1
+   0x000055555555568e <+1018>:	jmp    0x555555555695 <check_flag+1025>
+   0x0000555555555690 <+1020>:	mov    eax,0x0
+   0x0000555555555695 <+1025>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555698 <+1028>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555569c <+1032>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555556a0 <+1036>:	je     0x5555555556cf <check_flag+1083>
+   0x00005555555556a2 <+1038>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555556a6 <+1042>:	add    rax,0x4
+   0x00005555555556aa <+1046>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555556ad <+1049>:	movsx  edx,al
+   0x00005555555556b0 <+1052>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555556b4 <+1056>:	add    rax,0xc
+   0x00005555555556b8 <+1060>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555556bb <+1063>:	movsx  eax,al
+   0x00005555555556be <+1066>:	imul   eax,edx
+   0x00005555555556c1 <+1069>:	cmp    eax,0x2e50
+   0x00005555555556c6 <+1074>:	jne    0x5555555556cf <check_flag+1083>
+   0x00005555555556c8 <+1076>:	mov    eax,0x1
+   0x00005555555556cd <+1081>:	jmp    0x5555555556d4 <check_flag+1088>
+   0x00005555555556cf <+1083>:	mov    eax,0x0
+   0x00005555555556d4 <+1088>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555556d7 <+1091>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555556db <+1095>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555556df <+1099>:	je     0x55555555570d <check_flag+1145>
+   0x00005555555556e1 <+1101>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555556e5 <+1105>:	add    rax,0x4
+   0x00005555555556e9 <+1109>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555556ec <+1112>:	movsx  edx,al
+   0x00005555555556ef <+1115>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555556f3 <+1119>:	add    rax,0x1d
+   0x00005555555556f7 <+1123>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555556fa <+1126>:	movsx  eax,al
+   0x00005555555556fd <+1129>:	add    eax,edx
+   0x00005555555556ff <+1131>:	cmp    eax,0xa5
+   0x0000555555555704 <+1136>:	jne    0x55555555570d <check_flag+1145>
+   0x0000555555555706 <+1138>:	mov    eax,0x1
+   0x000055555555570b <+1143>:	jmp    0x555555555712 <check_flag+1150>
+   0x000055555555570d <+1145>:	mov    eax,0x0
+   0x0000555555555712 <+1150>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555715 <+1153>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555719 <+1157>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555571d <+1161>:	je     0x55555555574c <check_flag+1208>
+   0x000055555555571f <+1163>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555723 <+1167>:	add    rax,0x4
+   0x0000555555555727 <+1171>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555572a <+1174>:	movsx  edx,al
+   0x000055555555572d <+1177>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555731 <+1181>:	add    rax,0x14
+   0x0000555555555735 <+1185>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555738 <+1188>:	movsx  eax,al
+   0x000055555555573b <+1191>:	imul   eax,edx
+   0x000055555555573e <+1194>:	cmp    eax,0x2b32
+   0x0000555555555743 <+1199>:	jne    0x55555555574c <check_flag+1208>
+   0x0000555555555745 <+1201>:	mov    eax,0x1
+   0x000055555555574a <+1206>:	jmp    0x555555555751 <check_flag+1213>
+   0x000055555555574c <+1208>:	mov    eax,0x0
+   0x0000555555555751 <+1213>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555754 <+1216>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555758 <+1220>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555575c <+1224>:	je     0x55555555578b <check_flag+1271>
+   0x000055555555575e <+1226>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555762 <+1230>:	add    rax,0x4
+   0x0000555555555766 <+1234>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555769 <+1237>:	movsx  edx,al
+   0x000055555555576c <+1240>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555770 <+1244>:	add    rax,0x5
+   0x0000555555555774 <+1248>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555777 <+1251>:	movsx  eax,al
+   0x000055555555577a <+1254>:	imul   eax,edx
+   0x000055555555577d <+1257>:	cmp    eax,0x1560
+   0x0000555555555782 <+1262>:	jne    0x55555555578b <check_flag+1271>
+   0x0000555555555784 <+1264>:	mov    eax,0x1
+   0x0000555555555789 <+1269>:	jmp    0x555555555790 <check_flag+1276>
+   0x000055555555578b <+1271>:	mov    eax,0x0
+   0x0000555555555790 <+1276>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555793 <+1279>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555797 <+1283>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555579b <+1287>:	je     0x5555555557c9 <check_flag+1333>
+   0x000055555555579d <+1289>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555557a1 <+1293>:	add    rax,0x5
+   0x00005555555557a5 <+1297>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555557a8 <+1300>:	movsx  edx,al
+   0x00005555555557ab <+1303>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555557af <+1307>:	add    rax,0x18
+   0x00005555555557b3 <+1311>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555557b6 <+1314>:	cmp    al,0x5e
+   0x00005555555557b8 <+1316>:	sete   al
+   0x00005555555557bb <+1319>:	movzx  eax,al
+   0x00005555555557be <+1322>:	cmp    edx,eax
+   0x00005555555557c0 <+1324>:	je     0x5555555557c9 <check_flag+1333>
+   0x00005555555557c2 <+1326>:	mov    eax,0x1
+   0x00005555555557c7 <+1331>:	jmp    0x5555555557ce <check_flag+1338>
+   0x00005555555557c9 <+1333>:	mov    eax,0x0
+   0x00005555555557ce <+1338>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555557d1 <+1341>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555557d5 <+1345>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555557d9 <+1349>:	je     0x555555555807 <check_flag+1395>
+   0x00005555555557db <+1351>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555557df <+1355>:	add    rax,0x5
+   0x00005555555557e3 <+1359>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555557e6 <+1362>:	movsx  edx,al
+   0x00005555555557e9 <+1365>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555557ed <+1369>:	add    rax,0x1
+   0x00005555555557f1 <+1373>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555557f4 <+1376>:	cmp    al,0x64
+   0x00005555555557f6 <+1378>:	sete   al
+   0x00005555555557f9 <+1381>:	movzx  eax,al
+   0x00005555555557fc <+1384>:	cmp    edx,eax
+   0x00005555555557fe <+1386>:	je     0x555555555807 <check_flag+1395>
+   0x0000555555555800 <+1388>:	mov    eax,0x1
+   0x0000555555555805 <+1393>:	jmp    0x55555555580c <check_flag+1400>
+   0x0000555555555807 <+1395>:	mov    eax,0x0
+   0x000055555555580c <+1400>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555580f <+1403>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555813 <+1407>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555817 <+1411>:	je     0x555555555845 <check_flag+1457>
+   0x0000555555555819 <+1413>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555581d <+1417>:	add    rax,0x5
+   0x0000555555555821 <+1421>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555824 <+1424>:	movsx  edx,al
+   0x0000555555555827 <+1427>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555582b <+1431>:	add    rax,0x22
+   0x000055555555582f <+1435>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555832 <+1438>:	movsx  eax,al
+   0x0000555555555835 <+1441>:	add    eax,edx
+   0x0000555555555837 <+1443>:	cmp    eax,0x9c
+   0x000055555555583c <+1448>:	jne    0x555555555845 <check_flag+1457>
+   0x000055555555583e <+1450>:	mov    eax,0x1
+   0x0000555555555843 <+1455>:	jmp    0x55555555584a <check_flag+1462>
+   0x0000555555555845 <+1457>:	mov    eax,0x0
+   0x000055555555584a <+1462>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555584d <+1465>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555851 <+1469>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555855 <+1473>:	je     0x555555555883 <check_flag+1519>
+   0x0000555555555857 <+1475>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555585b <+1479>:	add    rax,0x5
+   0x000055555555585f <+1483>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555862 <+1486>:	movsx  edx,al
+   0x0000555555555865 <+1489>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555869 <+1493>:	add    rax,0x24
+   0x000055555555586d <+1497>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555870 <+1500>:	cmp    al,0x4d
+   0x0000555555555872 <+1502>:	sete   al
+   0x0000555555555875 <+1505>:	movzx  eax,al
+   0x0000555555555878 <+1508>:	cmp    edx,eax
+   0x000055555555587a <+1510>:	je     0x555555555883 <check_flag+1519>
+   0x000055555555587c <+1512>:	mov    eax,0x1
+   0x0000555555555881 <+1517>:	jmp    0x555555555888 <check_flag+1524>
+   0x0000555555555883 <+1519>:	mov    eax,0x0
+   0x0000555555555888 <+1524>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555588b <+1527>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555588f <+1531>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555893 <+1535>:	je     0x5555555558c2 <check_flag+1582>
+   0x0000555555555895 <+1537>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555899 <+1541>:	add    rax,0x6
+   0x000055555555589d <+1545>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555558a0 <+1548>:	movsx  edx,al
+   0x00005555555558a3 <+1551>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555558a7 <+1555>:	add    rax,0xf
+   0x00005555555558ab <+1559>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555558ae <+1562>:	movsx  eax,al
+   0x00005555555558b1 <+1565>:	imul   eax,edx
+   0x00005555555558b4 <+1568>:	cmp    eax,0x2cdc
+   0x00005555555558b9 <+1573>:	jne    0x5555555558c2 <check_flag+1582>
+   0x00005555555558bb <+1575>:	mov    eax,0x1
+   0x00005555555558c0 <+1580>:	jmp    0x5555555558c7 <check_flag+1587>
+   0x00005555555558c2 <+1582>:	mov    eax,0x0
+   0x00005555555558c7 <+1587>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555558ca <+1590>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555558ce <+1594>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555558d2 <+1598>:	je     0x555555555900 <check_flag+1644>
+   0x00005555555558d4 <+1600>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555558d8 <+1604>:	add    rax,0x6
+   0x00005555555558dc <+1608>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555558df <+1611>:	movsx  edx,al
+   0x00005555555558e2 <+1614>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555558e6 <+1618>:	add    rax,0xe
+   0x00005555555558ea <+1622>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555558ed <+1625>:	movsx  eax,al
+   0x00005555555558f0 <+1628>:	add    eax,edx
+   0x00005555555558f2 <+1630>:	cmp    eax,0xd3
+   0x00005555555558f7 <+1635>:	jne    0x555555555900 <check_flag+1644>
+   0x00005555555558f9 <+1637>:	mov    eax,0x1
+   0x00005555555558fe <+1642>:	jmp    0x555555555905 <check_flag+1649>
+   0x0000555555555900 <+1644>:	mov    eax,0x0
+   0x0000555555555905 <+1649>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555908 <+1652>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555590c <+1656>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555910 <+1660>:	je     0x55555555593f <check_flag+1707>
+   0x0000555555555912 <+1662>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555916 <+1666>:	add    rax,0x6
+   0x000055555555591a <+1670>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555591d <+1673>:	movsx  edx,al
+   0x0000555555555920 <+1676>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555924 <+1680>:	add    rax,0x15
+   0x0000555555555928 <+1684>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555592b <+1687>:	movsx  eax,al
+   0x000055555555592e <+1690>:	imul   eax,edx
+   0x0000555555555931 <+1693>:	cmp    eax,0x33a8
+   0x0000555555555936 <+1698>:	jne    0x55555555593f <check_flag+1707>
+   0x0000555555555938 <+1700>:	mov    eax,0x1
+   0x000055555555593d <+1705>:	jmp    0x555555555944 <check_flag+1712>
+   0x000055555555593f <+1707>:	mov    eax,0x0
+   0x0000555555555944 <+1712>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555947 <+1715>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555594b <+1719>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555594f <+1723>:	je     0x55555555597d <check_flag+1769>
+   0x0000555555555951 <+1725>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555955 <+1729>:	add    rax,0x6
+   0x0000555555555959 <+1733>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555595c <+1736>:	movsx  edx,al
+   0x000055555555595f <+1739>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555963 <+1743>:	add    rax,0xa
+   0x0000555555555967 <+1747>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555596a <+1750>:	movsx  eax,al
+   0x000055555555596d <+1753>:	add    eax,edx
+   0x000055555555596f <+1755>:	cmp    eax,0xd3
+   0x0000555555555974 <+1760>:	jne    0x55555555597d <check_flag+1769>
+   0x0000555555555976 <+1762>:	mov    eax,0x1
+   0x000055555555597b <+1767>:	jmp    0x555555555982 <check_flag+1774>
+   0x000055555555597d <+1769>:	mov    eax,0x0
+   0x0000555555555982 <+1774>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555985 <+1777>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555989 <+1781>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555598d <+1785>:	je     0x5555555559bc <check_flag+1832>
+   0x000055555555598f <+1787>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555993 <+1791>:	add    rax,0x7
+   0x0000555555555997 <+1795>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555599a <+1798>:	movsx  edx,al
+   0x000055555555599d <+1801>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555559a1 <+1805>:	add    rax,0x8
+   0x00005555555559a5 <+1809>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555559a8 <+1812>:	movsx  eax,al
+   0x00005555555559ab <+1815>:	imul   eax,edx
+   0x00005555555559ae <+1818>:	cmp    eax,0x1790
+   0x00005555555559b3 <+1823>:	jne    0x5555555559bc <check_flag+1832>
+   0x00005555555559b5 <+1825>:	mov    eax,0x1
+   0x00005555555559ba <+1830>:	jmp    0x5555555559c1 <check_flag+1837>
+   0x00005555555559bc <+1832>:	mov    eax,0x0
+   0x00005555555559c1 <+1837>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555559c4 <+1840>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555559c8 <+1844>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555559cc <+1848>:	je     0x5555555559f8 <check_flag+1892>
+   0x00005555555559ce <+1850>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555559d2 <+1854>:	add    rax,0x7
+   0x00005555555559d6 <+1858>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555559d9 <+1861>:	movsx  edx,al
+   0x00005555555559dc <+1864>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555559e0 <+1868>:	add    rax,0x10
+   0x00005555555559e4 <+1872>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555559e7 <+1875>:	movsx  eax,al
+   0x00005555555559ea <+1878>:	add    eax,edx
+   0x00005555555559ec <+1880>:	cmp    eax,0x64
+   0x00005555555559ef <+1883>:	jne    0x5555555559f8 <check_flag+1892>
+   0x00005555555559f1 <+1885>:	mov    eax,0x1
+   0x00005555555559f6 <+1890>:	jmp    0x5555555559fd <check_flag+1897>
+   0x00005555555559f8 <+1892>:	mov    eax,0x0
+   0x00005555555559fd <+1897>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555a00 <+1900>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555a04 <+1904>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555a08 <+1908>:	je     0x555555555a32 <check_flag+1950>
+   0x0000555555555a0a <+1910>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555a0e <+1914>:	add    rax,0x7
+   0x0000555555555a12 <+1918>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555a15 <+1921>:	movsx  edx,al
+   0x0000555555555a18 <+1924>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555a1c <+1928>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555a1f <+1931>:	cmp    al,0x7c
+   0x0000555555555a21 <+1933>:	sete   al
+   0x0000555555555a24 <+1936>:	movzx  eax,al
+   0x0000555555555a27 <+1939>:	cmp    edx,eax
+   0x0000555555555a29 <+1941>:	je     0x555555555a32 <check_flag+1950>
+   0x0000555555555a2b <+1943>:	mov    eax,0x1
+   0x0000555555555a30 <+1948>:	jmp    0x555555555a37 <check_flag+1955>
+   0x0000555555555a32 <+1950>:	mov    eax,0x0
+   0x0000555555555a37 <+1955>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555a3a <+1958>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555a3e <+1962>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555a42 <+1966>:	je     0x555555555a6e <check_flag+2010>
+   0x0000555555555a44 <+1968>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555a48 <+1972>:	add    rax,0x7
+   0x0000555555555a4c <+1976>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555a4f <+1979>:	movsx  edx,al
+   0x0000555555555a52 <+1982>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555a56 <+1986>:	add    rax,0x5
+   0x0000555555555a5a <+1990>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555a5d <+1993>:	movsx  eax,al
+   0x0000555555555a60 <+1996>:	add    eax,edx
+   0x0000555555555a62 <+1998>:	cmp    eax,0x64
+   0x0000555555555a65 <+2001>:	jne    0x555555555a6e <check_flag+2010>
+   0x0000555555555a67 <+2003>:	mov    eax,0x1
+   0x0000555555555a6c <+2008>:	jmp    0x555555555a73 <check_flag+2015>
+   0x0000555555555a6e <+2010>:	mov    eax,0x0
+   0x0000555555555a73 <+2015>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555a76 <+2018>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555a7a <+2022>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555a7e <+2026>:	je     0x555555555aac <check_flag+2072>
+   0x0000555555555a80 <+2028>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555a84 <+2032>:	add    rax,0x8
+   0x0000555555555a88 <+2036>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555a8b <+2039>:	movsx  edx,al
+   0x0000555555555a8e <+2042>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555a92 <+2046>:	add    rax,0x1
+   0x0000555555555a96 <+2050>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555a99 <+2053>:	cmp    al,0x20
+   0x0000555555555a9b <+2055>:	sete   al
+   0x0000555555555a9e <+2058>:	movzx  eax,al
+   0x0000555555555aa1 <+2061>:	cmp    edx,eax
+   0x0000555555555aa3 <+2063>:	je     0x555555555aac <check_flag+2072>
+   0x0000555555555aa5 <+2065>:	mov    eax,0x1
+   0x0000555555555aaa <+2070>:	jmp    0x555555555ab1 <check_flag+2077>
+   0x0000555555555aac <+2072>:	mov    eax,0x0
+   0x0000555555555ab1 <+2077>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555ab4 <+2080>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555ab8 <+2084>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555abc <+2088>:	je     0x555555555aea <check_flag+2134>
+   0x0000555555555abe <+2090>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555ac2 <+2094>:	add    rax,0x8
+   0x0000555555555ac6 <+2098>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555ac9 <+2101>:	movsx  edx,al
+   0x0000555555555acc <+2104>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555ad0 <+2108>:	add    rax,0xe
+   0x0000555555555ad4 <+2112>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555ad7 <+2115>:	cmp    al,0x2b
+   0x0000555555555ad9 <+2117>:	sete   al
+   0x0000555555555adc <+2120>:	movzx  eax,al
+   0x0000555555555adf <+2123>:	cmp    edx,eax
+   0x0000555555555ae1 <+2125>:	je     0x555555555aea <check_flag+2134>
+   0x0000555555555ae3 <+2127>:	mov    eax,0x1
+   0x0000555555555ae8 <+2132>:	jmp    0x555555555aef <check_flag+2139>
+   0x0000555555555aea <+2134>:	mov    eax,0x0
+   0x0000555555555aef <+2139>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555af2 <+2142>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555af6 <+2146>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555afa <+2150>:	je     0x555555555b29 <check_flag+2197>
+   0x0000555555555afc <+2152>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555b00 <+2156>:	add    rax,0x8
+   0x0000555555555b04 <+2160>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555b07 <+2163>:	movsx  edx,al
+   0x0000555555555b0a <+2166>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555b0e <+2170>:	add    rax,0x18
+   0x0000555555555b12 <+2174>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555b15 <+2177>:	movsx  eax,al
+   0x0000555555555b18 <+2180>:	imul   eax,edx
+   0x0000555555555b1b <+2183>:	cmp    eax,0x31d8
+   0x0000555555555b20 <+2188>:	jne    0x555555555b29 <check_flag+2197>
+   0x0000555555555b22 <+2190>:	mov    eax,0x1
+   0x0000555555555b27 <+2195>:	jmp    0x555555555b2e <check_flag+2202>
+   0x0000555555555b29 <+2197>:	mov    eax,0x0
+   0x0000555555555b2e <+2202>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555b31 <+2205>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555b35 <+2209>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555b39 <+2213>:	je     0x555555555b67 <check_flag+2259>
+   0x0000555555555b3b <+2215>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555b3f <+2219>:	add    rax,0x8
+   0x0000555555555b43 <+2223>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555b46 <+2226>:	movsx  edx,al
+   0x0000555555555b49 <+2229>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555b4d <+2233>:	add    rax,0x21
+   0x0000555555555b51 <+2237>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555b54 <+2240>:	movsx  eax,al
+   0x0000555555555b57 <+2243>:	add    eax,edx
+   0x0000555555555b59 <+2245>:	cmp    eax,0xe6
+   0x0000555555555b5e <+2250>:	jne    0x555555555b67 <check_flag+2259>
+   0x0000555555555b60 <+2252>:	mov    eax,0x1
+   0x0000555555555b65 <+2257>:	jmp    0x555555555b6c <check_flag+2264>
+   0x0000555555555b67 <+2259>:	mov    eax,0x0
+   0x0000555555555b6c <+2264>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555b6f <+2267>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555b73 <+2271>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555b77 <+2275>:	je     0x555555555ba5 <check_flag+2321>
+   0x0000555555555b79 <+2277>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555b7d <+2281>:	add    rax,0x9
+   0x0000555555555b81 <+2285>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555b84 <+2288>:	movsx  edx,al
+   0x0000555555555b87 <+2291>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555b8b <+2295>:	add    rax,0x15
+   0x0000555555555b8f <+2299>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555b92 <+2302>:	movsx  eax,al
+   0x0000555555555b95 <+2305>:	add    eax,edx
+   0x0000555555555b97 <+2307>:	cmp    eax,0xa5
+   0x0000555555555b9c <+2312>:	jne    0x555555555ba5 <check_flag+2321>
+   0x0000555555555b9e <+2314>:	mov    eax,0x1
+   0x0000555555555ba3 <+2319>:	jmp    0x555555555baa <check_flag+2326>
+   0x0000555555555ba5 <+2321>:	mov    eax,0x0
+   0x0000555555555baa <+2326>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555bad <+2329>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555bb1 <+2333>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555bb5 <+2337>:	je     0x555555555be4 <check_flag+2384>
+   0x0000555555555bb7 <+2339>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555bbb <+2343>:	add    rax,0x9
+   0x0000555555555bbf <+2347>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555bc2 <+2350>:	movsx  edx,al
+   0x0000555555555bc5 <+2353>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555bc9 <+2357>:	add    rax,0x1e
+   0x0000555555555bcd <+2361>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555bd0 <+2364>:	movsx  eax,al
+   0x0000555555555bd3 <+2367>:	imul   eax,edx
+   0x0000555555555bd6 <+2370>:	cmp    eax,0x12ed
+   0x0000555555555bdb <+2375>:	jne    0x555555555be4 <check_flag+2384>
+   0x0000555555555bdd <+2377>:	mov    eax,0x1
+   0x0000555555555be2 <+2382>:	jmp    0x555555555be9 <check_flag+2389>
+   0x0000555555555be4 <+2384>:	mov    eax,0x0
+   0x0000555555555be9 <+2389>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555bec <+2392>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555bf0 <+2396>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555bf4 <+2400>:	je     0x555555555c23 <check_flag+2447>
+   0x0000555555555bf6 <+2402>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555bfa <+2406>:	add    rax,0x9
+   0x0000555555555bfe <+2410>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555c01 <+2413>:	movsx  edx,al
+   0x0000555555555c04 <+2416>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555c08 <+2420>:	add    rax,0x1d
+   0x0000555555555c0c <+2424>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555c0f <+2427>:	movsx  eax,al
+   0x0000555555555c12 <+2430>:	imul   eax,edx
+   0x0000555555555c15 <+2433>:	cmp    eax,0xa29
+   0x0000555555555c1a <+2438>:	jne    0x555555555c23 <check_flag+2447>
+   0x0000555555555c1c <+2440>:	mov    eax,0x1
+   0x0000555555555c21 <+2445>:	jmp    0x555555555c28 <check_flag+2452>
+   0x0000555555555c23 <+2447>:	mov    eax,0x0
+   0x0000555555555c28 <+2452>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555c2b <+2455>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555c2f <+2459>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555c33 <+2463>:	je     0x555555555c61 <check_flag+2509>
+   0x0000555555555c35 <+2465>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555c39 <+2469>:	add    rax,0x9
+   0x0000555555555c3d <+2473>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555c40 <+2476>:	movsx  edx,al
+   0x0000555555555c43 <+2479>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555c47 <+2483>:	add    rax,0x1b
+   0x0000555555555c4b <+2487>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555c4e <+2490>:	cmp    al,0x47
+   0x0000555555555c50 <+2492>:	sete   al
+   0x0000555555555c53 <+2495>:	movzx  eax,al
+   0x0000555555555c56 <+2498>:	cmp    edx,eax
+   0x0000555555555c58 <+2500>:	je     0x555555555c61 <check_flag+2509>
+   0x0000555555555c5a <+2502>:	mov    eax,0x1
+   0x0000555555555c5f <+2507>:	jmp    0x555555555c66 <check_flag+2514>
+   0x0000555555555c61 <+2509>:	mov    eax,0x0
+   0x0000555555555c66 <+2514>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555c69 <+2517>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555c6d <+2521>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555c71 <+2525>:	je     0x555555555ca0 <check_flag+2572>
+   0x0000555555555c73 <+2527>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555c77 <+2531>:	add    rax,0xa
+   0x0000555555555c7b <+2535>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555c7e <+2538>:	movsx  edx,al
+   0x0000555555555c81 <+2541>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555c85 <+2545>:	add    rax,0xc
+   0x0000555555555c89 <+2549>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555c8c <+2552>:	movsx  eax,al
+   0x0000555555555c8f <+2555>:	imul   eax,edx
+   0x0000555555555c92 <+2558>:	cmp    eax,0x2698
+   0x0000555555555c97 <+2563>:	jne    0x555555555ca0 <check_flag+2572>
+   0x0000555555555c99 <+2565>:	mov    eax,0x1
+   0x0000555555555c9e <+2570>:	jmp    0x555555555ca5 <check_flag+2577>
+   0x0000555555555ca0 <+2572>:	mov    eax,0x0
+   0x0000555555555ca5 <+2577>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555ca8 <+2580>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555cac <+2584>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555cb0 <+2588>:	je     0x555555555cde <check_flag+2634>
+   0x0000555555555cb2 <+2590>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555cb6 <+2594>:	add    rax,0xa
+   0x0000555555555cba <+2598>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555cbd <+2601>:	movsx  edx,al
+   0x0000555555555cc0 <+2604>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555cc4 <+2608>:	add    rax,0xb
+   0x0000555555555cc8 <+2612>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555ccb <+2615>:	cmp    al,0x2b
+   0x0000555555555ccd <+2617>:	sete   al
+   0x0000555555555cd0 <+2620>:	movzx  eax,al
+   0x0000555555555cd3 <+2623>:	cmp    edx,eax
+   0x0000555555555cd5 <+2625>:	je     0x555555555cde <check_flag+2634>
+   0x0000555555555cd7 <+2627>:	mov    eax,0x1
+   0x0000555555555cdc <+2632>:	jmp    0x555555555ce3 <check_flag+2639>
+   0x0000555555555cde <+2634>:	mov    eax,0x0
+   0x0000555555555ce3 <+2639>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555ce6 <+2642>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555cea <+2646>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555cee <+2650>:	je     0x555555555d1c <check_flag+2696>
+   0x0000555555555cf0 <+2652>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555cf4 <+2656>:	add    rax,0xa
+   0x0000555555555cf8 <+2660>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555cfb <+2663>:	movsx  edx,al
+   0x0000555555555cfe <+2666>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555d02 <+2670>:	add    rax,0x23
+   0x0000555555555d06 <+2674>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555d09 <+2677>:	cmp    al,0x3b
+   0x0000555555555d0b <+2679>:	sete   al
+   0x0000555555555d0e <+2682>:	movzx  eax,al
+   0x0000555555555d11 <+2685>:	cmp    edx,eax
+   0x0000555555555d13 <+2687>:	je     0x555555555d1c <check_flag+2696>
+   0x0000555555555d15 <+2689>:	mov    eax,0x1
+   0x0000555555555d1a <+2694>:	jmp    0x555555555d21 <check_flag+2701>
+   0x0000555555555d1c <+2696>:	mov    eax,0x0
+   0x0000555555555d21 <+2701>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555d24 <+2704>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555d28 <+2708>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555d2c <+2712>:	je     0x555555555d5b <check_flag+2759>
+   0x0000555555555d2e <+2714>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555d32 <+2718>:	add    rax,0xa
+   0x0000555555555d36 <+2722>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555d39 <+2725>:	movsx  edx,al
+   0x0000555555555d3c <+2728>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555d40 <+2732>:	add    rax,0x16
+   0x0000555555555d44 <+2736>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555d47 <+2739>:	movsx  eax,al
+   0x0000555555555d4a <+2742>:	imul   eax,edx
+   0x0000555555555d4d <+2745>:	cmp    eax,0x11d0
+   0x0000555555555d52 <+2750>:	jne    0x555555555d5b <check_flag+2759>
+   0x0000555555555d54 <+2752>:	mov    eax,0x1
+   0x0000555555555d59 <+2757>:	jmp    0x555555555d60 <check_flag+2764>
+   0x0000555555555d5b <+2759>:	mov    eax,0x0
+   0x0000555555555d60 <+2764>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555d63 <+2767>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555d67 <+2771>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555d6b <+2775>:	je     0x555555555d99 <check_flag+2821>
+   0x0000555555555d6d <+2777>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555d71 <+2781>:	add    rax,0xb
+   0x0000555555555d75 <+2785>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555d78 <+2788>:	movsx  edx,al
+   0x0000555555555d7b <+2791>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555d7f <+2795>:	add    rax,0x7
+   0x0000555555555d83 <+2799>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555d86 <+2802>:	movsx  eax,al
+   0x0000555555555d89 <+2805>:	add    eax,edx
+   0x0000555555555d8b <+2807>:	cmp    eax,0xa8
+   0x0000555555555d90 <+2812>:	jne    0x555555555d99 <check_flag+2821>
+   0x0000555555555d92 <+2814>:	mov    eax,0x1
+   0x0000555555555d97 <+2819>:	jmp    0x555555555d9e <check_flag+2826>
+   0x0000555555555d99 <+2821>:	mov    eax,0x0
+   0x0000555555555d9e <+2826>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555da1 <+2829>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555da5 <+2833>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555da9 <+2837>:	je     0x555555555dd8 <check_flag+2884>
+   0x0000555555555dab <+2839>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555daf <+2843>:	add    rax,0xb
+   0x0000555555555db3 <+2847>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555db6 <+2850>:	movsx  edx,al
+   0x0000555555555db9 <+2853>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555dbd <+2857>:	add    rax,0x13
+   0x0000555555555dc1 <+2861>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555dc4 <+2864>:	movsx  eax,al
+   0x0000555555555dc7 <+2867>:	imul   eax,edx
+   0x0000555555555dca <+2870>:	cmp    eax,0x2b0c
+   0x0000555555555dcf <+2875>:	jne    0x555555555dd8 <check_flag+2884>
+   0x0000555555555dd1 <+2877>:	mov    eax,0x1
+   0x0000555555555dd6 <+2882>:	jmp    0x555555555ddd <check_flag+2889>
+   0x0000555555555dd8 <+2884>:	mov    eax,0x0
+   0x0000555555555ddd <+2889>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555de0 <+2892>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555de4 <+2896>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555de8 <+2900>:	je     0x555555555e16 <check_flag+2946>
+   0x0000555555555dea <+2902>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555dee <+2906>:	add    rax,0xb
+   0x0000555555555df2 <+2910>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555df5 <+2913>:	movsx  edx,al
+   0x0000555555555df8 <+2916>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555dfc <+2920>:	add    rax,0x17
+   0x0000555555555e00 <+2924>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555e03 <+2927>:	cmp    al,0x1
+   0x0000555555555e05 <+2929>:	sete   al
+   0x0000555555555e08 <+2932>:	movzx  eax,al
+   0x0000555555555e0b <+2935>:	cmp    edx,eax
+   0x0000555555555e0d <+2937>:	je     0x555555555e16 <check_flag+2946>
+   0x0000555555555e0f <+2939>:	mov    eax,0x1
+   0x0000555555555e14 <+2944>:	jmp    0x555555555e1b <check_flag+2951>
+   0x0000555555555e16 <+2946>:	mov    eax,0x0
+   0x0000555555555e1b <+2951>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555e1e <+2954>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555e22 <+2958>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555e26 <+2962>:	je     0x555555555e54 <check_flag+3008>
+   0x0000555555555e28 <+2964>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555e2c <+2968>:	add    rax,0xb
+   0x0000555555555e30 <+2972>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555e33 <+2975>:	movsx  edx,al
+   0x0000555555555e36 <+2978>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555e3a <+2982>:	add    rax,0x5
+   0x0000555555555e3e <+2986>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555e41 <+2989>:	movsx  eax,al
+   0x0000555555555e44 <+2992>:	add    eax,edx
+   0x0000555555555e46 <+2994>:	cmp    eax,0xa4
+   0x0000555555555e4b <+2999>:	jne    0x555555555e54 <check_flag+3008>
+   0x0000555555555e4d <+3001>:	mov    eax,0x1
+   0x0000555555555e52 <+3006>:	jmp    0x555555555e59 <check_flag+3013>
+   0x0000555555555e54 <+3008>:	mov    eax,0x0
+   0x0000555555555e59 <+3013>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555e5c <+3016>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555e60 <+3020>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555e64 <+3024>:	je     0x555555555e92 <check_flag+3070>
+   0x0000555555555e66 <+3026>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555e6a <+3030>:	add    rax,0xc
+   0x0000555555555e6e <+3034>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555e71 <+3037>:	movsx  edx,al
+   0x0000555555555e74 <+3040>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555e78 <+3044>:	add    rax,0x14
+   0x0000555555555e7c <+3048>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555e7f <+3051>:	cmp    al,0x9
+   0x0000555555555e81 <+3053>:	sete   al
+   0x0000555555555e84 <+3056>:	movzx  eax,al
+   0x0000555555555e87 <+3059>:	cmp    edx,eax
+   0x0000555555555e89 <+3061>:	je     0x555555555e92 <check_flag+3070>
+   0x0000555555555e8b <+3063>:	mov    eax,0x1
+   0x0000555555555e90 <+3068>:	jmp    0x555555555e97 <check_flag+3075>
+   0x0000555555555e92 <+3070>:	mov    eax,0x0
+   0x0000555555555e97 <+3075>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555e9a <+3078>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555e9e <+3082>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555ea2 <+3086>:	je     0x555555555ed1 <check_flag+3133>
+   0x0000555555555ea4 <+3088>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555ea8 <+3092>:	add    rax,0xc
+   0x0000555555555eac <+3096>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555eaf <+3099>:	movsx  edx,al
+   0x0000555555555eb2 <+3102>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555eb6 <+3106>:	add    rax,0x9
+   0x0000555555555eba <+3110>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555ebd <+3113>:	movsx  eax,al
+   0x0000555555555ec0 <+3116>:	imul   eax,edx
+   0x0000555555555ec3 <+3119>:	cmp    eax,0x14b8
+   0x0000555555555ec8 <+3124>:	jne    0x555555555ed1 <check_flag+3133>
+   0x0000555555555eca <+3126>:	mov    eax,0x1
+   0x0000555555555ecf <+3131>:	jmp    0x555555555ed6 <check_flag+3138>
+   0x0000555555555ed1 <+3133>:	mov    eax,0x0
+   0x0000555555555ed6 <+3138>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555ed9 <+3141>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555edd <+3145>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555ee1 <+3149>:	je     0x555555555f10 <check_flag+3196>
+   0x0000555555555ee3 <+3151>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555ee7 <+3155>:	add    rax,0xc
+   0x0000555555555eeb <+3159>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555eee <+3162>:	movsx  edx,al
+   0x0000555555555ef1 <+3165>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555ef5 <+3169>:	add    rax,0x1d
+   0x0000555555555ef9 <+3173>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555efc <+3176>:	movsx  eax,al
+   0x0000555555555eff <+3179>:	imul   eax,edx
+   0x0000555555555f02 <+3182>:	cmp    eax,0x14b8
+   0x0000555555555f07 <+3187>:	jne    0x555555555f10 <check_flag+3196>
+   0x0000555555555f09 <+3189>:	mov    eax,0x1
+   0x0000555555555f0e <+3194>:	jmp    0x555555555f15 <check_flag+3201>
+   0x0000555555555f10 <+3196>:	mov    eax,0x0
+   0x0000555555555f15 <+3201>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555f18 <+3204>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555f1c <+3208>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555f20 <+3212>:	je     0x555555555f4e <check_flag+3258>
+   0x0000555555555f22 <+3214>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555f26 <+3218>:	add    rax,0xc
+   0x0000555555555f2a <+3222>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555f2d <+3225>:	movsx  edx,al
+   0x0000555555555f30 <+3228>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555f34 <+3232>:	add    rax,0x23
+   0x0000555555555f38 <+3236>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555f3b <+3239>:	movsx  eax,al
+   0x0000555555555f3e <+3242>:	add    eax,edx
+   0x0000555555555f40 <+3244>:	cmp    eax,0xcc
+   0x0000555555555f45 <+3249>:	jne    0x555555555f4e <check_flag+3258>
+   0x0000555555555f47 <+3251>:	mov    eax,0x1
+   0x0000555555555f4c <+3256>:	jmp    0x555555555f53 <check_flag+3263>
+   0x0000555555555f4e <+3258>:	mov    eax,0x0
+   0x0000555555555f53 <+3263>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555f56 <+3266>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555f5a <+3270>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555f5e <+3274>:	je     0x555555555f8c <check_flag+3320>
+   0x0000555555555f60 <+3276>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555f64 <+3280>:	add    rax,0xd
+   0x0000555555555f68 <+3284>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555f6b <+3287>:	movsx  edx,al
+   0x0000555555555f6e <+3290>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555f72 <+3294>:	add    rax,0x3
+   0x0000555555555f76 <+3298>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555f79 <+3301>:	cmp    al,0x48
+   0x0000555555555f7b <+3303>:	sete   al
+   0x0000555555555f7e <+3306>:	movzx  eax,al
+   0x0000555555555f81 <+3309>:	cmp    edx,eax
+   0x0000555555555f83 <+3311>:	je     0x555555555f8c <check_flag+3320>
+   0x0000555555555f85 <+3313>:	mov    eax,0x1
+   0x0000555555555f8a <+3318>:	jmp    0x555555555f91 <check_flag+3325>
+   0x0000555555555f8c <+3320>:	mov    eax,0x0
+   0x0000555555555f91 <+3325>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555f94 <+3328>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555f98 <+3332>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555f9c <+3336>:	je     0x555555555fcb <check_flag+3383>
+   0x0000555555555f9e <+3338>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555fa2 <+3342>:	add    rax,0xd
+   0x0000555555555fa6 <+3346>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555fa9 <+3349>:	movsx  edx,al
+   0x0000555555555fac <+3352>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555fb0 <+3356>:	add    rax,0x10
+   0x0000555555555fb4 <+3360>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555fb7 <+3363>:	movsx  eax,al
+   0x0000555555555fba <+3366>:	imul   eax,edx
+   0x0000555555555fbd <+3369>:	cmp    eax,0x990
+   0x0000555555555fc2 <+3374>:	jne    0x555555555fcb <check_flag+3383>
+   0x0000555555555fc4 <+3376>:	mov    eax,0x1
+   0x0000555555555fc9 <+3381>:	jmp    0x555555555fd0 <check_flag+3388>
+   0x0000555555555fcb <+3383>:	mov    eax,0x0
+   0x0000555555555fd0 <+3388>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555555fd3 <+3391>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555555fd7 <+3395>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555555fdb <+3399>:	je     0x55555555600a <check_flag+3446>
+   0x0000555555555fdd <+3401>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555fe1 <+3405>:	add    rax,0xd
+   0x0000555555555fe5 <+3409>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555fe8 <+3412>:	movsx  edx,al
+   0x0000555555555feb <+3415>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555555fef <+3419>:	add    rax,0x19
+   0x0000555555555ff3 <+3423>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555555ff6 <+3426>:	movsx  eax,al
+   0x0000555555555ff9 <+3429>:	imul   eax,edx
+   0x0000555555555ffc <+3432>:	cmp    eax,0x13ec
+   0x0000555555556001 <+3437>:	jne    0x55555555600a <check_flag+3446>
+   0x0000555555556003 <+3439>:	mov    eax,0x1
+   0x0000555555556008 <+3444>:	jmp    0x55555555600f <check_flag+3451>
+   0x000055555555600a <+3446>:	mov    eax,0x0
+   0x000055555555600f <+3451>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556012 <+3454>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556016 <+3458>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555601a <+3462>:	je     0x555555556048 <check_flag+3508>
+   0x000055555555601c <+3464>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556020 <+3468>:	add    rax,0xd
+   0x0000555555556024 <+3472>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556027 <+3475>:	movsx  edx,al
+   0x000055555555602a <+3478>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555602e <+3482>:	add    rax,0x1b
+   0x0000555555556032 <+3486>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556035 <+3489>:	movsx  eax,al
+   0x0000555555556038 <+3492>:	add    eax,edx
+   0x000055555555603a <+3494>:	cmp    eax,0xa7
+   0x000055555555603f <+3499>:	jne    0x555555556048 <check_flag+3508>
+   0x0000555555556041 <+3501>:	mov    eax,0x1
+   0x0000555555556046 <+3506>:	jmp    0x55555555604d <check_flag+3513>
+   0x0000555555556048 <+3508>:	mov    eax,0x0
+   0x000055555555604d <+3513>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556050 <+3516>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556054 <+3520>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556058 <+3524>:	je     0x555555556086 <check_flag+3570>
+   0x000055555555605a <+3526>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555605e <+3530>:	add    rax,0xe
+   0x0000555555556062 <+3534>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556065 <+3537>:	movsx  edx,al
+   0x0000555555556068 <+3540>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555606c <+3544>:	add    rax,0x15
+   0x0000555555556070 <+3548>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556073 <+3551>:	cmp    al,0x2d
+   0x0000555555556075 <+3553>:	sete   al
+   0x0000555555556078 <+3556>:	movzx  eax,al
+   0x000055555555607b <+3559>:	cmp    edx,eax
+   0x000055555555607d <+3561>:	je     0x555555556086 <check_flag+3570>
+   0x000055555555607f <+3563>:	mov    eax,0x1
+   0x0000555555556084 <+3568>:	jmp    0x55555555608b <check_flag+3575>
+   0x0000555555556086 <+3570>:	mov    eax,0x0
+   0x000055555555608b <+3575>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555608e <+3578>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556092 <+3582>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556096 <+3586>:	je     0x5555555560c4 <check_flag+3632>
+   0x0000555555556098 <+3588>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555609c <+3592>:	add    rax,0xe
+   0x00005555555560a0 <+3596>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555560a3 <+3599>:	movsx  edx,al
+   0x00005555555560a6 <+3602>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555560aa <+3606>:	add    rax,0x9
+   0x00005555555560ae <+3610>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555560b1 <+3613>:	movsx  eax,al
+   0x00005555555560b4 <+3616>:	add    eax,edx
+   0x00005555555560b6 <+3618>:	cmp    eax,0x92
+   0x00005555555560bb <+3623>:	jne    0x5555555560c4 <check_flag+3632>
+   0x00005555555560bd <+3625>:	mov    eax,0x1
+   0x00005555555560c2 <+3630>:	jmp    0x5555555560c9 <check_flag+3637>
+   0x00005555555560c4 <+3632>:	mov    eax,0x0
+   0x00005555555560c9 <+3637>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555560cc <+3640>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555560d0 <+3644>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555560d4 <+3648>:	je     0x555555556103 <check_flag+3695>
+   0x00005555555560d6 <+3650>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555560da <+3654>:	add    rax,0xe
+   0x00005555555560de <+3658>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555560e1 <+3661>:	movsx  edx,al
+   0x00005555555560e4 <+3664>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555560e8 <+3668>:	add    rax,0x11
+   0x00005555555560ec <+3672>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555560ef <+3675>:	movsx  eax,al
+   0x00005555555560f2 <+3678>:	imul   eax,edx
+   0x00005555555560f5 <+3681>:	cmp    eax,0x251c
+   0x00005555555560fa <+3686>:	jne    0x555555556103 <check_flag+3695>
+   0x00005555555560fc <+3688>:	mov    eax,0x1
+   0x0000555555556101 <+3693>:	jmp    0x555555556108 <check_flag+3700>
+   0x0000555555556103 <+3695>:	mov    eax,0x0
+   0x0000555555556108 <+3700>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555610b <+3703>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555610f <+3707>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556113 <+3711>:	je     0x555555556141 <check_flag+3757>
+   0x0000555555556115 <+3713>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556119 <+3717>:	add    rax,0xe
+   0x000055555555611d <+3721>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556120 <+3724>:	movsx  edx,al
+   0x0000555555556123 <+3727>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556127 <+3731>:	add    rax,0x13
+   0x000055555555612b <+3735>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555612e <+3738>:	movsx  eax,al
+   0x0000555555556131 <+3741>:	add    eax,edx
+   0x0000555555556133 <+3743>:	cmp    eax,0xbe
+   0x0000555555556138 <+3748>:	jne    0x555555556141 <check_flag+3757>
+   0x000055555555613a <+3750>:	mov    eax,0x1
+   0x000055555555613f <+3755>:	jmp    0x555555556146 <check_flag+3762>
+   0x0000555555556141 <+3757>:	mov    eax,0x0
+   0x0000555555556146 <+3762>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556149 <+3765>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555614d <+3769>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556151 <+3773>:	je     0x55555555617f <check_flag+3819>
+   0x0000555555556153 <+3775>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556157 <+3779>:	add    rax,0xf
+   0x000055555555615b <+3783>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555615e <+3786>:	movsx  edx,al
+   0x0000555555556161 <+3789>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556165 <+3793>:	add    rax,0x6
+   0x0000555555556169 <+3797>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555616c <+3800>:	movsx  eax,al
+   0x000055555555616f <+3803>:	add    eax,edx
+   0x0000555555556171 <+3805>:	cmp    eax,0xd7
+   0x0000555555556176 <+3810>:	jne    0x55555555617f <check_flag+3819>
+   0x0000555555556178 <+3812>:	mov    eax,0x1
+   0x000055555555617d <+3817>:	jmp    0x555555556184 <check_flag+3824>
+   0x000055555555617f <+3819>:	mov    eax,0x0
+   0x0000555555556184 <+3824>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556187 <+3827>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555618b <+3831>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555618f <+3835>:	je     0x5555555561bd <check_flag+3881>
+   0x0000555555556191 <+3837>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556195 <+3841>:	add    rax,0xf
+   0x0000555555556199 <+3845>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555619c <+3848>:	movsx  edx,al
+   0x000055555555619f <+3851>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555561a3 <+3855>:	add    rax,0xc
+   0x00005555555561a7 <+3859>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555561aa <+3862>:	cmp    al,0xb
+   0x00005555555561ac <+3864>:	sete   al
+   0x00005555555561af <+3867>:	movzx  eax,al
+   0x00005555555561b2 <+3870>:	cmp    edx,eax
+   0x00005555555561b4 <+3872>:	je     0x5555555561bd <check_flag+3881>
+   0x00005555555561b6 <+3874>:	mov    eax,0x1
+   0x00005555555561bb <+3879>:	jmp    0x5555555561c2 <check_flag+3886>
+   0x00005555555561bd <+3881>:	mov    eax,0x0
+   0x00005555555561c2 <+3886>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555561c5 <+3889>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555561c9 <+3893>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555561cd <+3897>:	je     0x5555555561fb <check_flag+3943>
+   0x00005555555561cf <+3899>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555561d3 <+3903>:	add    rax,0xf
+   0x00005555555561d7 <+3907>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555561da <+3910>:	movsx  edx,al
+   0x00005555555561dd <+3913>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555561e1 <+3917>:	add    rax,0x1f
+   0x00005555555561e5 <+3921>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555561e8 <+3924>:	movsx  eax,al
+   0x00005555555561eb <+3927>:	add    eax,edx
+   0x00005555555561ed <+3929>:	cmp    eax,0xda
+   0x00005555555561f2 <+3934>:	jne    0x5555555561fb <check_flag+3943>
+   0x00005555555561f4 <+3936>:	mov    eax,0x1
+   0x00005555555561f9 <+3941>:	jmp    0x555555556200 <check_flag+3948>
+   0x00005555555561fb <+3943>:	mov    eax,0x0
+   0x0000555555556200 <+3948>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556203 <+3951>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556207 <+3955>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555620b <+3959>:	je     0x555555556239 <check_flag+4005>
+   0x000055555555620d <+3961>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556211 <+3965>:	add    rax,0xf
+   0x0000555555556215 <+3969>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556218 <+3972>:	movsx  edx,al
+   0x000055555555621b <+3975>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555621f <+3979>:	add    rax,0x1d
+   0x0000555555556223 <+3983>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556226 <+3986>:	movsx  eax,al
+   0x0000555555556229 <+3989>:	add    eax,edx
+   0x000055555555622b <+3991>:	cmp    eax,0x96
+   0x0000555555556230 <+3996>:	jne    0x555555556239 <check_flag+4005>
+   0x0000555555556232 <+3998>:	mov    eax,0x1
+   0x0000555555556237 <+4003>:	jmp    0x55555555623e <check_flag+4010>
+   0x0000555555556239 <+4005>:	mov    eax,0x0
+   0x000055555555623e <+4010>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556241 <+4013>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556245 <+4017>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556249 <+4021>:	je     0x555555556277 <check_flag+4067>
+   0x000055555555624b <+4023>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555624f <+4027>:	add    rax,0x10
+   0x0000555555556253 <+4031>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556256 <+4034>:	movsx  edx,al
+   0x0000555555556259 <+4037>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555625d <+4041>:	add    rax,0x1f
+   0x0000555555556261 <+4045>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556264 <+4048>:	movsx  eax,al
+   0x0000555555556267 <+4051>:	add    eax,edx
+   0x0000555555556269 <+4053>:	cmp    eax,0xa7
+   0x000055555555626e <+4058>:	jne    0x555555556277 <check_flag+4067>
+   0x0000555555556270 <+4060>:	mov    eax,0x1
+   0x0000555555556275 <+4065>:	jmp    0x55555555627c <check_flag+4072>
+   0x0000555555556277 <+4067>:	mov    eax,0x0
+   0x000055555555627c <+4072>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555627f <+4075>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556283 <+4079>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556287 <+4083>:	je     0x5555555562b5 <check_flag+4129>
+   0x0000555555556289 <+4085>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555628d <+4089>:	add    rax,0x10
+   0x0000555555556291 <+4093>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556294 <+4096>:	movsx  edx,al
+   0x0000555555556297 <+4099>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555629b <+4103>:	add    rax,0x21
+   0x000055555555629f <+4107>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555562a2 <+4110>:	cmp    al,0x42
+   0x00005555555562a4 <+4112>:	sete   al
+   0x00005555555562a7 <+4115>:	movzx  eax,al
+   0x00005555555562aa <+4118>:	cmp    edx,eax
+   0x00005555555562ac <+4120>:	je     0x5555555562b5 <check_flag+4129>
+   0x00005555555562ae <+4122>:	mov    eax,0x1
+   0x00005555555562b3 <+4127>:	jmp    0x5555555562ba <check_flag+4134>
+   0x00005555555562b5 <+4129>:	mov    eax,0x0
+   0x00005555555562ba <+4134>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555562bd <+4137>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555562c1 <+4141>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555562c5 <+4145>:	je     0x5555555562f3 <check_flag+4191>
+   0x00005555555562c7 <+4147>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555562cb <+4151>:	add    rax,0x10
+   0x00005555555562cf <+4155>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555562d2 <+4158>:	movsx  edx,al
+   0x00005555555562d5 <+4161>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555562d9 <+4165>:	add    rax,0x22
+   0x00005555555562dd <+4169>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555562e0 <+4172>:	movsx  eax,al
+   0x00005555555562e3 <+4175>:	add    eax,edx
+   0x00005555555562e5 <+4177>:	cmp    eax,0x9c
+   0x00005555555562ea <+4182>:	jne    0x5555555562f3 <check_flag+4191>
+   0x00005555555562ec <+4184>:	mov    eax,0x1
+   0x00005555555562f1 <+4189>:	jmp    0x5555555562f8 <check_flag+4196>
+   0x00005555555562f3 <+4191>:	mov    eax,0x0
+   0x00005555555562f8 <+4196>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555562fb <+4199>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555562ff <+4203>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556303 <+4207>:	je     0x555555556332 <check_flag+4254>
+   0x0000555555556305 <+4209>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556309 <+4213>:	add    rax,0x10
+   0x000055555555630d <+4217>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556310 <+4220>:	movsx  edx,al
+   0x0000555555556313 <+4223>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556317 <+4227>:	add    rax,0xb
+   0x000055555555631b <+4231>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555631e <+4234>:	movsx  eax,al
+   0x0000555555556321 <+4237>:	imul   eax,edx
+   0x0000555555556324 <+4240>:	cmp    eax,0x15c0
+   0x0000555555556329 <+4245>:	jne    0x555555556332 <check_flag+4254>
+   0x000055555555632b <+4247>:	mov    eax,0x1
+   0x0000555555556330 <+4252>:	jmp    0x555555556337 <check_flag+4259>
+   0x0000555555556332 <+4254>:	mov    eax,0x0
+   0x0000555555556337 <+4259>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555633a <+4262>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555633e <+4266>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556342 <+4270>:	je     0x555555556370 <check_flag+4316>
+   0x0000555555556344 <+4272>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556348 <+4276>:	add    rax,0x11
+   0x000055555555634c <+4280>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555634f <+4283>:	movsx  edx,al
+   0x0000555555556352 <+4286>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556356 <+4290>:	add    rax,0x24
+   0x000055555555635a <+4294>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555635d <+4297>:	movsx  eax,al
+   0x0000555555556360 <+4300>:	add    eax,edx
+   0x0000555555556362 <+4302>:	cmp    eax,0xe1
+   0x0000555555556367 <+4307>:	jne    0x555555556370 <check_flag+4316>
+   0x0000555555556369 <+4309>:	mov    eax,0x1
+   0x000055555555636e <+4314>:	jmp    0x555555556375 <check_flag+4321>
+   0x0000555555556370 <+4316>:	mov    eax,0x0
+   0x0000555555556375 <+4321>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556378 <+4324>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555637c <+4328>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556380 <+4332>:	je     0x5555555563ae <check_flag+4378>
+   0x0000555555556382 <+4334>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556386 <+4338>:	add    rax,0x11
+   0x000055555555638a <+4342>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555638d <+4345>:	movsx  edx,al
+   0x0000555555556390 <+4348>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556394 <+4352>:	add    rax,0x12
+   0x0000555555556398 <+4356>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555639b <+4359>:	movsx  eax,al
+   0x000055555555639e <+4362>:	add    eax,edx
+   0x00005555555563a0 <+4364>:	cmp    eax,0x97
+   0x00005555555563a5 <+4369>:	jne    0x5555555563ae <check_flag+4378>
+   0x00005555555563a7 <+4371>:	mov    eax,0x1
+   0x00005555555563ac <+4376>:	jmp    0x5555555563b3 <check_flag+4383>
+   0x00005555555563ae <+4378>:	mov    eax,0x0
+   0x00005555555563b3 <+4383>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555563b6 <+4386>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555563ba <+4390>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555563be <+4394>:	je     0x5555555563ec <check_flag+4440>
+   0x00005555555563c0 <+4396>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555563c4 <+4400>:	add    rax,0x11
+   0x00005555555563c8 <+4404>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555563cb <+4407>:	movsx  edx,al
+   0x00005555555563ce <+4410>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555563d2 <+4414>:	add    rax,0x1d
+   0x00005555555563d6 <+4418>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555563d9 <+4421>:	movsx  eax,al
+   0x00005555555563dc <+4424>:	add    eax,edx
+   0x00005555555563de <+4426>:	cmp    eax,0x97
+   0x00005555555563e3 <+4431>:	jne    0x5555555563ec <check_flag+4440>
+   0x00005555555563e5 <+4433>:	mov    eax,0x1
+   0x00005555555563ea <+4438>:	jmp    0x5555555563f1 <check_flag+4445>
+   0x00005555555563ec <+4440>:	mov    eax,0x0
+   0x00005555555563f1 <+4445>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555563f4 <+4448>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555563f8 <+4452>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555563fc <+4456>:	je     0x55555555642a <check_flag+4502>
+   0x00005555555563fe <+4458>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556402 <+4462>:	add    rax,0x11
+   0x0000555555556406 <+4466>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556409 <+4469>:	movsx  edx,al
+   0x000055555555640c <+4472>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556410 <+4476>:	add    rax,0x1e
+   0x0000555555556414 <+4480>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556417 <+4483>:	movsx  eax,al
+   0x000055555555641a <+4486>:	add    eax,edx
+   0x000055555555641c <+4488>:	cmp    eax,0xc3
+   0x0000555555556421 <+4493>:	jne    0x55555555642a <check_flag+4502>
+   0x0000555555556423 <+4495>:	mov    eax,0x1
+   0x0000555555556428 <+4500>:	jmp    0x55555555642f <check_flag+4507>
+   0x000055555555642a <+4502>:	mov    eax,0x0
+   0x000055555555642f <+4507>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556432 <+4510>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556436 <+4514>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555643a <+4518>:	je     0x555555556468 <check_flag+4564>
+   0x000055555555643c <+4520>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556440 <+4524>:	add    rax,0x12
+   0x0000555555556444 <+4528>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556447 <+4531>:	movsx  edx,al
+   0x000055555555644a <+4534>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555644e <+4538>:	add    rax,0xe
+   0x0000555555556452 <+4542>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556455 <+4545>:	movsx  eax,al
+   0x0000555555556458 <+4548>:	add    eax,edx
+   0x000055555555645a <+4550>:	cmp    eax,0x92
+   0x000055555555645f <+4555>:	jne    0x555555556468 <check_flag+4564>
+   0x0000555555556461 <+4557>:	mov    eax,0x1
+   0x0000555555556466 <+4562>:	jmp    0x55555555646d <check_flag+4569>
+   0x0000555555556468 <+4564>:	mov    eax,0x0
+   0x000055555555646d <+4569>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556470 <+4572>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556474 <+4576>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556478 <+4580>:	je     0x5555555564a7 <check_flag+4627>
+   0x000055555555647a <+4582>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555647e <+4586>:	add    rax,0x12
+   0x0000555555556482 <+4590>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556485 <+4593>:	movsx  edx,al
+   0x0000555555556488 <+4596>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555648c <+4600>:	add    rax,0x5
+   0x0000555555556490 <+4604>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556493 <+4607>:	movsx  eax,al
+   0x0000555555556496 <+4610>:	imul   eax,edx
+   0x0000555555556499 <+4613>:	cmp    eax,0x990
+   0x000055555555649e <+4618>:	jne    0x5555555564a7 <check_flag+4627>
+   0x00005555555564a0 <+4620>:	mov    eax,0x1
+   0x00005555555564a5 <+4625>:	jmp    0x5555555564ac <check_flag+4632>
+   0x00005555555564a7 <+4627>:	mov    eax,0x0
+   0x00005555555564ac <+4632>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555564af <+4635>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555564b3 <+4639>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555564b7 <+4643>:	je     0x5555555564e5 <check_flag+4689>
+   0x00005555555564b9 <+4645>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555564bd <+4649>:	add    rax,0x12
+   0x00005555555564c1 <+4653>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555564c4 <+4656>:	movsx  edx,al
+   0x00005555555564c7 <+4659>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555564cb <+4663>:	add    rax,0x1a
+   0x00005555555564cf <+4667>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555564d2 <+4670>:	movsx  eax,al
+   0x00005555555564d5 <+4673>:	add    eax,edx
+   0x00005555555564d7 <+4675>:	cmp    eax,0x92
+   0x00005555555564dc <+4680>:	jne    0x5555555564e5 <check_flag+4689>
+   0x00005555555564de <+4682>:	mov    eax,0x1
+   0x00005555555564e3 <+4687>:	jmp    0x5555555564ea <check_flag+4694>
+   0x00005555555564e5 <+4689>:	mov    eax,0x0
+   0x00005555555564ea <+4694>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555564ed <+4697>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555564f1 <+4701>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555564f5 <+4705>:	je     0x555555556523 <check_flag+4751>
+   0x00005555555564f7 <+4707>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555564fb <+4711>:	add    rax,0x12
+   0x00005555555564ff <+4715>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556502 <+4718>:	movsx  edx,al
+   0x0000555555556505 <+4721>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556509 <+4725>:	add    rax,0x3
+   0x000055555555650d <+4729>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556510 <+4732>:	movsx  eax,al
+   0x0000555555556513 <+4735>:	add    eax,edx
+   0x0000555555556515 <+4737>:	cmp    eax,0xae
+   0x000055555555651a <+4742>:	jne    0x555555556523 <check_flag+4751>
+   0x000055555555651c <+4744>:	mov    eax,0x1
+   0x0000555555556521 <+4749>:	jmp    0x555555556528 <check_flag+4756>
+   0x0000555555556523 <+4751>:	mov    eax,0x0
+   0x0000555555556528 <+4756>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555652b <+4759>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555652f <+4763>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556533 <+4767>:	je     0x555555556562 <check_flag+4814>
+   0x0000555555556535 <+4769>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556539 <+4773>:	add    rax,0x13
+   0x000055555555653d <+4777>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556540 <+4780>:	movsx  edx,al
+   0x0000555555556543 <+4783>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556547 <+4787>:	add    rax,0x1f
+   0x000055555555654b <+4791>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555654e <+4794>:	movsx  eax,al
+   0x0000555555556551 <+4797>:	imul   eax,edx
+   0x0000555555556554 <+4800>:	cmp    eax,0x2c29
+   0x0000555555556559 <+4805>:	jne    0x555555556562 <check_flag+4814>
+   0x000055555555655b <+4807>:	mov    eax,0x1
+   0x0000555555556560 <+4812>:	jmp    0x555555556567 <check_flag+4819>
+   0x0000555555556562 <+4814>:	mov    eax,0x0
+   0x0000555555556567 <+4819>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555656a <+4822>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555656e <+4826>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556572 <+4830>:	je     0x5555555565a1 <check_flag+4877>
+   0x0000555555556574 <+4832>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556578 <+4836>:	add    rax,0x13
+   0x000055555555657c <+4840>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555657f <+4843>:	movsx  edx,al
+   0x0000555555556582 <+4846>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556586 <+4850>:	add    rax,0x22
+   0x000055555555658a <+4854>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555658d <+4857>:	movsx  eax,al
+   0x0000555555556590 <+4860>:	imul   eax,edx
+   0x0000555555556593 <+4863>:	cmp    eax,0x2814
+   0x0000555555556598 <+4868>:	jne    0x5555555565a1 <check_flag+4877>
+   0x000055555555659a <+4870>:	mov    eax,0x1
+   0x000055555555659f <+4875>:	jmp    0x5555555565a6 <check_flag+4882>
+   0x00005555555565a1 <+4877>:	mov    eax,0x0
+   0x00005555555565a6 <+4882>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555565a9 <+4885>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555565ad <+4889>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555565b1 <+4893>:	je     0x5555555565df <check_flag+4939>
+   0x00005555555565b3 <+4895>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555565b7 <+4899>:	add    rax,0x13
+   0x00005555555565bb <+4903>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555565be <+4906>:	movsx  edx,al
+   0x00005555555565c1 <+4909>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555565c5 <+4913>:	add    rax,0x24
+   0x00005555555565c9 <+4917>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555565cc <+4920>:	movsx  eax,al
+   0x00005555555565cf <+4923>:	add    eax,edx
+   0x00005555555565d1 <+4925>:	cmp    eax,0xdc
+   0x00005555555565d6 <+4930>:	jne    0x5555555565df <check_flag+4939>
+   0x00005555555565d8 <+4932>:	mov    eax,0x1
+   0x00005555555565dd <+4937>:	jmp    0x5555555565e4 <check_flag+4944>
+   0x00005555555565df <+4939>:	mov    eax,0x0
+   0x00005555555565e4 <+4944>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555565e7 <+4947>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555565eb <+4951>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555565ef <+4955>:	je     0x55555555661d <check_flag+5001>
+   0x00005555555565f1 <+4957>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555565f5 <+4961>:	add    rax,0x13
+   0x00005555555565f9 <+4965>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555565fc <+4968>:	movsx  edx,al
+   0x00005555555565ff <+4971>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556603 <+4975>:	add    rax,0x10
+   0x0000555555556607 <+4979>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555660a <+4982>:	cmp    al,0x6f
+   0x000055555555660c <+4984>:	sete   al
+   0x000055555555660f <+4987>:	movzx  eax,al
+   0x0000555555556612 <+4990>:	cmp    edx,eax
+   0x0000555555556614 <+4992>:	je     0x55555555661d <check_flag+5001>
+   0x0000555555556616 <+4994>:	mov    eax,0x1
+   0x000055555555661b <+4999>:	jmp    0x555555556622 <check_flag+5006>
+   0x000055555555661d <+5001>:	mov    eax,0x0
+   0x0000555555556622 <+5006>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556625 <+5009>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556629 <+5013>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555662d <+5017>:	je     0x55555555665c <check_flag+5064>
+   0x000055555555662f <+5019>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556633 <+5023>:	add    rax,0x14
+   0x0000555555556637 <+5027>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555663a <+5030>:	movsx  edx,al
+   0x000055555555663d <+5033>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556641 <+5037>:	add    rax,0xc
+   0x0000555555556645 <+5041>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556648 <+5044>:	movsx  eax,al
+   0x000055555555664b <+5047>:	imul   eax,edx
+   0x000055555555664e <+5050>:	cmp    eax,0x2768
+   0x0000555555556653 <+5055>:	jne    0x55555555665c <check_flag+5064>
+   0x0000555555556655 <+5057>:	mov    eax,0x1
+   0x000055555555665a <+5062>:	jmp    0x555555556661 <check_flag+5069>
+   0x000055555555665c <+5064>:	mov    eax,0x0
+   0x0000555555556661 <+5069>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556664 <+5072>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556668 <+5076>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555666c <+5080>:	je     0x55555555669b <check_flag+5127>
+   0x000055555555666e <+5082>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556672 <+5086>:	add    rax,0x14
+   0x0000555555556676 <+5090>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556679 <+5093>:	movsx  edx,al
+   0x000055555555667c <+5096>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556680 <+5100>:	add    rax,0x22
+   0x0000555555556684 <+5104>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556687 <+5107>:	movsx  eax,al
+   0x000055555555668a <+5110>:	imul   eax,edx
+   0x000055555555668d <+5113>:	cmp    eax,0x28ec
+   0x0000555555556692 <+5118>:	jne    0x55555555669b <check_flag+5127>
+   0x0000555555556694 <+5120>:	mov    eax,0x1
+   0x0000555555556699 <+5125>:	jmp    0x5555555566a0 <check_flag+5132>
+   0x000055555555669b <+5127>:	mov    eax,0x0
+   0x00005555555566a0 <+5132>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555566a3 <+5135>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555566a7 <+5139>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555566ab <+5143>:	je     0x5555555566da <check_flag+5190>
+   0x00005555555566ad <+5145>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555566b1 <+5149>:	add    rax,0x14
+   0x00005555555566b5 <+5153>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555566b8 <+5156>:	movsx  edx,al
+   0x00005555555566bb <+5159>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555566bf <+5163>:	add    rax,0x7
+   0x00005555555566c3 <+5167>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555566c6 <+5170>:	movsx  eax,al
+   0x00005555555566c9 <+5173>:	imul   eax,edx
+   0x00005555555566cc <+5176>:	cmp    eax,0x13b4
+   0x00005555555566d1 <+5181>:	jne    0x5555555566da <check_flag+5190>
+   0x00005555555566d3 <+5183>:	mov    eax,0x1
+   0x00005555555566d8 <+5188>:	jmp    0x5555555566df <check_flag+5195>
+   0x00005555555566da <+5190>:	mov    eax,0x0
+   0x00005555555566df <+5195>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555566e2 <+5198>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555566e6 <+5202>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555566ea <+5206>:	je     0x555555556718 <check_flag+5252>
+   0x00005555555566ec <+5208>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555566f0 <+5212>:	add    rax,0x14
+   0x00005555555566f4 <+5216>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555566f7 <+5219>:	movsx  edx,al
+   0x00005555555566fa <+5222>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555566fe <+5226>:	add    rax,0x10
+   0x0000555555556702 <+5230>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556705 <+5233>:	cmp    al,0x51
+   0x0000555555556707 <+5235>:	sete   al
+   0x000055555555670a <+5238>:	movzx  eax,al
+   0x000055555555670d <+5241>:	cmp    edx,eax
+   0x000055555555670f <+5243>:	je     0x555555556718 <check_flag+5252>
+   0x0000555555556711 <+5245>:	mov    eax,0x1
+   0x0000555555556716 <+5250>:	jmp    0x55555555671d <check_flag+5257>
+   0x0000555555556718 <+5252>:	mov    eax,0x0
+   0x000055555555671d <+5257>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556720 <+5260>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556724 <+5264>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556728 <+5268>:	je     0x555555556756 <check_flag+5314>
+   0x000055555555672a <+5270>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555672e <+5274>:	add    rax,0x15
+   0x0000555555556732 <+5278>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556735 <+5281>:	movsx  edx,al
+   0x0000555555556738 <+5284>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555673c <+5288>:	add    rax,0x24
+   0x0000555555556740 <+5292>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556743 <+5295>:	cmp    al,0xf
+   0x0000555555556745 <+5297>:	sete   al
+   0x0000555555556748 <+5300>:	movzx  eax,al
+   0x000055555555674b <+5303>:	cmp    edx,eax
+   0x000055555555674d <+5305>:	je     0x555555556756 <check_flag+5314>
+   0x000055555555674f <+5307>:	mov    eax,0x1
+   0x0000555555556754 <+5312>:	jmp    0x55555555675b <check_flag+5319>
+   0x0000555555556756 <+5314>:	mov    eax,0x0
+   0x000055555555675b <+5319>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555675e <+5322>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556762 <+5326>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556766 <+5330>:	je     0x555555556795 <check_flag+5377>
+   0x0000555555556768 <+5332>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555676c <+5336>:	add    rax,0x15
+   0x0000555555556770 <+5340>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556773 <+5343>:	movsx  edx,al
+   0x0000555555556776 <+5346>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555677a <+5350>:	add    rax,0x9
+   0x000055555555677e <+5354>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556781 <+5357>:	movsx  eax,al
+   0x0000555555556784 <+5360>:	imul   eax,edx
+   0x0000555555556787 <+5363>:	cmp    eax,0x16b6
+   0x000055555555678c <+5368>:	jne    0x555555556795 <check_flag+5377>
+   0x000055555555678e <+5370>:	mov    eax,0x1
+   0x0000555555556793 <+5375>:	jmp    0x55555555679a <check_flag+5382>
+   0x0000555555556795 <+5377>:	mov    eax,0x0
+   0x000055555555679a <+5382>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555679d <+5385>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555567a1 <+5389>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555567a5 <+5393>:	je     0x5555555567cf <check_flag+5435>
+   0x00005555555567a7 <+5395>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555567ab <+5399>:	add    rax,0x15
+   0x00005555555567af <+5403>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555567b2 <+5406>:	movsx  edx,al
+   0x00005555555567b5 <+5409>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555567b9 <+5413>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555567bc <+5416>:	cmp    al,0x3a
+   0x00005555555567be <+5418>:	sete   al
+   0x00005555555567c1 <+5421>:	movzx  eax,al
+   0x00005555555567c4 <+5424>:	cmp    edx,eax
+   0x00005555555567c6 <+5426>:	je     0x5555555567cf <check_flag+5435>
+   0x00005555555567c8 <+5428>:	mov    eax,0x1
+   0x00005555555567cd <+5433>:	jmp    0x5555555567d4 <check_flag+5440>
+   0x00005555555567cf <+5435>:	mov    eax,0x0
+   0x00005555555567d4 <+5440>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555567d7 <+5443>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555567db <+5447>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555567df <+5451>:	je     0x55555555680e <check_flag+5498>
+   0x00005555555567e1 <+5453>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555567e5 <+5457>:	add    rax,0x15
+   0x00005555555567e9 <+5461>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555567ec <+5464>:	movsx  edx,al
+   0x00005555555567ef <+5467>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555567f3 <+5471>:	add    rax,0x17
+   0x00005555555567f7 <+5475>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555567fa <+5478>:	movsx  eax,al
+   0x00005555555567fd <+5481>:	imul   eax,edx
+   0x0000555555556800 <+5484>:	cmp    eax,0x341a
+   0x0000555555556805 <+5489>:	jne    0x55555555680e <check_flag+5498>
+   0x0000555555556807 <+5491>:	mov    eax,0x1
+   0x000055555555680c <+5496>:	jmp    0x555555556813 <check_flag+5503>
+   0x000055555555680e <+5498>:	mov    eax,0x0
+   0x0000555555556813 <+5503>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556816 <+5506>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555681a <+5510>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555681e <+5514>:	je     0x55555555684d <check_flag+5561>
+   0x0000555555556820 <+5516>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556824 <+5520>:	add    rax,0x16
+   0x0000555555556828 <+5524>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555682b <+5527>:	movsx  edx,al
+   0x000055555555682e <+5530>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556832 <+5534>:	add    rax,0x20
+   0x0000555555556836 <+5538>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556839 <+5541>:	movsx  eax,al
+   0x000055555555683c <+5544>:	imul   eax,edx
+   0x000055555555683f <+5547>:	cmp    eax,0x14d0
+   0x0000555555556844 <+5552>:	jne    0x55555555684d <check_flag+5561>
+   0x0000555555556846 <+5554>:	mov    eax,0x1
+   0x000055555555684b <+5559>:	jmp    0x555555556852 <check_flag+5566>
+   0x000055555555684d <+5561>:	mov    eax,0x0
+   0x0000555555556852 <+5566>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556855 <+5569>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556859 <+5573>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555685d <+5577>:	je     0x55555555688b <check_flag+5623>
+   0x000055555555685f <+5579>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556863 <+5583>:	add    rax,0x16
+   0x0000555555556867 <+5587>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555686a <+5590>:	movsx  edx,al
+   0x000055555555686d <+5593>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556871 <+5597>:	add    rax,0x19
+   0x0000555555556875 <+5601>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556878 <+5604>:	movsx  eax,al
+   0x000055555555687b <+5607>:	add    eax,edx
+   0x000055555555687d <+5609>:	cmp    eax,0x94
+   0x0000555555556882 <+5614>:	jne    0x55555555688b <check_flag+5623>
+   0x0000555555556884 <+5616>:	mov    eax,0x1
+   0x0000555555556889 <+5621>:	jmp    0x555555556890 <check_flag+5628>
+   0x000055555555688b <+5623>:	mov    eax,0x0
+   0x0000555555556890 <+5628>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556893 <+5631>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556897 <+5635>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555689b <+5639>:	je     0x5555555568c9 <check_flag+5685>
+   0x000055555555689d <+5641>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555568a1 <+5645>:	add    rax,0x16
+   0x00005555555568a5 <+5649>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555568a8 <+5652>:	movsx  edx,al
+   0x00005555555568ab <+5655>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555568af <+5659>:	add    rax,0x1
+   0x00005555555568b3 <+5663>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555568b6 <+5666>:	cmp    al,0x64
+   0x00005555555568b8 <+5668>:	sete   al
+   0x00005555555568bb <+5671>:	movzx  eax,al
+   0x00005555555568be <+5674>:	cmp    edx,eax
+   0x00005555555568c0 <+5676>:	je     0x5555555568c9 <check_flag+5685>
+   0x00005555555568c2 <+5678>:	mov    eax,0x1
+   0x00005555555568c7 <+5683>:	jmp    0x5555555568ce <check_flag+5690>
+   0x00005555555568c9 <+5685>:	mov    eax,0x0
+   0x00005555555568ce <+5690>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555568d1 <+5693>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555568d5 <+5697>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555568d9 <+5701>:	je     0x555555556907 <check_flag+5747>
+   0x00005555555568db <+5703>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555568df <+5707>:	add    rax,0x16
+   0x00005555555568e3 <+5711>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555568e6 <+5714>:	movsx  edx,al
+   0x00005555555568e9 <+5717>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555568ed <+5721>:	add    rax,0x1a
+   0x00005555555568f1 <+5725>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555568f4 <+5728>:	movsx  eax,al
+   0x00005555555568f7 <+5731>:	add    eax,edx
+   0x00005555555568f9 <+5733>:	cmp    eax,0x8f
+   0x00005555555568fe <+5738>:	jne    0x555555556907 <check_flag+5747>
+   0x0000555555556900 <+5740>:	mov    eax,0x1
+   0x0000555555556905 <+5745>:	jmp    0x55555555690c <check_flag+5752>
+   0x0000555555556907 <+5747>:	mov    eax,0x0
+   0x000055555555690c <+5752>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555690f <+5755>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556913 <+5759>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556917 <+5763>:	je     0x555555556945 <check_flag+5809>
+   0x0000555555556919 <+5765>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555691d <+5769>:	add    rax,0x17
+   0x0000555555556921 <+5773>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556924 <+5776>:	movsx  edx,al
+   0x0000555555556927 <+5779>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555692b <+5783>:	add    rax,0x22
+   0x000055555555692f <+5787>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556932 <+5790>:	movsx  eax,al
+   0x0000555555556935 <+5793>:	add    eax,edx
+   0x0000555555556937 <+5795>:	cmp    eax,0xe1
+   0x000055555555693c <+5800>:	jne    0x555555556945 <check_flag+5809>
+   0x000055555555693e <+5802>:	mov    eax,0x1
+   0x0000555555556943 <+5807>:	jmp    0x55555555694a <check_flag+5814>
+   0x0000555555556945 <+5809>:	mov    eax,0x0
+   0x000055555555694a <+5814>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555694d <+5817>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556951 <+5821>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556955 <+5825>:	je     0x555555556983 <check_flag+5871>
+   0x0000555555556957 <+5827>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555695b <+5831>:	add    rax,0x17
+   0x000055555555695f <+5835>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556962 <+5838>:	movsx  edx,al
+   0x0000555555556965 <+5841>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556969 <+5845>:	add    rax,0xb
+   0x000055555555696d <+5849>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556970 <+5852>:	cmp    al,0x1
+   0x0000555555556972 <+5854>:	sete   al
+   0x0000555555556975 <+5857>:	movzx  eax,al
+   0x0000555555556978 <+5860>:	cmp    edx,eax
+   0x000055555555697a <+5862>:	je     0x555555556983 <check_flag+5871>
+   0x000055555555697c <+5864>:	mov    eax,0x1
+   0x0000555555556981 <+5869>:	jmp    0x555555556988 <check_flag+5876>
+   0x0000555555556983 <+5871>:	mov    eax,0x0
+   0x0000555555556988 <+5876>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555698b <+5879>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555698f <+5883>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556993 <+5887>:	je     0x5555555569c1 <check_flag+5933>
+   0x0000555555556995 <+5889>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556999 <+5893>:	add    rax,0x17
+   0x000055555555699d <+5897>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555569a0 <+5900>:	movsx  edx,al
+   0x00005555555569a3 <+5903>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555569a7 <+5907>:	add    rax,0x20
+   0x00005555555569ab <+5911>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555569ae <+5914>:	cmp    al,0x1a
+   0x00005555555569b0 <+5916>:	sete   al
+   0x00005555555569b3 <+5919>:	movzx  eax,al
+   0x00005555555569b6 <+5922>:	cmp    edx,eax
+   0x00005555555569b8 <+5924>:	je     0x5555555569c1 <check_flag+5933>
+   0x00005555555569ba <+5926>:	mov    eax,0x1
+   0x00005555555569bf <+5931>:	jmp    0x5555555569c6 <check_flag+5938>
+   0x00005555555569c1 <+5933>:	mov    eax,0x0
+   0x00005555555569c6 <+5938>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555569c9 <+5941>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555569cd <+5945>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555569d1 <+5949>:	je     0x5555555569ff <check_flag+5995>
+   0x00005555555569d3 <+5951>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555569d7 <+5955>:	add    rax,0x17
+   0x00005555555569db <+5959>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555569de <+5962>:	movsx  edx,al
+   0x00005555555569e1 <+5965>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555569e5 <+5969>:	add    rax,0x14
+   0x00005555555569e9 <+5973>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555569ec <+5976>:	movsx  eax,al
+   0x00005555555569ef <+5979>:	add    eax,edx
+   0x00005555555569f1 <+5981>:	cmp    eax,0xd6
+   0x00005555555569f6 <+5986>:	jne    0x5555555569ff <check_flag+5995>
+   0x00005555555569f8 <+5988>:	mov    eax,0x1
+   0x00005555555569fd <+5993>:	jmp    0x555555556a04 <check_flag+6000>
+   0x00005555555569ff <+5995>:	mov    eax,0x0
+   0x0000555555556a04 <+6000>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556a07 <+6003>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556a0b <+6007>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556a0f <+6011>:	je     0x555555556a3e <check_flag+6058>
+   0x0000555555556a11 <+6013>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556a15 <+6017>:	add    rax,0x18
+   0x0000555555556a19 <+6021>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556a1c <+6024>:	movsx  edx,al
+   0x0000555555556a1f <+6027>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556a23 <+6031>:	add    rax,0x14
+   0x0000555555556a27 <+6035>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556a2a <+6038>:	movsx  eax,al
+   0x0000555555556a2d <+6041>:	imul   eax,edx
+   0x0000555555556a30 <+6044>:	cmp    eax,0x29ae
+   0x0000555555556a35 <+6049>:	jne    0x555555556a3e <check_flag+6058>
+   0x0000555555556a37 <+6051>:	mov    eax,0x1
+   0x0000555555556a3c <+6056>:	jmp    0x555555556a43 <check_flag+6063>
+   0x0000555555556a3e <+6058>:	mov    eax,0x0
+   0x0000555555556a43 <+6063>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556a46 <+6066>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556a4a <+6070>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556a4e <+6074>:	je     0x555555556a7d <check_flag+6121>
+   0x0000555555556a50 <+6076>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556a54 <+6080>:	add    rax,0x18
+   0x0000555555556a58 <+6084>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556a5b <+6087>:	movsx  edx,al
+   0x0000555555556a5e <+6090>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556a62 <+6094>:	add    rax,0x19
+   0x0000555555556a66 <+6098>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556a69 <+6101>:	movsx  eax,al
+   0x0000555555556a6c <+6104>:	imul   eax,edx
+   0x0000555555556a6f <+6107>:	cmp    eax,0x2af8
+   0x0000555555556a74 <+6112>:	jne    0x555555556a7d <check_flag+6121>
+   0x0000555555556a76 <+6114>:	mov    eax,0x1
+   0x0000555555556a7b <+6119>:	jmp    0x555555556a82 <check_flag+6126>
+   0x0000555555556a7d <+6121>:	mov    eax,0x0
+   0x0000555555556a82 <+6126>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556a85 <+6129>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556a89 <+6133>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556a8d <+6137>:	je     0x555555556abb <check_flag+6183>
+   0x0000555555556a8f <+6139>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556a93 <+6143>:	add    rax,0x18
+   0x0000555555556a97 <+6147>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556a9a <+6150>:	movsx  edx,al
+   0x0000555555556a9d <+6153>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556aa1 <+6157>:	add    rax,0x21
+   0x0000555555556aa5 <+6161>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556aa8 <+6164>:	cmp    al,0x1c
+   0x0000555555556aaa <+6166>:	sete   al
+   0x0000555555556aad <+6169>:	movzx  eax,al
+   0x0000555555556ab0 <+6172>:	cmp    edx,eax
+   0x0000555555556ab2 <+6174>:	je     0x555555556abb <check_flag+6183>
+   0x0000555555556ab4 <+6176>:	mov    eax,0x1
+   0x0000555555556ab9 <+6181>:	jmp    0x555555556ac0 <check_flag+6188>
+   0x0000555555556abb <+6183>:	mov    eax,0x0
+   0x0000555555556ac0 <+6188>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556ac3 <+6191>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556ac7 <+6195>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556acb <+6199>:	je     0x555555556af9 <check_flag+6245>
+   0x0000555555556acd <+6201>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556ad1 <+6205>:	add    rax,0x18
+   0x0000555555556ad5 <+6209>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556ad8 <+6212>:	movsx  edx,al
+   0x0000555555556adb <+6215>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556adf <+6219>:	add    rax,0x1a
+   0x0000555555556ae3 <+6223>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556ae6 <+6226>:	cmp    al,0x31
+   0x0000555555556ae8 <+6228>:	sete   al
+   0x0000555555556aeb <+6231>:	movzx  eax,al
+   0x0000555555556aee <+6234>:	cmp    edx,eax
+   0x0000555555556af0 <+6236>:	je     0x555555556af9 <check_flag+6245>
+   0x0000555555556af2 <+6238>:	mov    eax,0x1
+   0x0000555555556af7 <+6243>:	jmp    0x555555556afe <check_flag+6250>
+   0x0000555555556af9 <+6245>:	mov    eax,0x0
+   0x0000555555556afe <+6250>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556b01 <+6253>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556b05 <+6257>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556b09 <+6261>:	je     0x555555556b37 <check_flag+6307>
+   0x0000555555556b0b <+6263>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556b0f <+6267>:	add    rax,0x19
+   0x0000555555556b13 <+6271>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556b16 <+6274>:	movsx  edx,al
+   0x0000555555556b19 <+6277>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556b1d <+6281>:	add    rax,0x3
+   0x0000555555556b21 <+6285>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556b24 <+6288>:	cmp    al,0x1f
+   0x0000555555556b26 <+6290>:	sete   al
+   0x0000555555556b29 <+6293>:	movzx  eax,al
+   0x0000555555556b2c <+6296>:	cmp    edx,eax
+   0x0000555555556b2e <+6298>:	je     0x555555556b37 <check_flag+6307>
+   0x0000555555556b30 <+6300>:	mov    eax,0x1
+   0x0000555555556b35 <+6305>:	jmp    0x555555556b3c <check_flag+6312>
+   0x0000555555556b37 <+6307>:	mov    eax,0x0
+   0x0000555555556b3c <+6312>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556b3f <+6315>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556b43 <+6319>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556b47 <+6323>:	je     0x555555556b76 <check_flag+6370>
+   0x0000555555556b49 <+6325>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556b4d <+6329>:	add    rax,0x19
+   0x0000555555556b51 <+6333>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556b54 <+6336>:	movsx  edx,al
+   0x0000555555556b57 <+6339>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556b5b <+6343>:	add    rax,0x7
+   0x0000555555556b5f <+6347>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556b62 <+6350>:	movsx  eax,al
+   0x0000555555556b65 <+6353>:	imul   eax,edx
+   0x0000555555556b68 <+6356>:	cmp    eax,0x1450
+   0x0000555555556b6d <+6361>:	jne    0x555555556b76 <check_flag+6370>
+   0x0000555555556b6f <+6363>:	mov    eax,0x1
+   0x0000555555556b74 <+6368>:	jmp    0x555555556b7b <check_flag+6375>
+   0x0000555555556b76 <+6370>:	mov    eax,0x0
+   0x0000555555556b7b <+6375>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556b7e <+6378>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556b82 <+6382>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556b86 <+6386>:	je     0x555555556bb4 <check_flag+6432>
+   0x0000555555556b88 <+6388>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556b8c <+6392>:	add    rax,0x19
+   0x0000555555556b90 <+6396>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556b93 <+6399>:	movsx  edx,al
+   0x0000555555556b96 <+6402>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556b9a <+6406>:	add    rax,0xd
+   0x0000555555556b9e <+6410>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556ba1 <+6413>:	movsx  eax,al
+   0x0000555555556ba4 <+6416>:	add    eax,edx
+   0x0000555555556ba6 <+6418>:	cmp    eax,0x97
+   0x0000555555556bab <+6423>:	jne    0x555555556bb4 <check_flag+6432>
+   0x0000555555556bad <+6425>:	mov    eax,0x1
+   0x0000555555556bb2 <+6430>:	jmp    0x555555556bb9 <check_flag+6437>
+   0x0000555555556bb4 <+6432>:	mov    eax,0x0
+   0x0000555555556bb9 <+6437>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556bbc <+6440>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556bc0 <+6444>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556bc4 <+6448>:	je     0x555555556bf2 <check_flag+6494>
+   0x0000555555556bc6 <+6450>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556bca <+6454>:	add    rax,0x19
+   0x0000555555556bce <+6458>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556bd1 <+6461>:	movsx  edx,al
+   0x0000555555556bd4 <+6464>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556bd8 <+6468>:	add    rax,0x17
+   0x0000555555556bdc <+6472>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556bdf <+6475>:	movsx  eax,al
+   0x0000555555556be2 <+6478>:	add    eax,edx
+   0x0000555555556be4 <+6480>:	cmp    eax,0xd9
+   0x0000555555556be9 <+6485>:	jne    0x555555556bf2 <check_flag+6494>
+   0x0000555555556beb <+6487>:	mov    eax,0x1
+   0x0000555555556bf0 <+6492>:	jmp    0x555555556bf7 <check_flag+6499>
+   0x0000555555556bf2 <+6494>:	mov    eax,0x0
+   0x0000555555556bf7 <+6499>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556bfa <+6502>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556bfe <+6506>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556c02 <+6510>:	je     0x555555556c31 <check_flag+6557>
+   0x0000555555556c04 <+6512>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556c08 <+6516>:	add    rax,0x1a
+   0x0000555555556c0c <+6520>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556c0f <+6523>:	movsx  edx,al
+   0x0000555555556c12 <+6526>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556c16 <+6530>:	add    rax,0x20
+   0x0000555555556c1a <+6534>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556c1d <+6537>:	movsx  eax,al
+   0x0000555555556c20 <+6540>:	imul   eax,edx
+   0x0000555555556c23 <+6543>:	cmp    eax,0x2931
+   0x0000555555556c28 <+6548>:	jne    0x555555556c31 <check_flag+6557>
+   0x0000555555556c2a <+6550>:	mov    eax,0x1
+   0x0000555555556c2f <+6555>:	jmp    0x555555556c36 <check_flag+6562>
+   0x0000555555556c31 <+6557>:	mov    eax,0x0
+   0x0000555555556c36 <+6562>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556c39 <+6565>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556c3d <+6569>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556c41 <+6573>:	je     0x555555556c6f <check_flag+6619>
+   0x0000555555556c43 <+6575>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556c47 <+6579>:	add    rax,0x1a
+   0x0000555555556c4b <+6583>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556c4e <+6586>:	movsx  edx,al
+   0x0000555555556c51 <+6589>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556c55 <+6593>:	add    rax,0x21
+   0x0000555555556c59 <+6597>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556c5c <+6600>:	cmp    al,0x2d
+   0x0000555555556c5e <+6602>:	sete   al
+   0x0000555555556c61 <+6605>:	movzx  eax,al
+   0x0000555555556c64 <+6608>:	cmp    edx,eax
+   0x0000555555556c66 <+6610>:	je     0x555555556c6f <check_flag+6619>
+   0x0000555555556c68 <+6612>:	mov    eax,0x1
+   0x0000555555556c6d <+6617>:	jmp    0x555555556c74 <check_flag+6624>
+   0x0000555555556c6f <+6619>:	mov    eax,0x0
+   0x0000555555556c74 <+6624>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556c77 <+6627>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556c7b <+6631>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556c7f <+6635>:	je     0x555555556cae <check_flag+6682>
+   0x0000555555556c81 <+6637>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556c85 <+6641>:	add    rax,0x1a
+   0x0000555555556c89 <+6645>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556c8c <+6648>:	movsx  edx,al
+   0x0000555555556c8f <+6651>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556c93 <+6655>:	add    rax,0x4
+   0x0000555555556c97 <+6659>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556c9a <+6662>:	movsx  eax,al
+   0x0000555555556c9d <+6665>:	imul   eax,edx
+   0x0000555555556ca0 <+6668>:	cmp    eax,0x2a4e
+   0x0000555555556ca5 <+6673>:	jne    0x555555556cae <check_flag+6682>
+   0x0000555555556ca7 <+6675>:	mov    eax,0x1
+   0x0000555555556cac <+6680>:	jmp    0x555555556cb3 <check_flag+6687>
+   0x0000555555556cae <+6682>:	mov    eax,0x0
+   0x0000555555556cb3 <+6687>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556cb6 <+6690>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556cba <+6694>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556cbe <+6698>:	je     0x555555556cec <check_flag+6744>
+   0x0000555555556cc0 <+6700>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556cc4 <+6704>:	add    rax,0x1a
+   0x0000555555556cc8 <+6708>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556ccb <+6711>:	movsx  edx,al
+   0x0000555555556cce <+6714>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556cd2 <+6718>:	add    rax,0x3
+   0x0000555555556cd6 <+6722>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556cd9 <+6725>:	movsx  eax,al
+   0x0000555555556cdc <+6728>:	add    eax,edx
+   0x0000555555556cde <+6730>:	cmp    eax,0xda
+   0x0000555555556ce3 <+6735>:	jne    0x555555556cec <check_flag+6744>
+   0x0000555555556ce5 <+6737>:	mov    eax,0x1
+   0x0000555555556cea <+6742>:	jmp    0x555555556cf1 <check_flag+6749>
+   0x0000555555556cec <+6744>:	mov    eax,0x0
+   0x0000555555556cf1 <+6749>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556cf4 <+6752>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556cf8 <+6756>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556cfc <+6760>:	je     0x555555556d2a <check_flag+6806>
+   0x0000555555556cfe <+6762>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556d02 <+6766>:	add    rax,0x1b
+   0x0000555555556d06 <+6770>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556d09 <+6773>:	movsx  edx,al
+   0x0000555555556d0c <+6776>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556d10 <+6780>:	add    rax,0x17
+   0x0000555555556d14 <+6784>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556d17 <+6787>:	cmp    al,0x1
+   0x0000555555556d19 <+6789>:	sete   al
+   0x0000555555556d1c <+6792>:	movzx  eax,al
+   0x0000555555556d1f <+6795>:	cmp    edx,eax
+   0x0000555555556d21 <+6797>:	je     0x555555556d2a <check_flag+6806>
+   0x0000555555556d23 <+6799>:	mov    eax,0x1
+   0x0000555555556d28 <+6804>:	jmp    0x555555556d2f <check_flag+6811>
+   0x0000555555556d2a <+6806>:	mov    eax,0x0
+   0x0000555555556d2f <+6811>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556d32 <+6814>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556d36 <+6818>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556d3a <+6822>:	je     0x555555556d68 <check_flag+6868>
+   0x0000555555556d3c <+6824>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556d40 <+6828>:	add    rax,0x1b
+   0x0000555555556d44 <+6832>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556d47 <+6835>:	movsx  edx,al
+   0x0000555555556d4a <+6838>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556d4e <+6842>:	add    rax,0x13
+   0x0000555555556d52 <+6846>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556d55 <+6849>:	movsx  eax,al
+   0x0000555555556d58 <+6852>:	add    eax,edx
+   0x0000555555556d5a <+6854>:	cmp    eax,0xd3
+   0x0000555555556d5f <+6859>:	jne    0x555555556d68 <check_flag+6868>
+   0x0000555555556d61 <+6861>:	mov    eax,0x1
+   0x0000555555556d66 <+6866>:	jmp    0x555555556d6d <check_flag+6873>
+   0x0000555555556d68 <+6868>:	mov    eax,0x0
+   0x0000555555556d6d <+6873>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556d70 <+6876>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556d74 <+6880>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556d78 <+6884>:	je     0x555555556da6 <check_flag+6930>
+   0x0000555555556d7a <+6886>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556d7e <+6890>:	add    rax,0x1b
+   0x0000555555556d82 <+6894>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556d85 <+6897>:	movsx  edx,al
+   0x0000555555556d88 <+6900>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556d8c <+6904>:	add    rax,0xe
+   0x0000555555556d90 <+6908>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556d93 <+6911>:	movsx  eax,al
+   0x0000555555556d96 <+6914>:	add    eax,edx
+   0x0000555555556d98 <+6916>:	cmp    eax,0xd3
+   0x0000555555556d9d <+6921>:	jne    0x555555556da6 <check_flag+6930>
+   0x0000555555556d9f <+6923>:	mov    eax,0x1
+   0x0000555555556da4 <+6928>:	jmp    0x555555556dab <check_flag+6935>
+   0x0000555555556da6 <+6930>:	mov    eax,0x0
+   0x0000555555556dab <+6935>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556dae <+6938>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556db2 <+6942>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556db6 <+6946>:	je     0x555555556de4 <check_flag+6992>
+   0x0000555555556db8 <+6948>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556dbc <+6952>:	add    rax,0x1b
+   0x0000555555556dc0 <+6956>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556dc3 <+6959>:	movsx  edx,al
+   0x0000555555556dc6 <+6962>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556dca <+6966>:	add    rax,0x21
+   0x0000555555556dce <+6970>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556dd1 <+6973>:	cmp    al,0x6
+   0x0000555555556dd3 <+6975>:	sete   al
+   0x0000555555556dd6 <+6978>:	movzx  eax,al
+   0x0000555555556dd9 <+6981>:	cmp    edx,eax
+   0x0000555555556ddb <+6983>:	je     0x555555556de4 <check_flag+6992>
+   0x0000555555556ddd <+6985>:	mov    eax,0x1
+   0x0000555555556de2 <+6990>:	jmp    0x555555556de9 <check_flag+6997>
+   0x0000555555556de4 <+6992>:	mov    eax,0x0
+   0x0000555555556de9 <+6997>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556dec <+7000>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556df0 <+7004>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556df4 <+7008>:	je     0x555555556e23 <check_flag+7055>
+   0x0000555555556df6 <+7010>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556dfa <+7014>:	add    rax,0x1c
+   0x0000555555556dfe <+7018>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556e01 <+7021>:	movsx  edx,al
+   0x0000555555556e04 <+7024>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556e08 <+7028>:	add    rax,0x15
+   0x0000555555556e0c <+7032>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556e0f <+7035>:	movsx  eax,al
+   0x0000555555556e12 <+7038>:	imul   eax,edx
+   0x0000555555556e15 <+7041>:	cmp    eax,0x2e50
+   0x0000555555556e1a <+7046>:	jne    0x555555556e23 <check_flag+7055>
+   0x0000555555556e1c <+7048>:	mov    eax,0x1
+   0x0000555555556e21 <+7053>:	jmp    0x555555556e28 <check_flag+7060>
+   0x0000555555556e23 <+7055>:	mov    eax,0x0
+   0x0000555555556e28 <+7060>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556e2b <+7063>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556e2f <+7067>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556e33 <+7071>:	je     0x555555556e61 <check_flag+7117>
+   0x0000555555556e35 <+7073>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556e39 <+7077>:	add    rax,0x1c
+   0x0000555555556e3d <+7081>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556e40 <+7084>:	movsx  edx,al
+   0x0000555555556e43 <+7087>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556e47 <+7091>:	add    rax,0x11
+   0x0000555555556e4b <+7095>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556e4e <+7098>:	movsx  eax,al
+   0x0000555555556e51 <+7101>:	add    eax,edx
+   0x0000555555556e53 <+7103>:	cmp    eax,0xcc
+   0x0000555555556e58 <+7108>:	jne    0x555555556e61 <check_flag+7117>
+   0x0000555555556e5a <+7110>:	mov    eax,0x1
+   0x0000555555556e5f <+7115>:	jmp    0x555555556e66 <check_flag+7122>
+   0x0000555555556e61 <+7117>:	mov    eax,0x0
+   0x0000555555556e66 <+7122>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556e69 <+7125>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556e6d <+7129>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556e71 <+7133>:	je     0x555555556e9f <check_flag+7179>
+   0x0000555555556e73 <+7135>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556e77 <+7139>:	add    rax,0x1c
+   0x0000555555556e7b <+7143>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556e7e <+7146>:	movsx  edx,al
+   0x0000555555556e81 <+7149>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556e85 <+7153>:	add    rax,0x6
+   0x0000555555556e89 <+7157>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556e8c <+7160>:	cmp    al,0x1c
+   0x0000555555556e8e <+7162>:	sete   al
+   0x0000555555556e91 <+7165>:	movzx  eax,al
+   0x0000555555556e94 <+7168>:	cmp    edx,eax
+   0x0000555555556e96 <+7170>:	je     0x555555556e9f <check_flag+7179>
+   0x0000555555556e98 <+7172>:	mov    eax,0x1
+   0x0000555555556e9d <+7177>:	jmp    0x555555556ea4 <check_flag+7184>
+   0x0000555555556e9f <+7179>:	mov    eax,0x0
+   0x0000555555556ea4 <+7184>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556ea7 <+7187>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556eab <+7191>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556eaf <+7195>:	je     0x555555556ede <check_flag+7242>
+   0x0000555555556eb1 <+7197>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556eb5 <+7201>:	add    rax,0x1c
+   0x0000555555556eb9 <+7205>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556ebc <+7208>:	movsx  edx,al
+   0x0000555555556ebf <+7211>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556ec3 <+7215>:	add    rax,0xf
+   0x0000555555556ec7 <+7219>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556eca <+7222>:	movsx  eax,al
+   0x0000555555556ecd <+7225>:	imul   eax,edx
+   0x0000555555556ed0 <+7228>:	cmp    eax,0x2838
+   0x0000555555556ed5 <+7233>:	jne    0x555555556ede <check_flag+7242>
+   0x0000555555556ed7 <+7235>:	mov    eax,0x1
+   0x0000555555556edc <+7240>:	jmp    0x555555556ee3 <check_flag+7247>
+   0x0000555555556ede <+7242>:	mov    eax,0x0
+   0x0000555555556ee3 <+7247>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556ee6 <+7250>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556eea <+7254>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556eee <+7258>:	je     0x555555556f1c <check_flag+7304>
+   0x0000555555556ef0 <+7260>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556ef4 <+7264>:	add    rax,0x1d
+   0x0000555555556ef8 <+7268>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556efb <+7271>:	movsx  edx,al
+   0x0000555555556efe <+7274>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556f02 <+7278>:	add    rax,0x13
+   0x0000555555556f06 <+7282>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556f09 <+7285>:	cmp    al,0x6c
+   0x0000555555556f0b <+7287>:	sete   al
+   0x0000555555556f0e <+7290>:	movzx  eax,al
+   0x0000555555556f11 <+7293>:	cmp    edx,eax
+   0x0000555555556f13 <+7295>:	je     0x555555556f1c <check_flag+7304>
+   0x0000555555556f15 <+7297>:	mov    eax,0x1
+   0x0000555555556f1a <+7302>:	jmp    0x555555556f21 <check_flag+7309>
+   0x0000555555556f1c <+7304>:	mov    eax,0x0
+   0x0000555555556f21 <+7309>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556f24 <+7312>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556f28 <+7316>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556f2c <+7320>:	je     0x555555556f5a <check_flag+7366>
+   0x0000555555556f2e <+7322>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556f32 <+7326>:	add    rax,0x1d
+   0x0000555555556f36 <+7330>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556f39 <+7333>:	movsx  edx,al
+   0x0000555555556f3c <+7336>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556f40 <+7340>:	add    rax,0x17
+   0x0000555555556f44 <+7344>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556f47 <+7347>:	cmp    al,0x46
+   0x0000555555556f49 <+7349>:	sete   al
+   0x0000555555556f4c <+7352>:	movzx  eax,al
+   0x0000555555556f4f <+7355>:	cmp    edx,eax
+   0x0000555555556f51 <+7357>:	je     0x555555556f5a <check_flag+7366>
+   0x0000555555556f53 <+7359>:	mov    eax,0x1
+   0x0000555555556f58 <+7364>:	jmp    0x555555556f5f <check_flag+7371>
+   0x0000555555556f5a <+7366>:	mov    eax,0x0
+   0x0000555555556f5f <+7371>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556f62 <+7374>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556f66 <+7378>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556f6a <+7382>:	je     0x555555556f98 <check_flag+7428>
+   0x0000555555556f6c <+7384>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556f70 <+7388>:	add    rax,0x1d
+   0x0000555555556f74 <+7392>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556f77 <+7395>:	movsx  edx,al
+   0x0000555555556f7a <+7398>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556f7e <+7402>:	add    rax,0x1c
+   0x0000555555556f82 <+7406>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556f85 <+7409>:	cmp    al,0x5b
+   0x0000555555556f87 <+7411>:	sete   al
+   0x0000555555556f8a <+7414>:	movzx  eax,al
+   0x0000555555556f8d <+7417>:	cmp    edx,eax
+   0x0000555555556f8f <+7419>:	je     0x555555556f98 <check_flag+7428>
+   0x0000555555556f91 <+7421>:	mov    eax,0x1
+   0x0000555555556f96 <+7426>:	jmp    0x555555556f9d <check_flag+7433>
+   0x0000555555556f98 <+7428>:	mov    eax,0x0
+   0x0000555555556f9d <+7433>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556fa0 <+7436>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556fa4 <+7440>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556fa8 <+7444>:	je     0x555555556fd7 <check_flag+7491>
+   0x0000555555556faa <+7446>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556fae <+7450>:	add    rax,0x1d
+   0x0000555555556fb2 <+7454>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556fb5 <+7457>:	movsx  edx,al
+   0x0000555555556fb8 <+7460>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556fbc <+7464>:	add    rax,0x15
+   0x0000555555556fc0 <+7468>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556fc3 <+7471>:	movsx  eax,al
+   0x0000555555556fc6 <+7474>:	imul   eax,edx
+   0x0000555555556fc9 <+7477>:	cmp    eax,0x16b6
+   0x0000555555556fce <+7482>:	jne    0x555555556fd7 <check_flag+7491>
+   0x0000555555556fd0 <+7484>:	mov    eax,0x1
+   0x0000555555556fd5 <+7489>:	jmp    0x555555556fdc <check_flag+7496>
+   0x0000555555556fd7 <+7491>:	mov    eax,0x0
+   0x0000555555556fdc <+7496>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555556fdf <+7499>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555556fe3 <+7503>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555556fe7 <+7507>:	je     0x555555557015 <check_flag+7553>
+   0x0000555555556fe9 <+7509>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556fed <+7513>:	add    rax,0x1e
+   0x0000555555556ff1 <+7517>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555556ff4 <+7520>:	movsx  edx,al
+   0x0000555555556ff7 <+7523>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555556ffb <+7527>:	add    rax,0x1d
+   0x0000555555556fff <+7531>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557002 <+7534>:	movsx  eax,al
+   0x0000555555557005 <+7537>:	add    eax,edx
+   0x0000555555557007 <+7539>:	cmp    eax,0x92
+   0x000055555555700c <+7544>:	jne    0x555555557015 <check_flag+7553>
+   0x000055555555700e <+7546>:	mov    eax,0x1
+   0x0000555555557013 <+7551>:	jmp    0x55555555701a <check_flag+7558>
+   0x0000555555557015 <+7553>:	mov    eax,0x0
+   0x000055555555701a <+7558>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555701d <+7561>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557021 <+7565>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557025 <+7569>:	je     0x555555557054 <check_flag+7616>
+   0x0000555555557027 <+7571>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555702b <+7575>:	add    rax,0x1e
+   0x000055555555702f <+7579>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557032 <+7582>:	movsx  edx,al
+   0x0000555555557035 <+7585>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557039 <+7589>:	add    rax,0xf
+   0x000055555555703d <+7593>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557040 <+7596>:	movsx  eax,al
+   0x0000555555557043 <+7599>:	imul   eax,edx
+   0x0000555555557046 <+7602>:	cmp    eax,0x24bd
+   0x000055555555704b <+7607>:	jne    0x555555557054 <check_flag+7616>
+   0x000055555555704d <+7609>:	mov    eax,0x1
+   0x0000555555557052 <+7614>:	jmp    0x555555557059 <check_flag+7621>
+   0x0000555555557054 <+7616>:	mov    eax,0x0
+   0x0000555555557059 <+7621>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555705c <+7624>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557060 <+7628>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557064 <+7632>:	je     0x555555557092 <check_flag+7678>
+   0x0000555555557066 <+7634>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555706a <+7638>:	add    rax,0x1e
+   0x000055555555706e <+7642>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557071 <+7645>:	movsx  edx,al
+   0x0000555555557074 <+7648>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557078 <+7652>:	add    rax,0xb
+   0x000055555555707c <+7656>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555707f <+7659>:	movsx  eax,al
+   0x0000555555557082 <+7662>:	add    eax,edx
+   0x0000555555557084 <+7664>:	cmp    eax,0xd3
+   0x0000555555557089 <+7669>:	jne    0x555555557092 <check_flag+7678>
+   0x000055555555708b <+7671>:	mov    eax,0x1
+   0x0000555555557090 <+7676>:	jmp    0x555555557097 <check_flag+7683>
+   0x0000555555557092 <+7678>:	mov    eax,0x0
+   0x0000555555557097 <+7683>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555709a <+7686>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555709e <+7690>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555570a2 <+7694>:	je     0x5555555570d1 <check_flag+7741>
+   0x00005555555570a4 <+7696>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555570a8 <+7700>:	add    rax,0x1e
+   0x00005555555570ac <+7704>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555570af <+7707>:	movsx  edx,al
+   0x00005555555570b2 <+7710>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555570b6 <+7714>:	add    rax,0xa
+   0x00005555555570ba <+7718>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555570bd <+7721>:	movsx  eax,al
+   0x00005555555570c0 <+7724>:	imul   eax,edx
+   0x00005555555570c3 <+7727>:	cmp    eax,0x2341
+   0x00005555555570c8 <+7732>:	jne    0x5555555570d1 <check_flag+7741>
+   0x00005555555570ca <+7734>:	mov    eax,0x1
+   0x00005555555570cf <+7739>:	jmp    0x5555555570d6 <check_flag+7746>
+   0x00005555555570d1 <+7741>:	mov    eax,0x0
+   0x00005555555570d6 <+7746>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555570d9 <+7749>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555570dd <+7753>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555570e1 <+7757>:	je     0x555555557110 <check_flag+7804>
+   0x00005555555570e3 <+7759>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555570e7 <+7763>:	add    rax,0x1f
+   0x00005555555570eb <+7767>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555570ee <+7770>:	movsx  edx,al
+   0x00005555555570f1 <+7773>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555570f5 <+7777>:	add    rax,0x9
+   0x00005555555570f9 <+7781>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555570fc <+7784>:	movsx  eax,al
+   0x00005555555570ff <+7787>:	imul   eax,edx
+   0x0000555555557102 <+7790>:	cmp    eax,0x17b5
+   0x0000555555557107 <+7795>:	jne    0x555555557110 <check_flag+7804>
+   0x0000555555557109 <+7797>:	mov    eax,0x1
+   0x000055555555710e <+7802>:	jmp    0x555555557115 <check_flag+7809>
+   0x0000555555557110 <+7804>:	mov    eax,0x0
+   0x0000555555557115 <+7809>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557118 <+7812>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555711c <+7816>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557120 <+7820>:	je     0x55555555714e <check_flag+7866>
+   0x0000555555557122 <+7822>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557126 <+7826>:	add    rax,0x1f
+   0x000055555555712a <+7830>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555712d <+7833>:	movsx  edx,al
+   0x0000555555557130 <+7836>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557134 <+7840>:	add    rax,0xe
+   0x0000555555557138 <+7844>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555713b <+7847>:	movsx  eax,al
+   0x000055555555713e <+7850>:	add    eax,edx
+   0x0000555555557140 <+7852>:	cmp    eax,0xd6
+   0x0000555555557145 <+7857>:	jne    0x55555555714e <check_flag+7866>
+   0x0000555555557147 <+7859>:	mov    eax,0x1
+   0x000055555555714c <+7864>:	jmp    0x555555557153 <check_flag+7871>
+   0x000055555555714e <+7866>:	mov    eax,0x0
+   0x0000555555557153 <+7871>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557156 <+7874>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555715a <+7878>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555715e <+7882>:	je     0x55555555718d <check_flag+7929>
+   0x0000555555557160 <+7884>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557164 <+7888>:	add    rax,0x1f
+   0x0000555555557168 <+7892>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555716b <+7895>:	movsx  edx,al
+   0x000055555555716e <+7898>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557172 <+7902>:	add    rax,0x12
+   0x0000555555557176 <+7906>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557179 <+7909>:	movsx  eax,al
+   0x000055555555717c <+7912>:	imul   eax,edx
+   0x000055555555717f <+7915>:	cmp    eax,0x17b5
+   0x0000555555557184 <+7920>:	jne    0x55555555718d <check_flag+7929>
+   0x0000555555557186 <+7922>:	mov    eax,0x1
+   0x000055555555718b <+7927>:	jmp    0x555555557192 <check_flag+7934>
+   0x000055555555718d <+7929>:	mov    eax,0x0
+   0x0000555555557192 <+7934>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557195 <+7937>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557199 <+7941>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555719d <+7945>:	je     0x5555555571cb <check_flag+7991>
+   0x000055555555719f <+7947>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555571a3 <+7951>:	add    rax,0x1f
+   0x00005555555571a7 <+7955>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555571aa <+7958>:	movsx  edx,al
+   0x00005555555571ad <+7961>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555571b1 <+7965>:	add    rax,0x11
+   0x00005555555571b5 <+7969>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555571b8 <+7972>:	movsx  eax,al
+   0x00005555555571bb <+7975>:	add    eax,edx
+   0x00005555555571bd <+7977>:	cmp    eax,0xdb
+   0x00005555555571c2 <+7982>:	jne    0x5555555571cb <check_flag+7991>
+   0x00005555555571c4 <+7984>:	mov    eax,0x1
+   0x00005555555571c9 <+7989>:	jmp    0x5555555571d0 <check_flag+7996>
+   0x00005555555571cb <+7991>:	mov    eax,0x0
+   0x00005555555571d0 <+7996>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555571d3 <+7999>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555571d7 <+8003>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555571db <+8007>:	je     0x55555555720a <check_flag+8054>
+   0x00005555555571dd <+8009>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555571e1 <+8013>:	add    rax,0x20
+   0x00005555555571e5 <+8017>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555571e8 <+8020>:	movsx  edx,al
+   0x00005555555571eb <+8023>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555571ef <+8027>:	add    rax,0x10
+   0x00005555555571f3 <+8031>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555571f6 <+8034>:	movsx  eax,al
+   0x00005555555571f9 <+8037>:	imul   eax,edx
+   0x00005555555571fc <+8040>:	cmp    eax,0x14d0
+   0x0000555555557201 <+8045>:	jne    0x55555555720a <check_flag+8054>
+   0x0000555555557203 <+8047>:	mov    eax,0x1
+   0x0000555555557208 <+8052>:	jmp    0x55555555720f <check_flag+8059>
+   0x000055555555720a <+8054>:	mov    eax,0x0
+   0x000055555555720f <+8059>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557212 <+8062>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557216 <+8066>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555721a <+8070>:	je     0x555555557249 <check_flag+8117>
+   0x000055555555721c <+8072>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557220 <+8076>:	add    rax,0x20
+   0x0000555555557224 <+8080>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557227 <+8083>:	movsx  edx,al
+   0x000055555555722a <+8086>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555722e <+8090>:	add    rax,0x8
+   0x0000555555557232 <+8094>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557235 <+8097>:	movsx  eax,al
+   0x0000555555557238 <+8100>:	imul   eax,edx
+   0x000055555555723b <+8103>:	cmp    eax,0x324c
+   0x0000555555557240 <+8108>:	jne    0x555555557249 <check_flag+8117>
+   0x0000555555557242 <+8110>:	mov    eax,0x1
+   0x0000555555557247 <+8115>:	jmp    0x55555555724e <check_flag+8122>
+   0x0000555555557249 <+8117>:	mov    eax,0x0
+   0x000055555555724e <+8122>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557251 <+8125>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557255 <+8129>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557259 <+8133>:	je     0x555555557288 <check_flag+8180>
+   0x000055555555725b <+8135>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555725f <+8139>:	add    rax,0x20
+   0x0000555555557263 <+8143>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557266 <+8146>:	movsx  edx,al
+   0x0000555555557269 <+8149>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555726d <+8153>:	add    rax,0x11
+   0x0000555555557271 <+8157>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557274 <+8160>:	movsx  eax,al
+   0x0000555555557277 <+8163>:	imul   eax,edx
+   0x000055555555727a <+8166>:	cmp    eax,0x2b5c
+   0x000055555555727f <+8171>:	jne    0x555555557288 <check_flag+8180>
+   0x0000555555557281 <+8173>:	mov    eax,0x1
+   0x0000555555557286 <+8178>:	jmp    0x55555555728d <check_flag+8185>
+   0x0000555555557288 <+8180>:	mov    eax,0x0
+   0x000055555555728d <+8185>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557290 <+8188>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557294 <+8192>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557298 <+8196>:	je     0x5555555572c6 <check_flag+8242>
+   0x000055555555729a <+8198>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555729e <+8202>:	add    rax,0x20
+   0x00005555555572a2 <+8206>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555572a5 <+8209>:	movsx  edx,al
+   0x00005555555572a8 <+8212>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555572ac <+8216>:	add    rax,0x1
+   0x00005555555572b0 <+8220>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555572b3 <+8223>:	cmp    al,0x3b
+   0x00005555555572b5 <+8225>:	sete   al
+   0x00005555555572b8 <+8228>:	movzx  eax,al
+   0x00005555555572bb <+8231>:	cmp    edx,eax
+   0x00005555555572bd <+8233>:	je     0x5555555572c6 <check_flag+8242>
+   0x00005555555572bf <+8235>:	mov    eax,0x1
+   0x00005555555572c4 <+8240>:	jmp    0x5555555572cb <check_flag+8247>
+   0x00005555555572c6 <+8242>:	mov    eax,0x0
+   0x00005555555572cb <+8247>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555572ce <+8250>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555572d2 <+8254>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555572d6 <+8258>:	je     0x555555557305 <check_flag+8305>
+   0x00005555555572d8 <+8260>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555572dc <+8264>:	add    rax,0x21
+   0x00005555555572e0 <+8268>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555572e3 <+8271>:	movsx  edx,al
+   0x00005555555572e6 <+8274>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555572ea <+8278>:	add    rax,0xa
+   0x00005555555572ee <+8282>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555572f1 <+8285>:	movsx  eax,al
+   0x00005555555572f4 <+8288>:	imul   eax,edx
+   0x00005555555572f7 <+8291>:	cmp    eax,0x2a4e
+   0x00005555555572fc <+8296>:	jne    0x555555557305 <check_flag+8305>
+   0x00005555555572fe <+8298>:	mov    eax,0x1
+   0x0000555555557303 <+8303>:	jmp    0x55555555730a <check_flag+8310>
+   0x0000555555557305 <+8305>:	mov    eax,0x0
+   0x000055555555730a <+8310>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555730d <+8313>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557311 <+8317>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557315 <+8321>:	je     0x555555557343 <check_flag+8367>
+   0x0000555555557317 <+8323>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555731b <+8327>:	add    rax,0x21
+   0x000055555555731f <+8331>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557322 <+8334>:	movsx  edx,al
+   0x0000555555557325 <+8337>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557329 <+8341>:	add    rax,0x23
+   0x000055555555732d <+8345>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557330 <+8348>:	cmp    al,0x16
+   0x0000555555557332 <+8350>:	sete   al
+   0x0000555555557335 <+8353>:	movzx  eax,al
+   0x0000555555557338 <+8356>:	cmp    edx,eax
+   0x000055555555733a <+8358>:	je     0x555555557343 <check_flag+8367>
+   0x000055555555733c <+8360>:	mov    eax,0x1
+   0x0000555555557341 <+8365>:	jmp    0x555555557348 <check_flag+8372>
+   0x0000555555557343 <+8367>:	mov    eax,0x0
+   0x0000555555557348 <+8372>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555734b <+8375>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555734f <+8379>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557353 <+8383>:	je     0x555555557381 <check_flag+8429>
+   0x0000555555557355 <+8385>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557359 <+8389>:	add    rax,0x21
+   0x000055555555735d <+8393>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557360 <+8396>:	movsx  edx,al
+   0x0000555555557363 <+8399>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557367 <+8403>:	add    rax,0xc
+   0x000055555555736b <+8407>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555736e <+8410>:	cmp    al,0x1a
+   0x0000555555557370 <+8412>:	sete   al
+   0x0000555555557373 <+8415>:	movzx  eax,al
+   0x0000555555557376 <+8418>:	cmp    edx,eax
+   0x0000555555557378 <+8420>:	je     0x555555557381 <check_flag+8429>
+   0x000055555555737a <+8422>:	mov    eax,0x1
+   0x000055555555737f <+8427>:	jmp    0x555555557386 <check_flag+8434>
+   0x0000555555557381 <+8429>:	mov    eax,0x0
+   0x0000555555557386 <+8434>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557389 <+8437>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555738d <+8441>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557391 <+8445>:	je     0x5555555573c0 <check_flag+8492>
+   0x0000555555557393 <+8447>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557397 <+8451>:	add    rax,0x21
+   0x000055555555739b <+8455>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555739e <+8458>:	movsx  edx,al
+   0x00005555555573a1 <+8461>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555573a5 <+8465>:	add    rax,0x11
+   0x00005555555573a9 <+8469>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555573ac <+8472>:	movsx  eax,al
+   0x00005555555573af <+8475>:	imul   eax,edx
+   0x00005555555573b2 <+8478>:	cmp    eax,0x2c88
+   0x00005555555573b7 <+8483>:	jne    0x5555555573c0 <check_flag+8492>
+   0x00005555555573b9 <+8485>:	mov    eax,0x1
+   0x00005555555573be <+8490>:	jmp    0x5555555573c5 <check_flag+8497>
+   0x00005555555573c0 <+8492>:	mov    eax,0x0
+   0x00005555555573c5 <+8497>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555573c8 <+8500>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555573cc <+8504>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555573d0 <+8508>:	je     0x5555555573fe <check_flag+8554>
+   0x00005555555573d2 <+8510>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555573d6 <+8514>:	add    rax,0x22
+   0x00005555555573da <+8518>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555573dd <+8521>:	movsx  edx,al
+   0x00005555555573e0 <+8524>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555573e4 <+8528>:	add    rax,0x12
+   0x00005555555573e8 <+8532>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555573eb <+8535>:	cmp    al,0x5f
+   0x00005555555573ed <+8537>:	sete   al
+   0x00005555555573f0 <+8540>:	movzx  eax,al
+   0x00005555555573f3 <+8543>:	cmp    edx,eax
+   0x00005555555573f5 <+8545>:	je     0x5555555573fe <check_flag+8554>
+   0x00005555555573f7 <+8547>:	mov    eax,0x1
+   0x00005555555573fc <+8552>:	jmp    0x555555557403 <check_flag+8559>
+   0x00005555555573fe <+8554>:	mov    eax,0x0
+   0x0000555555557403 <+8559>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557406 <+8562>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555740a <+8566>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555740e <+8570>:	je     0x55555555743c <check_flag+8616>
+   0x0000555555557410 <+8572>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557414 <+8576>:	add    rax,0x22
+   0x0000555555557418 <+8580>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555741b <+8583>:	movsx  edx,al
+   0x000055555555741e <+8586>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557422 <+8590>:	add    rax,0x3
+   0x0000555555557426 <+8594>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557429 <+8597>:	cmp    al,0x17
+   0x000055555555742b <+8599>:	sete   al
+   0x000055555555742e <+8602>:	movzx  eax,al
+   0x0000555555557431 <+8605>:	cmp    edx,eax
+   0x0000555555557433 <+8607>:	je     0x55555555743c <check_flag+8616>
+   0x0000555555557435 <+8609>:	mov    eax,0x1
+   0x000055555555743a <+8614>:	jmp    0x555555557441 <check_flag+8621>
+   0x000055555555743c <+8616>:	mov    eax,0x0
+   0x0000555555557441 <+8621>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557444 <+8624>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557448 <+8628>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555744c <+8632>:	je     0x55555555747a <check_flag+8678>
+   0x000055555555744e <+8634>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557452 <+8638>:	add    rax,0x22
+   0x0000555555557456 <+8642>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557459 <+8645>:	movsx  edx,al
+   0x000055555555745c <+8648>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557460 <+8652>:	add    rax,0x5
+   0x0000555555557464 <+8656>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557467 <+8659>:	movsx  eax,al
+   0x000055555555746a <+8662>:	add    eax,edx
+   0x000055555555746c <+8664>:	cmp    eax,0x9c
+   0x0000555555557471 <+8669>:	jne    0x55555555747a <check_flag+8678>
+   0x0000555555557473 <+8671>:	mov    eax,0x1
+   0x0000555555557478 <+8676>:	jmp    0x55555555747f <check_flag+8683>
+   0x000055555555747a <+8678>:	mov    eax,0x0
+   0x000055555555747f <+8683>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557482 <+8686>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557486 <+8690>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555748a <+8694>:	je     0x5555555574b8 <check_flag+8740>
+   0x000055555555748c <+8696>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557490 <+8700>:	add    rax,0x22
+   0x0000555555557494 <+8704>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557497 <+8707>:	movsx  edx,al
+   0x000055555555749a <+8710>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555749e <+8714>:	add    rax,0x1e
+   0x00005555555574a2 <+8718>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555574a5 <+8721>:	cmp    al,0x33
+   0x00005555555574a7 <+8723>:	sete   al
+   0x00005555555574aa <+8726>:	movzx  eax,al
+   0x00005555555574ad <+8729>:	cmp    edx,eax
+   0x00005555555574af <+8731>:	je     0x5555555574b8 <check_flag+8740>
+   0x00005555555574b1 <+8733>:	mov    eax,0x1
+   0x00005555555574b6 <+8738>:	jmp    0x5555555574bd <check_flag+8745>
+   0x00005555555574b8 <+8740>:	mov    eax,0x0
+   0x00005555555574bd <+8745>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555574c0 <+8748>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555574c4 <+8752>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555574c8 <+8756>:	je     0x5555555574f6 <check_flag+8802>
+   0x00005555555574ca <+8758>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555574ce <+8762>:	add    rax,0x23
+   0x00005555555574d2 <+8766>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555574d5 <+8769>:	movsx  edx,al
+   0x00005555555574d8 <+8772>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555574dc <+8776>:	add    rax,0x9
+   0x00005555555574e0 <+8780>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555574e3 <+8783>:	cmp    al,0x57
+   0x00005555555574e5 <+8785>:	sete   al
+   0x00005555555574e8 <+8788>:	movzx  eax,al
+   0x00005555555574eb <+8791>:	cmp    edx,eax
+   0x00005555555574ed <+8793>:	je     0x5555555574f6 <check_flag+8802>
+   0x00005555555574ef <+8795>:	mov    eax,0x1
+   0x00005555555574f4 <+8800>:	jmp    0x5555555574fb <check_flag+8807>
+   0x00005555555574f6 <+8802>:	mov    eax,0x0
+   0x00005555555574fb <+8807>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555574fe <+8810>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557502 <+8814>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557506 <+8818>:	je     0x555555557534 <check_flag+8864>
+   0x0000555555557508 <+8820>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555750c <+8824>:	add    rax,0x23
+   0x0000555555557510 <+8828>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557513 <+8831>:	movsx  edx,al
+   0x0000555555557516 <+8834>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555751a <+8838>:	add    rax,0x6
+   0x000055555555751e <+8842>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557521 <+8845>:	movsx  eax,al
+   0x0000555555557524 <+8848>:	add    eax,edx
+   0x0000555555557526 <+8850>:	cmp    eax,0xd8
+   0x000055555555752b <+8855>:	jne    0x555555557534 <check_flag+8864>
+   0x000055555555752d <+8857>:	mov    eax,0x1
+   0x0000555555557532 <+8862>:	jmp    0x555555557539 <check_flag+8869>
+   0x0000555555557534 <+8864>:	mov    eax,0x0
+   0x0000555555557539 <+8869>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555753c <+8872>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557540 <+8876>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557544 <+8880>:	je     0x555555557572 <check_flag+8926>
+   0x0000555555557546 <+8882>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555754a <+8886>:	add    rax,0x23
+   0x000055555555754e <+8890>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557551 <+8893>:	movsx  edx,al
+   0x0000555555557554 <+8896>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557558 <+8900>:	add    rax,0xa
+   0x000055555555755c <+8904>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555755f <+8907>:	cmp    al,0x3b
+   0x0000555555557561 <+8909>:	sete   al
+   0x0000555555557564 <+8912>:	movzx  eax,al
+   0x0000555555557567 <+8915>:	cmp    edx,eax
+   0x0000555555557569 <+8917>:	je     0x555555557572 <check_flag+8926>
+   0x000055555555756b <+8919>:	mov    eax,0x1
+   0x0000555555557570 <+8924>:	jmp    0x555555557577 <check_flag+8931>
+   0x0000555555557572 <+8926>:	mov    eax,0x0
+   0x0000555555557577 <+8931>:	mov    BYTE PTR [rbp-0x11],al
+   0x000055555555757a <+8934>:	and    BYTE PTR [rbp-0x11],0x1
+   0x000055555555757e <+8938>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x0000555555557582 <+8942>:	je     0x5555555575b0 <check_flag+8988>
+   0x0000555555557584 <+8944>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557588 <+8948>:	add    rax,0x23
+   0x000055555555758c <+8952>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555758f <+8955>:	movsx  edx,al
+   0x0000555555557592 <+8958>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557596 <+8962>:	add    rax,0x7
+   0x000055555555759a <+8966>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555759d <+8969>:	cmp    al,0x50
+   0x000055555555759f <+8971>:	sete   al
+   0x00005555555575a2 <+8974>:	movzx  eax,al
+   0x00005555555575a5 <+8977>:	cmp    edx,eax
+   0x00005555555575a7 <+8979>:	je     0x5555555575b0 <check_flag+8988>
+   0x00005555555575a9 <+8981>:	mov    eax,0x1
+   0x00005555555575ae <+8986>:	jmp    0x5555555575b5 <check_flag+8993>
+   0x00005555555575b0 <+8988>:	mov    eax,0x0
+   0x00005555555575b5 <+8993>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555575b8 <+8996>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555575bc <+9000>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555575c0 <+9004>:	je     0x5555555575ee <check_flag+9050>
+   0x00005555555575c2 <+9006>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555575c6 <+9010>:	add    rax,0x24
+   0x00005555555575ca <+9014>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555575cd <+9017>:	movsx  edx,al
+   0x00005555555575d0 <+9020>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x00005555555575d4 <+9024>:	add    rax,0xa
+   0x00005555555575d8 <+9028>:	movzx  eax,BYTE PTR [rax]
+   0x00005555555575db <+9031>:	cmp    al,0x22
+   0x00005555555575dd <+9033>:	sete   al
+   0x00005555555575e0 <+9036>:	movzx  eax,al
+   0x00005555555575e3 <+9039>:	cmp    edx,eax
+   0x00005555555575e5 <+9041>:	je     0x5555555575ee <check_flag+9050>
+   0x00005555555575e7 <+9043>:	mov    eax,0x1
+   0x00005555555575ec <+9048>:	jmp    0x5555555575f3 <check_flag+9055>
+   0x00005555555575ee <+9050>:	mov    eax,0x0
+   0x00005555555575f3 <+9055>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555575f6 <+9058>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555575fa <+9062>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x00005555555575fe <+9066>:	je     0x55555555762c <check_flag+9112>
+   0x0000555555557600 <+9068>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557604 <+9072>:	add    rax,0x24
+   0x0000555555557608 <+9076>:	movzx  eax,BYTE PTR [rax]
+   0x000055555555760b <+9079>:	movsx  edx,al
+   0x000055555555760e <+9082>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557612 <+9086>:	add    rax,0x1f
+   0x0000555555557616 <+9090>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557619 <+9093>:	cmp    al,0xa
+   0x000055555555761b <+9095>:	sete   al
+   0x000055555555761e <+9098>:	movzx  eax,al
+   0x0000555555557621 <+9101>:	cmp    edx,eax
+   0x0000555555557623 <+9103>:	je     0x55555555762c <check_flag+9112>
+   0x0000555555557625 <+9105>:	mov    eax,0x1
+   0x000055555555762a <+9110>:	jmp    0x555555557631 <check_flag+9117>
+   0x000055555555762c <+9112>:	mov    eax,0x0
+   0x0000555555557631 <+9117>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557634 <+9120>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557638 <+9124>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555763c <+9128>:	je     0x55555555766b <check_flag+9175>
+   0x000055555555763e <+9130>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557642 <+9134>:	add    rax,0x24
+   0x0000555555557646 <+9138>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557649 <+9141>:	movsx  edx,al
+   0x000055555555764c <+9144>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557650 <+9148>:	add    rax,0x1e
+   0x0000555555557654 <+9152>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557657 <+9155>:	movsx  eax,al
+   0x000055555555765a <+9158>:	imul   eax,edx
+   0x000055555555765d <+9161>:	cmp    eax,0x2e63
+   0x0000555555557662 <+9166>:	jne    0x55555555766b <check_flag+9175>
+   0x0000555555557664 <+9168>:	mov    eax,0x1
+   0x0000555555557669 <+9173>:	jmp    0x555555557670 <check_flag+9180>
+   0x000055555555766b <+9175>:	mov    eax,0x0
+   0x0000555555557670 <+9180>:	mov    BYTE PTR [rbp-0x11],al
+   0x0000555555557673 <+9183>:	and    BYTE PTR [rbp-0x11],0x1
+   0x0000555555557677 <+9187>:	cmp    BYTE PTR [rbp-0x11],0x0
+   0x000055555555767b <+9191>:	je     0x5555555576a9 <check_flag+9237>
+   0x000055555555767d <+9193>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x0000555555557681 <+9197>:	add    rax,0x24
+   0x0000555555557685 <+9201>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557688 <+9204>:	movsx  edx,al
+   0x000055555555768b <+9207>:	mov    rax,QWORD PTR [rbp-0x28]
+   0x000055555555768f <+9211>:	add    rax,0x15
+   0x0000555555557693 <+9215>:	movzx  eax,BYTE PTR [rax]
+   0x0000555555557696 <+9218>:	cmp    al,0xf
+   0x0000555555557698 <+9220>:	sete   al
+   0x000055555555769b <+9223>:	movzx  eax,al
+   0x000055555555769e <+9226>:	cmp    edx,eax
+   0x00005555555576a0 <+9228>:	je     0x5555555576a9 <check_flag+9237>
+   0x00005555555576a2 <+9230>:	mov    eax,0x1
+   0x00005555555576a7 <+9235>:	jmp    0x5555555576ae <check_flag+9242>
+   0x00005555555576a9 <+9237>:	mov    eax,0x0
+   0x00005555555576ae <+9242>:	mov    BYTE PTR [rbp-0x11],al
+   0x00005555555576b1 <+9245>:	and    BYTE PTR [rbp-0x11],0x1
+   0x00005555555576b5 <+9249>:	movzx  eax,BYTE PTR [rbp-0x11]
+   0x00005555555576b9 <+9253>:	mov    rbx,QWORD PTR [rbp-0x8]
+   0x00005555555576bd <+9257>:	leave
+   0x00005555555576be <+9258>:	ret
+End of assembler dump.
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

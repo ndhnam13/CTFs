@@ -1,0 +1,201 @@
+FUNCTION check_flag(input_string):
+
+  // Biến cờ để theo dõi kết quả. Ban đầu được đặt là true.
+  is_correct = TRUE
+
+  // --- KIỂM TRA 1: Độ dài chuỗi ---
+  // Độ dài của chuỗi phải là 37 ký tự (0x25).
+  [cite_start]is_correct = is_correct AND (length_of(input_string) == 37) [cite: 1]
+
+  // --- KIỂM TRA 2-149: Điều kiện ký tự ---
+  // Một loạt các điều kiện phải được đáp ứng.
+  // Các giá trị ký tự được coi là giá trị byte của chúng.
+  // Các chỉ số và giá trị số đều ở dạng thập lục phân.
+
+  // Các điều kiện liên quan đến input_string[0]
+  [cite_start]is_correct = is_correct AND (input_string[0] != (input_string[4] == 0x3a)) [cite: 2, 3]
+  [cite_start]is_correct = is_correct AND (input_string[0] * input_string[0xb] == 0x20a0) [cite: 4]
+  [cite_start]is_correct = is_correct AND (input_string[0] + input_string[0x15] == 0xba) [cite: 5, 6]
+  [cite_start]is_correct = is_correct AND (input_string[0] * input_string[0xa] == 0x1ab8) [cite: 7]
+
+  // Các điều kiện liên quan đến input_string[1]
+  [cite_start]is_correct = is_correct AND (input_string[1] != (input_string[0x11] == 0x30)) [cite: 8, 9]
+  [cite_start]is_correct = is_correct AND (input_string[1] + input_string[0x21] == 0xc6) [cite: 10]
+  [cite_start]is_correct = is_correct AND (input_string[1] * input_string[0x16] == 0xfc0) [cite: 11, 12]
+  [cite_start]is_correct = is_correct AND (input_string[1] + input_string[0xc] == 0xbc) [cite: 13]
+
+  // Các điều kiện liên quan đến input_string[2]
+  [cite_start]is_correct = is_correct AND (input_string[2] != (input_string[0x16] == 0x72)) [cite: 14, 15]
+  [cite_start]is_correct = is_correct AND (input_string[2] + input_string[4] == 0xb4) [cite: 16, 17]
+  [cite_start]is_correct = is_correct AND (input_string[2] != (input_string[0xc] == 0x2a)) [cite: 18]
+  [cite_start]is_correct = is_correct AND (input_string[2] != (input_string[0x12] == 0x71)) [cite: 19, 20]
+
+  // Các điều kiện liên quan đến input_string[3]
+  [cite_start]is_correct = is_correct AND (input_string[3] * input_string[0x16] == 0x1710) [cite: 21]
+  [cite_start]is_correct = is_correct AND (input_string[3] != (input_string[0xc] == 0x13)) [cite: 22, 23]
+  [cite_start]is_correct = is_correct AND (input_string[3] + input_string[0x18] == 0xe9) [cite: 24, 25]
+  [cite_start]is_correct = is_correct AND (input_string[3] + input_string[0x13] == 0xda) [cite: 26]
+
+  // Các điều kiện liên quan đến input_string[4]
+  [cite_start]is_correct = is_correct AND (input_string[4] * input_string[0xc] == 0x2e50) [cite: 27, 28]
+  [cite_start]is_correct = is_correct AND (input_string[4] + input_string[0x1d] == 0xa5) [cite: 29]
+  [cite_start]is_correct = is_correct AND (input_string[4] * input_string[0x14] == 0x2b32) [cite: 30, 31]
+  [cite_start]is_correct = is_correct AND (input_string[4] * input_string[5] == 0x1560) [cite: 32]
+
+  // Các điều kiện liên quan đến input_string[5]
+  [cite_start]is_correct = is_correct AND (input_string[5] != (input_string[0x18] == 0x5e)) [cite: 33, 34]
+  [cite_start]is_correct = is_correct AND (input_string[5] != (input_string[1] == 0x64)) [cite: 35]
+  [cite_start]is_correct = is_correct AND (input_string[5] + input_string[0x22] == 0x9c) [cite: 36, 37]
+  [cite_start]is_correct = is_correct AND (input_string[5] != (input_string[0x24] == 0x4d)) [cite: 38, 39]
+
+  // Các điều kiện liên quan đến input_string[6]
+  [cite_start]is_correct = is_correct AND (input_string[6] * input_string[0xf] == 0x2cdc) [cite: 40]
+  [cite_start]is_correct = is_correct AND (input_string[6] + input_string[0xe] == 0xd3) [cite: 41, 42]
+  [cite_start]is_correct = is_correct AND (input_string[6] * input_string[0x15] == 0x33a8) [cite: 43]
+  [cite_start]is_correct = is_correct AND (input_string[6] + input_string[0xa] == 0xd3) [cite: 44, 45]
+
+  // Các điều kiện liên quan đến input_string[7]
+  [cite_start]is_correct = is_correct AND (input_string[7] * input_string[8] == 0x1790) [cite: 46]
+  [cite_start]is_correct = is_correct AND (input_string[7] + input_string[0x10] == 0x64) [cite: 47, 48]
+  [cite_start]is_correct = is_correct AND (input_string[7] != (input_string[0] == 0x7c)) [cite: 49]
+  [cite_start]is_correct = is_correct AND (input_string[7] + input_string[5] == 0x64) [cite: 50, 51]
+
+  // Các điều kiện liên quan đến input_string[8]
+  [cite_start]is_correct = is_correct AND (input_string[8] != (input_string[1] == 0x20)) [cite: 52, 53]
+  [cite_start]is_correct = is_correct AND (input_string[8] != (input_string[0xe] == 0x2b)) [cite: 54]
+  [cite_start]is_correct = is_correct AND (input_string[8] * input_string[0x18] == 0x31d8) [cite: 55, 56]
+  [cite_start]is_correct = is_correct AND (input_string[8] + input_string[0x21] == 0xe6) [cite: 57]
+
+  // Các điều kiện liên quan đến input_string[9]
+  [cite_start]is_correct = is_correct AND (input_string[9] + input_string[0x15] == 0xa5) [cite: 58, 59]
+  [cite_start]is_correct = is_correct AND (input_string[9] * input_string[0x1e] == 0x12ed) [cite: 60]
+  [cite_start]is_correct = is_correct AND (input_string[9] * input_string[0x1d] == 0xa29) [cite: 61, 62]
+  [cite_start]is_correct = is_correct AND (input_string[9] != (input_string[0x1b] == 0x47)) [cite: 63]
+
+  // Các điều kiện liên quan đến input_string[0xa] (10)
+  [cite_start]is_correct = is_correct AND (input_string[0xa] * input_string[0xc] == 0x2698) [cite: 64, 65]
+  [cite_start]is_correct = is_correct AND (input_string[0xa] != (input_string[0xb] == 0x2b)) [cite: 66, 67]
+  [cite_start]is_correct = is_correct AND (input_string[0xa] != (input_string[0x23] == 0x3b)) [cite: 68]
+  [cite_start]is_correct = is_correct AND (input_string[0xa] * input_string[0x16] == 0x11d0) [cite: 69, 70]
+
+  // Các điều kiện liên quan đến input_string[0xb] (11)
+  [cite_start]is_correct = is_correct AND (input_string[0xb] + input_string[7] == 0xa8) [cite: 71]
+  [cite_start]is_correct = is_correct AND (input_string[0xb] * input_string[0x13] == 0x2b0c) [cite: 72, 73]
+  [cite_start]is_correct = is_correct AND (input_string[0xb] != (input_string[0x17] == 0x1)) [cite: 74]
+  [cite_start]is_correct = is_correct AND (input_string[0xb] + input_string[5] == 0xa4) [cite: 75, 76]
+
+  // Các điều kiện liên quan đến input_string[0xc] (12)
+  [cite_start]is_correct = is_correct AND (input_string[0xc] != (input_string[0x14] == 0x9)) [cite: 77, 78]
+  [cite_start]is_correct = is_correct AND (input_string[0xc] * input_string[9] == 0x14b8) [cite: 78, 79]
+  [cite_start]is_correct = is_correct AND (input_string[0xc] * input_string[0x1d] == 0x14b8) [cite: 80, 81]
+  [cite_start]is_correct = is_correct AND (input_string[0xc] + input_string[0x23] == 0xcc) [cite: 82]
+
+  // Các điều kiện liên quan đến input_string[0xd] (13)
+  [cite_start]is_correct = is_correct AND (input_string[0xd] != (input_string[3] == 0x48)) [cite: 83, 84]
+  [cite_start]is_correct = is_correct AND (input_string[0xd] * input_string[0x10] == 0x990) [cite: 85]
+  [cite_start]is_correct = is_correct AND (input_string[0xd] * input_string[0x19] == 0x13ec) [cite: 86, 87]
+  [cite_start]is_correct = is_correct AND (input_string[0xd] + input_string[0x1b] == 0xa7) [cite: 88]
+
+  // Các điều kiện liên quan đến input_string[0xe] (14)
+  [cite_start]is_correct = is_correct AND (input_string[0xe] != (input_string[0x15] == 0x2d)) [cite: 89, 90]
+  [cite_start]is_correct = is_correct AND (input_string[0xe] + input_string[9] == 0x92) [cite: 91, 92]
+  [cite_start]is_correct = is_correct AND (input_string[0xe] * input_string[0x11] == 0x251c) [cite: 93]
+  [cite_start]is_correct = is_correct AND (input_string[0xe] + input_string[0x13] == 0xbe) [cite: 94, 95]
+
+  // Các điều kiện liên quan đến input_string[0xf] (15)
+  [cite_start]is_correct = is_correct AND (input_string[0xf] + input_string[6] == 0xd7) [cite: 96]
+  [cite_start]is_correct = is_correct AND (input_string[0xf] != (input_string[0xc] == 0xb)) [cite: 97, 98]
+  [cite_start]is_correct = is_correct AND (input_string[0xf] + input_string[0x1f] == 0xda) [cite: 99]
+  [cite_start]is_correct = is_correct AND (input_string[0xf] + input_string[0x1d] == 0x96) [cite: 100, 101]
+
+  // ... (Tiếp tục cho các chỉ số còn lại) ...
+
+  [cite_start]is_correct = is_correct AND (input_string[0x10] + input_string[0x1f] == 0xa7) [cite: 102]
+  [cite_start]is_correct = is_correct AND (input_string[0x10] != (input_string[0x21] == 0x42)) [cite: 103, 104]
+  [cite_start]is_correct = is_correct AND (input_string[0x10] + input_string[0x22] == 0x9c) [cite: 105, 106]
+  [cite_start]is_correct = is_correct AND (input_string[0x10] * input_string[0xb] == 0x15c0) [cite: 107]
+  [cite_start]is_correct = is_correct AND (input_string[0x11] + input_string[0x24] == 0xe1) [cite: 108, 109]
+  [cite_start]is_correct = is_correct AND (input_string[0x11] + input_string[0x12] == 0x97) [cite: 110]
+  [cite_start]is_correct = is_correct AND (input_string[0x11] + input_string[0x1d] == 0x97) [cite: 111, 112]
+  [cite_start]is_correct = is_correct AND (input_string[0x11] + input_string[0x1e] == 0xc3) [cite: 113]
+  [cite_start]is_correct = is_correct AND (input_string[0x12] + input_string[0xe] == 0x92) [cite: 114, 115]
+  [cite_start]is_correct = is_correct AND (input_string[0x12] * input_string[5] == 0x990) [cite: 116]
+  [cite_start]is_correct = is_correct AND (input_string[0x12] + input_string[0x1a] == 0x92) [cite: 117, 118]
+  [cite_start]is_correct = is_correct AND (input_string[0x12] + input_string[3] == 0xae) [cite: 119]
+  [cite_start]is_correct = is_correct AND (input_string[0x13] * input_string[0x1f] == 0x2c29) [cite: 120, 121]
+  [cite_start]is_correct = is_correct AND (input_string[0x13] * input_string[0x22] == 0x2814) [cite: 122, 123]
+  [cite_start]is_correct = is_correct AND (input_string[0x13] + input_string[0x24] == 0xdc) [cite: 124]
+  [cite_start]is_correct = is_correct AND (input_string[0x13] != (input_string[0x10] == 0x6f)) [cite: 125, 126]
+  [cite_start]is_correct = is_correct AND (input_string[0x14] * input_string[0xc] == 0x2768) [cite: 127]
+  [cite_start]is_correct = is_correct AND (input_string[0x14] * input_string[0x22] == 0x28ec) [cite: 128, 129]
+  [cite_start]is_correct = is_correct AND (input_string[0x14] * input_string[7] == 0x13b4) [cite: 130]
+  [cite_start]is_correct = is_correct AND (input_string[0x14] != (input_string[0x10] == 0x51)) [cite: 131, 132]
+  [cite_start]is_correct = is_correct AND (input_string[0x15] != (input_string[0x24] == 0xf)) [cite: 133, 134]
+  [cite_start]is_correct = is_correct AND (input_string[0x15] * input_string[9] == 0x16b6) [cite: 134, 135]
+  [cite_start]is_correct = is_correct AND (input_string[0x15] != (input_string[0] == 0x3a)) [cite: 136, 137]
+  [cite_start]is_correct = is_correct AND (input_string[0x15] * input_string[0x17] == 0x341a) [cite: 138]
+  [cite_start]is_correct = is_correct AND (input_string[0x16] * input_string[0x20] == 0x14d0) [cite: 139, 140]
+  [cite_start]is_correct = is_correct AND (input_string[0x16] + input_string[0x19] == 0x94) [cite: 141]
+  [cite_start]is_correct = is_correct AND (input_string[0x16] != (input_string[1] == 0x64)) [cite: 142, 143]
+  [cite_start]is_correct = is_correct AND (input_string[0x16] + input_string[0x1a] == 0x8f) [cite: 144]
+  [cite_start]is_correct = is_correct AND (input_string[0x17] + input_string[0x22] == 0xe1) [cite: 145, 146]
+  [cite_start]is_correct = is_correct AND (input_string[0x17] != (input_string[0xb] == 0x1)) [cite: 147, 148]
+  [cite_start]is_correct = is_correct AND (input_string[0x17] != (input_string[0x20] == 0x1a)) [cite: 148, 149]
+  [cite_start]is_correct = is_correct AND (input_string[0x17] + input_string[0x14] == 0xd6) [cite: 150, 151]
+  [cite_start]is_correct = is_correct AND (input_string[0x18] * input_string[0x14] == 0x29ae) [cite: 152]
+  [cite_start]is_correct = is_correct AND (input_string[0x18] * input_string[0x19] == 0x2af8) [cite: 153, 154]
+  [cite_start]is_correct = is_correct AND (input_string[0x18] != (input_string[0x21] == 0x1c)) [cite: 155]
+  [cite_start]is_correct = is_correct AND (input_string[0x18] != (input_string[0x1a] == 0x31)) [cite: 156, 157]
+  [cite_start]is_correct = is_correct AND (input_string[0x19] != (input_string[3] == 0x1f)) [cite: 158, 159]
+  [cite_start]is_correct = is_correct AND (input_string[0x19] * input_string[7] == 0x1450) [cite: 160]
+  [cite_start]is_correct = is_correct AND (input_string[0x19] + input_string[0xd] == 0x97) [cite: 161, 162]
+  [cite_start]is_correct = is_correct AND (input_string[0x19] + input_string[0x17] == 0xd9) [cite: 163]
+  [cite_start]is_correct = is_correct AND (input_string[0x1a] * input_string[0x20] == 0x2931) [cite: 164, 165]
+  [cite_start]is_correct = is_correct AND (input_string[0x1a] != (input_string[0x21] == 0x2d)) [cite: 166]
+  [cite_start]is_correct = is_correct AND (input_string[0x1a] * input_string[4] == 0x2a4e) [cite: 167, 168]
+  [cite_start]is_correct = is_correct AND (input_string[0x1a] + input_string[3] == 0xda) [cite: 169]
+  [cite_start]is_correct = is_correct AND (input_string[0x1b] != (input_string[0x17] == 0x1)) [cite: 170, 171]
+  [cite_start]is_correct = is_correct AND (input_string[0x1b] + input_string[0x13] == 0xd3) [cite: 172, 173]
+  [cite_start]is_correct = is_correct AND (input_string[0x1b] + input_string[0xe] == 0xd3) [cite: 174]
+  [cite_start]is_correct = is_correct AND (input_string[0x1b] != (input_string[0x21] == 0x6)) [cite: 175, 176]
+  [cite_start]is_correct = is_correct AND (input_string[0x1c] * input_string[0x15] == 0x2e50) [cite: 177]
+  [cite_start]is_correct = is_correct AND (input_string[0x1c] + input_string[0x11] == 0xcc) [cite: 178, 179]
+  [cite_start]is_correct = is_correct AND (input_string[0x1c] != (input_string[6] == 0x1c)) [cite: 180]
+  [cite_start]is_correct = is_correct AND (input_string[0x1c] * input_string[0xf] == 0x2838) [cite: 181, 182]
+  [cite_start]is_correct = is_correct AND (input_string[0x1d] != (input_string[0x13] == 0x6c)) [cite: 183, 184]
+  [cite_start]is_correct = is_correct AND (input_string[0x1d] != (input_string[0x17] == 0x46)) [cite: 185]
+  [cite_start]is_correct = is_correct AND (input_string[0x1d] != (input_string[0x1c] == 0x5b)) [cite: 186, 187]
+  [cite_start]is_correct = is_correct AND (input_string[0x1d] * input_string[0x15] == 0x16b6) [cite: 188]
+  [cite_start]is_correct = is_correct AND (input_string[0x1e] + input_string[0x1d] == 0x92) [cite: 189, 190]
+  [cite_start]is_correct = is_correct AND (input_string[0x1e] * input_string[0xf] == 0x24bd) [cite: 191, 192]
+  [cite_start]is_correct = is_correct AND (input_string[0x1e] + input_string[0xb] == 0xd3) [cite: 193]
+  [cite_start]is_correct = is_correct AND (input_string[0x1e] * input_string[0xa] == 0x2341) [cite: 194, 195]
+  [cite_start]is_correct = is_correct AND (input_string[0x1f] * input_string[9] == 0x17b5) [cite: 196]
+  [cite_start]is_correct = is_correct AND (input_string[0x1f] + input_string[0xe] == 0xd6) [cite: 197, 198]
+  [cite_start]is_correct = is_correct AND (input_string[0x1f] * input_string[0x12] == 0x17b5) [cite: 199]
+  [cite_start]is_correct = is_correct AND (input_string[0x1f] + input_string[0x11] == 0xdb) [cite: 200, 201]
+  [cite_start]is_correct = is_correct AND (input_string[0x20] * input_string[0x10] == 0x14d0) [cite: 202]
+  [cite_start]is_correct = is_correct AND (input_string[0x20] * input_string[8] == 0x324c) [cite: 203, 204]
+  [cite_start]is_correct = is_correct AND (input_string[0x20] * input_string[0x11] == 0x2b5c) [cite: 205]
+  [cite_start]is_correct = is_correct AND (input_string[0x20] != (input_string[1] == 0x3b)) [cite: 206, 207]
+  [cite_start]is_correct = is_correct AND (input_string[0x21] * input_string[0xa] == 0x2a4e) [cite: 208]
+  [cite_start]is_correct = is_correct AND (input_string[0x21] != (input_string[0x23] == 0x16)) [cite: 209, 210]
+  [cite_start]is_correct = is_correct AND (input_string[0x21] != (input_string[0xc] == 0x1a)) [cite: 211, 212]
+  [cite_start]is_correct = is_correct AND (input_string[0x21] * input_string[0x11] == 0x2c88) [cite: 213]
+  [cite_start]is_correct = is_correct AND (input_string[0x22] != (input_string[0x12] == 0x5f)) [cite: 214, 215]
+  [cite_start]is_correct = is_correct AND (input_string[0x22] != (input_string[3] == 0x17)) [cite: 216]
+  [cite_start]is_correct = is_correct AND (input_string[0x22] + input_string[5] == 0x9c) [cite: 217, 218]
+  [cite_start]is_correct = is_correct AND (input_string[0x22] != (input_string[0x1e] == 0x33)) [cite: 219]
+  [cite_start]is_correct = is_correct AND (input_string[0x23] != (input_string[9] == 0x57)) [cite: 220, 221]
+  [cite_start]is_correct = is_correct AND (input_string[0x23] + input_string[6] == 0xd8) [cite: 222, 223]
+  [cite_start]is_correct = is_correct AND (input_string[0x23] != (input_string[0xa] == 0x3b)) [cite: 224]
+  [cite_start]is_correct = is_correct AND (input_string[0x23] != (input_string[7] == 0x50)) [cite: 225, 226]
+  [cite_start]is_correct = is_correct AND (input_string[0x24] != (input_string[0xa] == 0x22)) [cite: 227]
+  [cite_start]is_correct = is_correct AND (input_string[0x24] != (input_string[0x1f] == 0xa)) [cite: 228, 229]
+  [cite_start]is_correct = is_correct AND (input_string[0x24] * input_string[0x1e] == 0x2e63) [cite: 230, 231]
+  [cite_start]is_correct = is_correct AND (input_string[0x24] != (input_string[0x15] == 0xf)) [cite: 232]
+
+  // --- KẾT QUẢ CUỐI CÙNG ---
+  RETURN is_correct
+
+END FUNCTION
