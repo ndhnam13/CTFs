@@ -136,7 +136,7 @@ var logo = "https://gist.githubusercontent.com/oumazio/d2b2cbbe1ad51fd956815e78e
 
 Tải và thực hiện một file javascript từ github
 
-> **Vậy có thể nói rằng người dùng đã có thể bị lừa tải file `FlashInstaller.hta` nghĩ rằng đây là một installer bình thường từ đó bị dính mã độc, mất trộm dữ liệu**
+> **Vậy có thể nói rằng người dùng đã bị lừa tải file `FlashInstaller.hta` nghĩ rằng đây là một installer bình thường từ đó bị dính mã độc, mất trộm dữ liệu**
 
 https://gist.githubusercontent.com/oumazio/d2b2cbbe1ad51fd956815e78e6bfe31d/raw/2e34af3f8aac3392f07a1d59013cc8897dda8f3a/something.txt
 
@@ -345,7 +345,7 @@ try {
 }
 ```
 
-Tải chuỗi hex từ Pastebin -> ghép vào -> XOR với `0x24` -> load assembly vào RAM (`[System.Reflection.Assembly]::Load`) → gọi `StealerJanai.core.RiderKick.Run()`
+Tải chuỗi hex từ Pastebin -> ghép vào -> XOR với `0x24` -> load assembly vào RAM (`[System.Reflection.Assembly]::Load`) -> gọi `StealerJanai.core.RiderKick.Run()`
 
 Vậy ta sẽ tiếp tục decode payload từ `pastebin` ra một file `dll`  có tên là `StealerJanai` được viết bằng `C#` 
 
@@ -778,5 +778,6 @@ CSCV2025{my_chal_got_leaked_before_the_contest_bruh_here_is_your_new_flag_b8891c
 
 
 ## FLag
+
 
 > **CSCV2025{my_chal_got_leaked_before_the_contest_bruh_here_is_your_new_flag_b8891c4e147c452b8cc6642f10400452}**
