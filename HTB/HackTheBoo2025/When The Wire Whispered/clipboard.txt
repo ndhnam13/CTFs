@@ -1,0 +1,120 @@
+d$
+
+id                     : 2
+hostname               : http://brackenrow.htb
+formSubmitURL          : 
+usernameField          : 
+passwordField          : 
+guid                   : {8fa8b071-2544-40da-9801-3b67e037a5aa}
+encType                : 1
+timeCreated            : 1760985367574
+timeLastUsed           : 1760985367574
+timePasswordChanged    : 1760985367574
+timesUsed              : 1
+syncCounter            : 1
+everSynced             : False
+encryptedUnknownFields : MEMEEPgAAAAAAAAAAAAAAAAAAAEwHQYJYIZIAWUDBAEqBBDU35ezznMbDQ4SEQKSGEJ0BBDJgwBqBZrRfOkwppqr4uvX
+username               : tallow_keeper
+password               : Wax&Whisper_1313
+
+id                     : 3
+hostname               : http://hollowmere.htb
+formSubmitURL          : 
+usernameField          : 
+passwordField          : 
+guid                   : {f79ade19-f19a-44c2-b4ef-2df810ee66fc}
+encType                : 1
+timeCreated            : 1760985367584
+timeLastUsed           : 1760985367584
+timePasswordChanged    : 1760985367584
+timesUsed              : 1
+syncCounter            : 1
+everSynced             : False
+encryptedUnknownFields : MEMEEPgAAAAAAAAAAAAAAAAAAAEwHQYJYIZIAWUDBAEqBBBgwy1nFzgBD22mcvG6yPsIBBAR/Xf9kN0EX5qrJynf376U
+username               : bone_riddle
+password               : Cipher.of.Marrows!
+
+id                     : 4
+hostname               : http://oakhurstwatch.htb
+formSubmitURL          : 
+usernameField          : 
+passwordField          : 
+guid                   : {ce21b0df-d1bf-473b-ae3c-121655dce4f6}
+encType                : 1
+timeCreated            : 1760985367592
+timeLastUsed           : 1760985367592
+timePasswordChanged    : 1760985367592
+timesUsed              : 1
+syncCounter            : 1
+everSynced             : False
+encryptedUnknownFields : MEMEEPgAAAAAAAAAAAAAAAAAAAEwHQYJYIZIAWUDBAEqBBAMTSKG67hjRBPvJo6dI64+BBDCI5HcBudCU9rSKU5bY6q2
+username               : night_threader
+password               : ThreadSight_03$Moon
+
+id                     : 5
+hostname               : http://barrowick.htb
+formSubmitURL          : 
+usernameField          : 
+passwordField          : 
+guid                   : {23a64d8d-6327-48fd-9042-b4ef6b0acf5d}
+encType                : 1
+timeCreated            : 1760985367604
+timeLastUsed           : 1760985367604
+timePasswordChanged    : 1760985367604
+timesUsed              : 1
+syncCounter            : 1
+everSynced             : False
+encryptedUnknownFields : MEMEEPgAAAAAAAAAAAAAAAAAAAEwHQYJYIZIAWUDBAEqBBBwdJwssMn5gPitwx8QISEEBBBu/b1b3BL4X0aDv5BjRPn5
+username               : candle_eyed
+password               : AshWitness_99@Tomb
+
+id                     : 6
+hostname               : http://ashforge.htb
+formSubmitURL          : 
+usernameField          : 
+passwordField          : 
+guid                   : {7a21c145-a54a-4741-a01f-e1ea0564e165}
+encType                : 1
+timeCreated            : 1760985367612
+timeLastUsed           : 1760985367612
+timePasswordChanged    : 1760985367612
+timesUsed              : 1
+syncCounter            : 1
+everSynced             : False
+encryptedUnknownFields : MEMEEPgAAAAAAAAAAAAAAAAAAAEwHQYJYIZIAWUDBAEqBBBg7Q9rquK52OAgr3bwdj2WBBCyFMzYg+RcukfrQqPIGLy+
+username               : ash_apprentice
+password               : IronLock_Breaker42
+
+id                     : 7
+hostname               : http://lornmerelocks.htb
+formSubmitURL          : 
+usernameField          : 
+passwordField          : 
+guid                   : {f681bc16-b725-464f-b437-715ce03a2a07}
+encType                : 1
+timeCreated            : 1760985367618
+timeLastUsed           : 1760985367618
+timePasswordChanged    : 1760985367618
+timesUsed              : 1
+syncCounter            : 1
+everSynced             : False
+encryptedUnknownFields : MEMEEPgAAAAAAAAAAAAAAAAAAAEwHQYJYIZIAWUDBAEqBBBUNikG1gk1NXad5luPHCtoBBA1TiOabIpjb/rxTQUj+kat
+username               : knot_weaver
+password               : RuleBound_7xThorn
+
+id                     : 8
+hostname               : http://emberreach.htb
+formSubmitURL          : 
+usernameField          : 
+passwordField          : 
+guid                   : {8b9d44a1-93bb-4ac5-bec5-9f5a67b84444}
+encType                : 1
+timeCreated            : 1760985367631
+timeLastUsed           : 1760985367631
+timePasswordChanged    : 1760985367631
+timesUsed              : 1
+syncCounter            : 1
+everSynced             : False
+encryptedUnknownFields : MEMEEPgAAAAAAAAAAAAAAAAAAAEwHQYJYIZIAWUDBAEqBBDkXuSMkm25zhXrt2ijIMaqBBD2nnQqm7vRhijrm6C5foba
+username               : memory_tinker
+password               : Reverse.Time_404!
