@@ -1,0 +1,31 @@
+Test with my VSN
+0xD1E21660
+Result: 9C883C28 
+
+VSN check: CRC32(MD5(serial+serial)) = expected (constant ^ 0xDEADBEEF)
+This should be the expected values: 0x7DCA862E, 0x1F1D2720
+VSN: 
+0xf1c2471b
+0xa0612028
+0xfc6c6235
+0x6563784a
+0x02a3ff67 - This one correct
+0x9aaa28cd
+
+Brute from 11h37 done 14h19 xd
+
+Cryption: ChaCha20 so we need a 32byte key and 8 or 12 byte nonce
+How to get key: SHA256(SHA256(public key sent + public key recv)+VSN)
+How to get nonce: The sent or recieved packet contains the encrypted payload and the nonce used to encrypt it. So we can take that nonce to decrypt
+- Heres an example of payload
+	Client -> Server payload: opcode (2b) + len (4b) + nonce (12b) + encrypted payload
+	Server -> Client payload: opcode (2b) + len (4b) + nonce (12b)
+				  Another seperate packet for the encrypted payload
+
+There are 6 possible VSN but only 1 key so we have to check all 6, the working VSN would create a key that can decrypt our payload
+096430d5771252df5c170249e8f493b56f94ceb53393b9978fb1290099486e0c
+c4c63ccbcc368958710aaa0dda5e3c13748dd2289fc0703efc973b5c4b9df645
+84ccf9330eeb7c5ee86333e19b0ebd7f4889dd3c8f80345779ad9abe221c64a8
+29f0ae06c3cad94a46da77714c2e14074da12aee9e92b5bf3b8d78ef1ac97cd9
+90af18d6780678435f4a37308dbe43c08f18c06bff70ee99aaf2280920522628 - Correct
+a6cfad4487ffc11583f1589e94eef67d0fbb4d3b99452562657fa2e8dd3d647a
